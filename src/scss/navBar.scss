@@ -43,3 +43,16 @@
         margin-left: 2%;
     }
 }
+// icono carrito
+.divIconoCarrito {
+    // modificacion
+    border-radius: 5px;
+    // color
+    background-color: $color6;
+}
+.iconoCarrito {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: -10px;
+    color: $color7;
+}

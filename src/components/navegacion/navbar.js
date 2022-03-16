@@ -1,5 +1,6 @@
 
 import '../../scss/navBar.scss';
+import '../../scss/variables.scss'
 import React from 'react';
 // icono carrito
 import Iconshopcart from './CartWidget'

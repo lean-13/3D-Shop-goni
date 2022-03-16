@@ -6,9 +6,10 @@ import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import React from 'react';
 function Iconshopcart() {
     return (
-        <div>
+        <div className='divIconoCarrito'>
             <ShoppingCartOutlinedIcon
-            color='$color6'
+            fontSize="small" 
+            className='iconoCarrito'
             />
         </div>
 
