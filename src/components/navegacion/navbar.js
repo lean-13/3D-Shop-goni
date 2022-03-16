@@ -5,7 +5,7 @@ import React from 'react';
 // icono carrito
 import Iconshopcart from './CartWidget'
 
-const Navbar = () => {
+function Navbar() {
     return (
       <nav className="navbar navbar-expand-lg nav__bar--modificacion nav__bar--size nav__bar--color" id="navBar">
         <div className="navBarSection">
