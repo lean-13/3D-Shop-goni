@@ -1,0 +1,12 @@
+// variables
+@import "variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    // background
+    background-color: $color7;
+}

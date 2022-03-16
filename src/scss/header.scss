@@ -1,0 +1,44 @@
+// variables
+@import "variables";
+
+.header__carousel--modificacion {
+    // img
+    div div div img{
+        border-radius: 5px;
+    }
+    // arrow
+    div a span {
+        border-radius: 5px;
+    }
+}
+.header__carousel--size {
+    margin-top: 55px;
+    // padding img
+    div div div {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    // img
+    div div div img{
+        border-radius: 5px;
+    }
+    // arrow
+    div a span{
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+}
+.header__carousel--color {
+    // arrow
+    div a span{
+        color: $color7 ;
+        background-color: $color7;
+    }
+    // indicador
+    div ol li {
+        color: $color7;
+    }
+}
+
