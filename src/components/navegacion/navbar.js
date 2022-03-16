@@ -1,6 +1,8 @@
 
 import '../../scss/navBar.scss';
 import React from 'react';
+// icono carrito
+import Iconshopcart from './CartWidget'
 
 const Navbar = () => {
     return (
@@ -24,7 +26,7 @@ const Navbar = () => {
                 <a className="nav-link" href="#">Encargo</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Carrito</a>
+                <a className="nav-link" href="#"><Iconshopcart/></a>
               </li>
             </ul>
             <span className="navbar-text">
