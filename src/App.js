@@ -1,9 +1,7 @@
-// scss
-import './scss/navBar.scss'
 // navBar
 import Navbar from './components/navegacion/navbar'
 // item list
-import Itemproducto from './components/items/ItemListContainers'
+import Itemproducto from './components/items/ItemListContainer'
 // react
 import React from 'react';
 
