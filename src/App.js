@@ -2,6 +2,8 @@
 import Navbar from './components/navegacion/navbar'
 // item list
 import Itemproducto from './components/items/ItemListContainer'
+// item count
+import ItemCount from './components/items/itemCount'
 // react
 import React from 'react';
 
@@ -16,7 +18,10 @@ function App() {
   return (
     <header className="App-header">
       <Navbar/>
-      <Itemproducto {...producto}/>
+      <div>
+        <Itemproducto {...producto}/>
+        <ItemCount/>
+      </div>
     </header>
   );
 }

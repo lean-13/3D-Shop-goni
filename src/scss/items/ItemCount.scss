@@ -1,2 +1,47 @@
 // variables
 @import "../variables";
+
+.cardCantidadProducto {
+    // modificacion
+    text-align: center;
+    // size
+    width: 300px;
+    height: auto;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+.cantidadCompra {
+    // modificacion
+    border: 1px solid $color7;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    align-items: center;
+}
+.numeroCantidadCompra {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+// botones
+.botonRemove {
+    // modificacion
+    border: none;
+    border-radius: 5px;
+    // size
+    width: 50px;
+    height: auto;
+    // color
+    background-color: transparent;
+    color: $color9;
+}
+.botonAdd {
+    // modificacion
+    border: none;
+    border-radius: 5px;
+    // size
+    width: 100px;
+    height: auto;
+    // color
+    background-color: transparent;
+    color: $color10;
+}
