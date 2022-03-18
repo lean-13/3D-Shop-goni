@@ -2,12 +2,14 @@
 import React from 'react';
 // sass
 import '../../scss/header.scss'
-const Itemproducto = ({id, nombre}) => {
+const Itemproducto = ({nombre, categoria, precio, stock}) => {
     return (
         <div className="itemProductoInfo">
             <h3>Productos: </h3>
-            <strong>id: {id}</strong>
             <strong>producto: {nombre}</strong>
+            <strong>categoria: {categoria}</strong>
+            <strong>precio: ${precio}</strong>
+            <strong>stock: {stock}</strong>
         </div>
     );
 }
