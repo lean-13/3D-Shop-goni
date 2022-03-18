@@ -1,0 +1,8 @@
+{
+    "id": 1,
+    "nombre": "maceta",
+    "categoria": "hogar",
+    "estado": "normal",
+    "precio": 1000,
+    "stock": 3
+  }
