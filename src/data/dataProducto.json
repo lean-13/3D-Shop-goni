@@ -1,8 +1,30 @@
-{
-    "id": 1,
-    "nombre": "maceta",
-    "categoria": "hogar",
-    "estado": "normal",
-    "precio": 1000,
-    "stock": 3
+[   
+  {
+      "id": 0,
+      "categoria": "Hogar",
+      "detalle": "Productos para decorar tu hogar",
+      "items": [
+                  {
+                    "id": 1,
+                    "nombre": "maceta",
+                    "precio": 1000,
+                    "stock": 3
+                  }
+      ]         
+  },
+  {
+      "id": 1,
+      "categoria": "Mascotas",
+      "detalle": "Accesorios y juguetes para mascota",
+      "items": [
+                  {
+                      "nombre": "Tasa Condor",
+                      "tamanno": [200, 500],
+                      "stock": 100,
+                      "precio": 500,
+                      "url": "../img/tasaCondor.png"
+                  }
+      ]        
   }
+]
+
