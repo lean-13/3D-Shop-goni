@@ -5,10 +5,25 @@
       "detalle": "Productos para decorar tu hogar",
       "items": [
                   {
-                    "id": 1,
-                    "nombre": "maceta",
-                    "precio": 1000,
-                    "stock": 3
+                    "nombre": "maceta de venus y afrodita",
+                    "descripcion": "maceta de las Diosas del amor, la belleza y la fertilidad",
+                    "precio": 4000,
+                    "stock": 5,
+                    "img": "../img/productos/1.jpg"
+                  },
+                  {
+                    "nombre": "Casa para pajaros caravana",
+                    "descripcion": "casa pajaros con forma de caravana perfecta para tu hogar",
+                    "precio": 1200,
+                    "stock": 2,
+                    "img": "../img/productos/2.jpg"
+                  },
+                  {
+                    "nombre": "Lampara articulada star wars",
+                    "descripcion": "lampara del famoso caza tie fighter",
+                    "precio": 3000,
+                    "stock": 4,
+                    "img": "../img/productos/3.jpg"
                   }
       ]         
   },
