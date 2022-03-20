@@ -24,6 +24,13 @@
                     "precio": 3000,
                     "stock": 4,
                     "img": "../img/productos/3.jpg"
+                  },
+                  {
+                    "nombre": "soporte de esponja con forma de bob esponja",
+                    "descripcion": "ideal para darle un aire fresco a tu cocina",
+                    "precio": 800,
+                    "stock": 4,
+                    "img": "../img/productos/4.jpg"
                   }
       ]         
   },
