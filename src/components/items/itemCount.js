@@ -7,15 +7,14 @@ import AddOutlinedIcon from '@material-ui/icons/AddOutlined';
 import RemoveOutlinedIcon from '@material-ui/icons/RemoveOutlined';
 
 
-const ItemCount= () => {
+const ItemCount= ({stock}) => {
     const [contador, setContador] = useState(0);
-
+    console.log(stock)
     const click = (tipo) => {
-        if (tipo === 'sumar') {
+        if ((tipo === 'sumar') && (contador < stock)) {
             setContador(contador + 1);
-        }else {
-            setContador(contador - 1);
-        }
+        }else if ((tipo === 'restar') && (contador > 0)) {
+            setContador(contador - 1);        }
     }
 
     return (

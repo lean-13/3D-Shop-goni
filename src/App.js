@@ -21,7 +21,7 @@ function App() {
       <Navbar/>
       <div>
         <Itemproducto {...producto}/>
-        <ItemCount/>
+        <ItemCount {...producto}/>
       </div>
     </header>
   );
