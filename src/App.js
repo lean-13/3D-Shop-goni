@@ -1,5 +1,5 @@
 // navBar
-import Navbar from './components/navegacion/navbar'
+import Navbar from './components/navegacion/Navbar'
 // item list
 import Itemproducto from './components/items/ItemListContainer'
 // item count
