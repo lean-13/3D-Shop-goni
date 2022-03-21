@@ -10,7 +10,6 @@ import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 
 const ItemCount= ({stock}) => {
     const [contador, setContador] = useState(0);
-    console.log(stock)
     const click = (tipo) => {
         if ((tipo === 'sumar') && (contador < stock)) {
             setContador(contador + 1);
@@ -21,6 +20,7 @@ const ItemCount= ({stock}) => {
 
     const OnAdd = () => {
         alert('stock: ' + contador)
+        console.log(contador)
     }
 
     const AddToCart = () => {
