@@ -5,6 +5,7 @@ import '../../scss/items/ItemCount.scss'
 // iconos 
 import AddOutlinedIcon from '@material-ui/icons/AddOutlined';
 import RemoveOutlinedIcon from '@material-ui/icons/RemoveOutlined';
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 
 
 const ItemCount= ({stock}) => {
@@ -14,7 +15,18 @@ const ItemCount= ({stock}) => {
         if ((tipo === 'sumar') && (contador < stock)) {
             setContador(contador + 1);
         }else if ((tipo === 'restar') && (contador > 0)) {
-            setContador(contador - 1);        }
+            setContador(contador - 1);        
+        }
+    }
+
+    const OnAdd = () => {
+        alert('stock: ' + contador)
+    }
+
+    const AddToCart = () => {
+        if (contador > 0) {
+            OnAdd();
+        }
     }
 
     return (
@@ -26,6 +38,7 @@ const ItemCount= ({stock}) => {
                     <strong className="numeroCantidadCompra">{contador}</strong>
                     <button onClick={() => click('sumar')} className="botonAdd" id="1"><AddOutlinedIcon/></button>
                 </div>
+                <button onClick={() => AddToCart()} className="botonAddCarrito"><AddShoppingCartIcon/>Agregar al carrito</button>
             </div>
         </div>
     )
