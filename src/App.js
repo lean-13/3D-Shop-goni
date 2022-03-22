@@ -1,7 +1,7 @@
 // navBar
 import Navbar from './components/navegacion/Navbar'
 // item list
-import Itemproducto from './components/items/ItemListContainer'
+import ItemListContainer from './components/items/ItemListContainer'
 // item count
 import ItemCount from './components/items/itemCount'
 // react
@@ -20,7 +20,7 @@ function App() {
     <header className="App-header">
       <Navbar/>
       <div>
-        <Itemproducto {...producto}/>
+        <ItemListContainer {...producto}/>
         <ItemCount {...producto}/>
       </div>
     </header>

@@ -2,7 +2,7 @@
 import React from 'react';
 // sass
 import '../../scss/header.scss'
-const Itemproducto = ({nombre, categoria, precio, stock}) => {
+const ItemListContainer = ({nombre, categoria, precio, stock}) => {
     return (
         <div className="itemProductoInfo">
             <h3>Productos: </h3>
@@ -14,4 +14,4 @@ const Itemproducto = ({nombre, categoria, precio, stock}) => {
     );
 }
 
-export default Itemproducto;
+export default ItemListContainer;
