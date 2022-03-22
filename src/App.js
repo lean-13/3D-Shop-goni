@@ -2,8 +2,6 @@
 import Navbar from './components/navegacion/Navbar'
 // item list
 import ItemListContainer from './components/items/ItemListContainer'
-// item count
-import ItemCount from './components/items/itemCount'
 // react
 import React from 'react';
 
@@ -21,7 +19,6 @@ function App() {
       <Navbar/>
       <div>
         <ItemListContainer {...producto}/>
-        <ItemCount {...producto}/>
       </div>
     </header>
   );
