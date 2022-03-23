@@ -6,8 +6,8 @@ import ItemListContainer from './components/items/ItemListContainer'
 import React from 'react';
 // bootstrap
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-// sass
-import './scss/items/item.scss'
+import "../node_modules/bootstrap/dist/js/bootstrap.bundle.js";
+
 
 const IVA = 1.21;
 const producto ={
@@ -20,9 +20,9 @@ const producto ={
 function App() {
   return (
     <div>
-      <header className="App-header">
+      <div className="App-header">
         <Navbar/>
-      </header>
+      </div>
       <div>
         <ItemListContainer {...producto}/>
       </div>

@@ -1,9 +1,11 @@
 // react
-import React from 'react';
+import React, { useEffect } from 'react';
 // item
 import { Item } from './Item'
 // sass
 import '../../scss/items/itemList.scss'
+
+const Data = '../../data/dataProducto.json'
 
 const ProductoData = [
     {
@@ -41,13 +43,29 @@ const ProductoData = [
 ]
 
 export const ItemList = () => {
-    return (
-        <div className="cardCatalogo">
-            {
-                ProductoData.map((item) => (
-                    <Item nombre={item.nombre} precio={item.precio} img={item.img} stock={item.stock} categoria={item.categoria} descripcion={item.descripcion} alt={item.alt}/>
-                ))
-            }
-        </div>
-    )
-};
+  const GetData = new Promise((resolve, reject) => {
+    let condicion = true;
+    if (condicion) {
+      setTimeout(() => {
+        resolve(ProductoData)
+      })
+    }else {
+      reject('error')
+    }
+  })
+  useEffect(() => {
+    GetData
+    .then((res) => console.log(res))
+  }, [])
+  
+  return (
+      <div className="cardCatalogo">
+          {
+              ProductoData.map((item) => (
+                  <Item nombre={item.nombre} precio={item.precio} img={item.img} stock={item.stock} categoria={item.categoria} descripcion={item.descripcion} alt={item.alt}/>
+              ))
+          }
+      </div>
+  )
+}
+
