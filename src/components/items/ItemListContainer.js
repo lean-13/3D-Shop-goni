@@ -4,7 +4,7 @@ import React from 'react';
 import '../../scss/header.scss'
 // item count
 import ItemCount from './ItemCount'
-import ItemList from './ItemList';
+import {ItemList} from './ItemList';
 const initial = 1;
 
 const OnAdd = (contador) => {

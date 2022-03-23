@@ -3,7 +3,7 @@ import React from 'react';
 // sass
 
 
-function Item({img, precio, stock, categoria, descripcion}) {
+export const Item = ({img, precio, stock, categoria, descripcion}) => {
     return (
         <div classname="card">
             <img classname="card-img-top" src={img} alt="Card image"/>
@@ -16,5 +16,3 @@ function Item({img, precio, stock, categoria, descripcion}) {
       </div>
     )
 }
-
-export default Item;
