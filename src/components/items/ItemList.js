@@ -40,7 +40,7 @@ export const ItemList = () => {
     return (
         <div>
             {
-                ProductoData.map((Item) => (
+                ProductoData.map((item) => (
                     <Item nombre={Item.nombre} precio={Item.precio} stock={Item.stock} categoria={Item.categoria} descripcion={Item.descripcion}/>
                 ))
             }
