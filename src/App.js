@@ -15,12 +15,15 @@ const producto ={
 }
 function App() {
   return (
-    <header className="App-header">
-      <Navbar/>
+    <div>
+      <header className="App-header">
+        <Navbar/>
+      </header>
       <div>
         <ItemListContainer {...producto}/>
       </div>
-    </header>
+    </div>
+
   );
 }
 
