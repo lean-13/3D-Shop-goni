@@ -1,9 +1,9 @@
 // react
 import React from 'react';
-// sass
-
 // item
 import { Item } from './Item'
+// sass
+import '../../scss/items/itemList.scss'
 
 const ProductoData = [
     {
@@ -42,7 +42,7 @@ const ProductoData = [
 
 export const ItemList = () => {
     return (
-        <div>
+        <div className="cardCatalogo">
             {
                 ProductoData.map((item) => (
                     <Item nombre={item.nombre} precio={item.precio} img={item.img} stock={item.stock} categoria={item.categoria} descripcion={item.descripcion} alt={item.alt}/>

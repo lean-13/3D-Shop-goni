@@ -4,6 +4,10 @@ import Navbar from './components/navegacion/Navbar'
 import ItemListContainer from './components/items/ItemListContainer'
 // react
 import React from 'react';
+// bootstrap
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+// sass
+import './scss/items/item.scss'
 
 const IVA = 1.21;
 const producto ={
