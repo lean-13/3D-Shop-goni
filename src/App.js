@@ -10,7 +10,7 @@ import "../node_modules/bootstrap/dist/js/bootstrap.bundle.js";
 
 
 const IVA = 1.21;
-const producto ={
+const producto1 ={
   id:'1',
   nombre:'Maceta',
   categoria:'Hogar',
@@ -24,7 +24,7 @@ function App() {
         <Navbar/>
       </div>
       <div>
-        <ItemListContainer {...producto}/>
+        <ItemListContainer {...producto1}/>
       </div>
     </div>
 
