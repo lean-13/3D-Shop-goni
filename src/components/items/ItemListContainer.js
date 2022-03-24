@@ -60,7 +60,7 @@ const ItemListContainer = ({nombre, categoria, precio, stock}) => {
       if (condicion) {
         setTimeout(() => {
           resolve(Productos)
-        }, 0)
+        }, 2000)
       }else {
         reject('error')
       }

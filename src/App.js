@@ -6,7 +6,6 @@ import ItemListContainer from './components/items/ItemListContainer'
 import React from 'react';
 // bootstrap
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import "../node_modules/bootstrap/dist/js/bootstrap.bundle.js";
 
 
 const IVA = 1.21;
