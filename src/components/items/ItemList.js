@@ -6,15 +6,16 @@ import Item from './Item'
 import '../../scss/items/itemList.scss'
 
 const ItemList = ({ListaProductos}) => {
-  return (
-      <div className="cardCatalogo">
-          {
-              ListaProductos.map((producto) => (
-                  <Item producto={producto} key={producto.id}/>
-              ))
-          }
-      </div>
-  )
+    console.log({ListaProductos})
+    return (
+        <div className="cardCatalogo">
+            {
+                ListaProductos.map((producto) => (
+                    <Item producto={producto} key={producto.id}/>
+                ))
+            }
+        </div>
+    )
 }
 
 export default ItemList;

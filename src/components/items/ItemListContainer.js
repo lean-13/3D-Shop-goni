@@ -54,7 +54,7 @@ const ItemListContainer = ({nombre, categoria, precio, stock}) => {
       }
     ]
 
-    const [ListaProductos , SetListaProductos] = useState();
+    const [ListaProductos , SetListaProductos] = useState([]);
     const GetData = new Promise((resolve, reject) => {
       let condicion = true;
       if (condicion) {
@@ -66,7 +66,8 @@ const ItemListContainer = ({nombre, categoria, precio, stock}) => {
       }
     })
     useEffect(() => {
-      GetData.then((res) => SetListaProductos(res))
+      GetData
+      .then((res) => SetListaProductos(res))
     }, [])
     return (
         <div>
