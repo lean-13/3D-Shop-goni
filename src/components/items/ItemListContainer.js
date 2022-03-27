@@ -55,6 +55,7 @@ const ItemListContainer = ({nombre, categoria, precio, stock}) => {
     ]
 
     const [ListaProductos , SetListaProductos] = useState([]);
+    const [Cargando, SetCargando] = useState([])
     const GetData = new Promise((resolve, reject) => {
       let condicion = true;
       if (condicion) {
@@ -66,8 +67,11 @@ const ItemListContainer = ({nombre, categoria, precio, stock}) => {
       }
     })
     useEffect(() => {
+      SetCargando(true);
       GetData
       .then((res) => SetListaProductos(res))
+      .catch((error) => console.log(error))
+      .finally(() => SetCargando(false))
     }, [])
     return (
         <div>
@@ -86,6 +90,7 @@ const ItemListContainer = ({nombre, categoria, precio, stock}) => {
                     />
             </div>
             <div>
+              {Cargando ? <p>Cargando...</p> : ''}
               <ItemList ListaProductos={ListaProductos}/>
             </div>
         </div>
