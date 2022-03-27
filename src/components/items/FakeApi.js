@@ -38,7 +38,7 @@ const Productos = [
     ]
 
   
-    export const GetData = new Promise((resolve, reject) => {
+    export const GetProducts = new Promise((resolve, reject) => {
       let condicion = true;
       if (condicion) {
         setTimeout(() => {

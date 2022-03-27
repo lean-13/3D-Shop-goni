@@ -6,7 +6,7 @@ import '../../scss/header.scss'
 import ItemCount from './ItemCount'
 import ItemList from './ItemList';
 // item
-import { GetData } from './FakeApi'
+import { GetProducts } from './FakeApi'
 
 const initial = 1;
 
@@ -22,7 +22,7 @@ const ItemListContainer = ({nombre, categoria, precio, stock}) => {
     const [Cargando, SetCargando] = useState([])
     useEffect(() => {
       SetCargando(true);
-      GetData
+      GetProducts
       .then((res) => SetListaProductos(res))
       .catch((error) => console.log(error))
       .finally(() => SetCargando(false  ))
