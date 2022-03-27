@@ -3,6 +3,8 @@ import React from 'react';
 // bootstrap
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import "../node_modules/bootstrap/dist/js/bootstrap";
+// scss
+import "./scss/body.scss"
 // navBar
 import Navbar from './components/navegacion/Navbar'
 // item list
@@ -22,7 +24,7 @@ const producto1 ={
 }
 function App() {
   return (
-    <div>
+    <div className='body'>
       <div className="App-header">
         <Navbar/>
       </div>
