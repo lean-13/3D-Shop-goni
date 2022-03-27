@@ -10,7 +10,6 @@ const Item = ({producto}) => {
             <div classname="card-body">
                 <h5 className="card-title">{producto.nombre}</h5>
                 <p classname="card-text">Precio: ${producto.precio}</p>
-                <p classname="card-text">Stock: {producto.stock}</p>
                 <p classname="card-text">Categoria: {producto.categoria}</p>
             </div>
         </div>

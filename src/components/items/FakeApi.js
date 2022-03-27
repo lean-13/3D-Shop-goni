@@ -2,6 +2,7 @@ const Productos = [
     {
         id: 1,
         nombre: "maceta de venus y afrodita",
+        categoria: "Hogar",
         descripcion: "maceta de las Diosas del amor, la belleza y la fertilidad",
         precio: 4000,
         stock: 5,
@@ -11,6 +12,7 @@ const Productos = [
       {
         id: 2,
         nombre: "Casa para pajaros caravana",
+        categoria: "Hogar",
         descripcion: "casa pajaros con forma de caravana perfecta para tu hogar",
         precio: 1200,
         stock: 2,
@@ -20,6 +22,7 @@ const Productos = [
       {
         id: 3,
         nombre: "Lampara articulada star wars",
+        categoria: "Hogar",
         descripcion: "lampara del famoso caza tie fighter",
         precio: 3000,
         stock: 4,
@@ -29,6 +32,7 @@ const Productos = [
       {
         id: 4,
         nombre: "soporte de esponja con forma de bob esponja",
+        categoria: "Hogar",
         descripcion: "ideal para darle un aire fresco a tu cocina",
         precio: 800,
         stock: 4,
