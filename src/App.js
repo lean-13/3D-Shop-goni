@@ -1,11 +1,15 @@
+// react
+import React from 'react';
+// bootstrap
+import "../node_modules/bootstrap/dist/css/bootstrap.css";
+import "../node_modules/bootstrap/dist/js/bootstrap";
 // navBar
 import Navbar from './components/navegacion/Navbar'
 // item list
 import ItemListContainer from './components/items/ItemListContainer'
-// react
-import React from 'react';
-// bootstrap
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+// item detail
+import ItemDetailContainer from './components/items/ItemDetailContainer'
+
 
 
 const IVA = 1.21;
@@ -24,6 +28,7 @@ function App() {
       </div>
       <div>
         <ItemListContainer {...producto1}/>
+        <ItemDetailContainer/>
       </div>
     </div>
 
