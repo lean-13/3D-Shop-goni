@@ -7,10 +7,10 @@ import React from 'react';
 function Carrito() {
     return (
         <div className='divCarrito'>
-            <ShoppingCartOutlinedIcon
+            <h1><ShoppingCartOutlinedIcon
             fontSize="small" 
             className='iconoCarrito'
-            />
+            />Carrito</h1>
         </div>
 
     );

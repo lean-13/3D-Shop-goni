@@ -1,7 +1,7 @@
 // react
 import React, { useEffect, useState } from 'react';
 // sass
-import '../../scss/header.scss'
+import '../../scss/items/ItemListContainer.scss'
 // item count
 import ItemCount from './ItemCount'
 import ItemList from './ItemList';
