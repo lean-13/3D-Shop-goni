@@ -1,5 +1,6 @@
 // react
 import React from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 // bootstrap
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import "../node_modules/bootstrap/dist/js/bootstrap";
@@ -11,6 +12,8 @@ import Navbar from './components/navegacion/Navbar'
 import ItemListContainer from './components/items/ItemListContainer'
 // item detail
 import ItemDetailContainer from './components/items/ItemDetailContainer'
+// carrito
+import Carrito from './components/carrito/Carrito'
 
 
 
@@ -24,15 +27,17 @@ const producto1 ={
 }
 function App() {
   return (
-    <div className='body'>
+    <BrowserRouter className='body'>
       <div className="App-header">
         <Navbar/>
       </div>
-      <div>
-        <ItemListContainer {...producto1}/>
-        <ItemDetailContainer/>
-      </div>
-    </div>
+      <Routes>
+        <Route path="/" element={ <ItemListContainer {...producto1}/> + <ItemDetailContainer/> } />  
+        <Route path="/Carrito" element={ <Carrito/> } /> 
+        {/* error 404 */}
+        <Route path="*" element={ <h1>Error 404</h1> } /> 
+      </Routes>
+    </BrowserRouter>
 
   );
 }
