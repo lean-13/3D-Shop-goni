@@ -1,7 +1,9 @@
 
 import '../../scss/navegacion/navBar.scss';
 import '../../scss/variables.scss'
+// react
 import React from 'react';
+import { Link } from "react-router-dom";
 // icono carrito
 import Iconshopcart from './CartWidget'
 
@@ -9,7 +11,7 @@ function Navbar() {
     return (
       <nav className="navbar navbar-expand-lg nav__bar--modificacion nav__bar--size nav__bar--color" id="navBar">
         <div className="navBarSection">
-          <a className="navbar-brand nav__bar__logo--modificacion nav__bar__logo--size nav__bar__logo--color" id="navBarLogo" href="/">Logo</a>
+          <Link className="navbar-brand nav__bar__logo--modificacion nav__bar__logo--size nav__bar__logo--color" id="navBarLogo" to="/">Logo</Link>
         </div>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />
@@ -18,16 +20,16 @@ function Navbar() {
           <div className="collapse navbar-collapse" id="navbarText">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
-                <a className="nav-link" href="/">Inicio</a>
+                <Link className="nav-link" to="/">Inicio</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Categorias</a>
+                <Link className="nav-link" to="#">Categorias</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Encargo</a>
+                <Link className="nav-link" to="#">Encargo</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/Carrito"><Iconshopcart/></a>
+                <Link className="nav-link" to="/Carrito"><Iconshopcart/></Link>
               </li>
             </ul>
             <span className="navbar-text">
