@@ -6,7 +6,6 @@ import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import "../node_modules/bootstrap/dist/js/bootstrap";
 // scss
 import "./scss/body.scss"
-import "./scss/App.scss"
 // navBar
 import Navbar from './components/navegacion/Navbar'
 // item list
@@ -32,7 +31,7 @@ function App() {
       <div className="App-header">
         <Navbar/>
       </div>
-      <Routes className="routeElement">
+      <Routes>
         <Route path="/" element={ <ItemListContainer {...producto1}/> } /> 
         <Route path="/Detalle" element={ <ItemDetailContainer/> } />
         <Route path="/Carrito" element={ <Carrito/> } /> 
