@@ -22,12 +22,19 @@ const ItemListContainer = ({nombre, categoria, precio, stock}) => {
     const [ListaProductos , SetListaProductos] = useState([]);
     const [Cargando, SetCargando] = useState([]);
 
-    const params = useParams()
-    console.log(params)
+    const {categoriaId} = useParams()
+
     useEffect(() => {
       SetCargando(true);
       GetProducts
-      .then((res) => SetListaProductos(res))
+      .then((res) => {
+
+            if (categoriaId) {
+                SetListaProductos( res.filter( (prod) => prod.categoria === categoriaId ) )
+            }else {
+                SetListaProductos(res)
+            }
+      })
       .catch((error) => console.log(error))
       .finally(() => SetCargando(false  ))
     }, [])
