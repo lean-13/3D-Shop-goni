@@ -14,6 +14,8 @@ import ItemListContainer from './components/items/ItemListContainer'
 import ItemDetailContainer from './components/items/ItemDetailContainer'
 // carrito
 import Carrito from './components/carrito/Carrito'
+// categorias
+import Categorias from './components/categorias/Categorias'
 
 
 
@@ -33,6 +35,7 @@ function App() {
       </div>
       <Routes>
         <Route path="/" element={ <ItemListContainer {...producto1}/> } /> 
+        <Route path="/Categorias" element={ <Categorias/> } /> 
         <Route path="/Detalle" element={ <ItemDetailContainer/> } />
         <Route path="/Carrito" element={ <Carrito/> } /> 
         {/* error 404 */}
