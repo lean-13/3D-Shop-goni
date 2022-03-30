@@ -38,6 +38,16 @@ const Productos = [
         stock: 4,
         img: require("../../img/productos/4.jpg"),
         alt: "img soporte de bob esponja"
+      },
+      {
+        id: 5,
+        nombre: "Organizador de cables en forma de panal",
+        categoria: "Organizadores",
+        descripcion: "Perfecta para no perder tus cables",
+        precio: 500,
+        stock: 2,
+        img: require("../../img/productos/5.jpg"),
+        alt: "img organizador"
       }
     ]
 
