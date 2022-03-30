@@ -1,5 +1,6 @@
 // react
 import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 // sass
 import '../../scss/items/ItemListContainer.scss'
 // item count
@@ -19,7 +20,10 @@ const OnAdd = (contador) => {
 const ItemListContainer = ({nombre, categoria, precio, stock}) => {
 
     const [ListaProductos , SetListaProductos] = useState([]);
-    const [Cargando, SetCargando] = useState([])
+    const [Cargando, SetCargando] = useState([]);
+
+    const params = useParams()
+    console.log(params)
     useEffect(() => {
       SetCargando(true);
       GetProducts
