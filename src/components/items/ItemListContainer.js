@@ -23,7 +23,6 @@ const ItemListContainer = ({nombre, categoria, precio, stock}) => {
     const [Cargando, SetCargando] = useState([]);
 
     const {categoriaId} = useParams()
-    console.log(categoriaId)
 
     useEffect(() => {
       SetCargando(true);
@@ -37,8 +36,8 @@ const ItemListContainer = ({nombre, categoria, precio, stock}) => {
             }
       })
       .catch((error) => console.log(error))
-      .finally(() => SetCargando(false  ))
-    }, [])
+      .finally(() => SetCargando(false))
+    }, [categoriaId])
     return (
         <div>
             <div className="itemProductoInfo">
