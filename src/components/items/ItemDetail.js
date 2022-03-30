@@ -1,5 +1,6 @@
 // react
 import React from 'react';
+import { Card } from 'react-bootstrap'
 // scss
 import '../../scss/items/ItemDetail.scss'
 
@@ -8,16 +9,16 @@ const ItemDetail = ({ProductDetail}) => {
     return (
         <div className="DetalleProducto">
             <h2>Detalle de producto</h2>
-            <div classname="card cardProducto">
-                <img classname="card-img-top" src={img} alt={alt} />
-                <div classname="card-body">
-                    <h5 className="card-title">{nombre}</h5>
-                    <p classname="card-text">Precio: ${precio}</p>
-                    <p classname="card-text">Stock: {stock}</p>
-                    <p classname="card-text">Categoria: {categoria}</p>
-                    <p classname="card-text">Descripcion: {descripcion}</p>
-                </div>
-            </div>
+            <Card classname="cardProducto">
+                <Card.Img  src={img} alt={alt} />
+                <Card.Body>
+                    <Card.Title>{nombre}</Card.Title>
+                    <Card.Text>Precio: ${precio}</Card.Text>
+                    <Card.Text>Stock: {stock}</Card.Text>
+                    <Card.Text>Categoria: {categoria}</Card.Text>
+                    <Card.Text>Descripcion: {descripcion}</Card.Text>
+                </Card.Body>
+            </Card>
         </div>
     )
 }
