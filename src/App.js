@@ -14,8 +14,7 @@ import ItemListContainer from './components/items/ItemListContainer'
 import ItemDetailContainer from './components/items/ItemDetailContainer'
 // carrito
 import Carrito from './components/carrito/Carrito'
-// categorias
-import Categorias from './components/categorias/Categorias'
+
 
 
 
