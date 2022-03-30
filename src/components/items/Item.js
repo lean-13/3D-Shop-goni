@@ -11,6 +11,7 @@ const Item = ({producto}) => {
                 <h5 className="card-title">{producto.nombre}</h5>
                 <p classname="card-text">Precio: ${producto.precio}</p>
                 <p classname="card-text">Categoria: {producto.categoria}</p>
+                <button className="botonVerMas">Ver Mas</button>
             </div>
         </div>
     )

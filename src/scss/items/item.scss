@@ -15,3 +15,18 @@
         height: 50px;
     }
 }
+// boton
+.botonVerMas {
+    // modificacion
+    border-radius: 5px;
+    border: none;
+    // size
+    padding: 4px;
+    // color
+    background-color: $color6;
+    color: $color7;
+}
+.botonVerMas:hover {
+    color: $color1;
+    transition: 0.7s;
+}
