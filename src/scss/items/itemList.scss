@@ -3,8 +3,10 @@
 
 .cardCatalogo {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 500px);
+    grid-template-columns: repeat(auto-fill, 230px);
     grid-gap: 30px;
     // size
+    margin-top: 10px;
     margin-left: 2%;
+    margin-right: 2%;
 }
