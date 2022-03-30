@@ -9,13 +9,14 @@ import ItemDetail from './ItemDetail'
 const ItemDetailContainer = () => {
     const [ProductDetail, SetProductDetail] = useState([]);
     const [Cargando, SetCargando] = useState([]);
+
     const {itemId} = useParams()
-    console.log(itemId)
+
     
     useEffect(() => {
         SetCargando(true)
         GetProducts
-        .then((res) => SetProductDetail(res.find((item) => item.id === 4)))
+        .then((res) => SetProductDetail(res.find((item) => item.id === Number(itemId))))
         .catch((error) => console.log(error))
         .finally(() => SetCargando(false))
     }, [])
