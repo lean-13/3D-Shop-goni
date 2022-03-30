@@ -9,7 +9,7 @@ const ItemDetail = ({ProductDetail}) => {
     return (
         <div className="DetalleProducto">
             <h2>Detalle de producto</h2>
-            <Card classname="cardProducto">
+            <Card style={{ width: '20rem' }}>
                 <Card.Img  src={img} alt={alt} />
                 <Card.Body>
                     <Card.Title>{nombre}</Card.Title>
