@@ -19,7 +19,7 @@ const ItemDetailContainer = () => {
         .then((res) => SetProductDetail(res.find((item) => item.id === Number(itemId))))
         .catch((error) => console.log(error))
         .finally(() => SetCargando(false))
-    }, [])
+    }, [itemId])
 
     return (
         
