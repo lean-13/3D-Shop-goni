@@ -27,8 +27,8 @@ function Navbar() {
                   Categorias
                 </Link>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><Link className="dropdown-item"  to="/categorias/Hogar">Hogar</Link></li>
-                  <li><Link className="dropdown-item"  to="/categorias/Organizadores">Organizadores</Link></li>
+                  <li><Link className="dropdown-item"  to="/categoria/Hogar">Hogar</Link></li>
+                  <li><Link className="dropdown-item"  to="/categoria/Organizadores">Organizadores</Link></li>
                 </ul>
               </li>
               <li className="nav-item">

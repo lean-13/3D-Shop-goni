@@ -23,6 +23,7 @@ const ItemListContainer = ({nombre, categoria, precio, stock}) => {
     const [Cargando, SetCargando] = useState([]);
 
     const {categoriaId} = useParams()
+    console.log(categoriaId)
 
     useEffect(() => {
       SetCargando(true);
