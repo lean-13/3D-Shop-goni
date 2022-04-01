@@ -19,13 +19,7 @@ import Carrito from './components/carrito/Carrito'
 
 
 const IVA = 1.21;
-const producto1 ={
-  id:'1',
-  nombre:'Maceta',
-  categoria:'Hogar',
-  precio: 1000 * IVA,
-  stock: 5
-}
+
 function App() {
   return (
     <BrowserRouter className='body'>
@@ -33,8 +27,8 @@ function App() {
         <Navbar/>
       </div>
       <Routes>
-        <Route path="/" element={ <ItemListContainer {...producto1}/> } /> 
-        <Route path="/categoria/:categoriaId" element={ <ItemListContainer {...producto1}/> } /> 
+        <Route path="/" element={ <ItemListContainer/> } /> 
+        <Route path="/categoria/:categoriaId" element={ <ItemListContainer/> } /> 
         <Route path="/detail/:itemId" element={ <ItemDetailContainer/> } />
         <Route path="/carrito" element={ <Carrito/> } /> 
         {/* error 404 */}

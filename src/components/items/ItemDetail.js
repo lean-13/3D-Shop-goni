@@ -3,8 +3,18 @@ import React from 'react';
 import { Card } from 'react-bootstrap'
 // button
 import ButtonVolver from '../buttons/ButtonVolver';
+// item count
+import ItemCount from './ItemCount'
 // scss
 import '../../scss/items/ItemDetail.scss'
+
+const initial = 1;
+
+
+const OnAdd = (contador) => {
+    alert('stock: ' + contador)
+    console.log(contador)
+}
 
 const ItemDetail = ({ProductDetail}) => {
     const {nombre, categoria, img, alt,descripcion, precio, stock} = ProductDetail;
@@ -23,6 +33,13 @@ const ItemDetail = ({ProductDetail}) => {
                     <Card.Text>Descripcion: {descripcion}</Card.Text>
                 </Card.Body>
             </Card>
+            <div>
+                <ItemCount
+                    initial = {initial}
+                    OnAdd = {OnAdd}
+                    stock = {stock}
+                    />
+            </div>
         </div>
     )
 }
