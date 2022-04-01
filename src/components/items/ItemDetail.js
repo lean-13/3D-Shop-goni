@@ -19,14 +19,14 @@ const ItemDetail = ({ProductDetail}) => {
     const {nombre, categoria, img, alt,descripcion, precio, stock} = ProductDetail;
 
     return (
-        <div className="DetalleProducto">
+        <div className="detalleProducto">
             <h2>Detalle de producto</h2>
             <ButtonVolver/>
-            <div className='DetalleProductoInfo'>
+            <div className='detalleProductoInfo'>
                 <div>
                     <img  src={img} alt={alt} />
                 </div>
-                <div className='DetalleProductotext'>
+                <div className='detalleProductotext'>
                     <p>{nombre}</p>
                     <p>Precio: ${precio}</p>
                     <pt>Stock: {stock}</pt>

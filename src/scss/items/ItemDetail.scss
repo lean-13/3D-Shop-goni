@@ -2,7 +2,7 @@
 @import "../variables";
 
 // detalles
-.DetalleProducto {
+.detalleProducto {
     // modificacion
     align-items: center;
     border-radius: 5px;
@@ -10,26 +10,26 @@
     margin-left: 2%;
     margin-top: 70px;
     margin-bottom: 20px;
-
-    button {
-        margin-left: 90%;
-    }
 }
 // detail img and text
 // left
-.DetalleProductoInfo {
+.detalleProductoInfo {
     // modificacion
     display: flex;
     // size
     margin-top: 10px;
 }
-.DetalleProductoInfo img {
+.detalleProductoInfo img {
     // modificiacion
     border-radius: 5px;
     // size
     width: 25rem;
 }
 // right
-.DetalleProductotext {
+.detalleProductotext {
     margin-left: 20px;
+}
+// boton
+.botonVolverDetail {
+    padding-left: 200px;
 }
