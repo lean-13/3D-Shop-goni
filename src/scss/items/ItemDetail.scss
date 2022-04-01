@@ -1,6 +1,7 @@
 // variables
 @import "../variables";
 
+// detalles
 .DetalleProducto {
     // modificacion
     align-items: center;
@@ -9,4 +10,26 @@
     margin-left: 2%;
     margin-top: 70px;
     margin-bottom: 20px;
+
+    button {
+        margin-left: 90%;
+    }
+}
+// detail img and text
+// left
+.DetalleProductoInfo {
+    // modificacion
+    display: flex;
+    // size
+    margin-top: 10px;
+}
+.DetalleProductoInfo img {
+    // modificiacion
+    border-radius: 5px;
+    // size
+    width: 25rem;
+}
+// right
+.DetalleProductotext {
+    margin-left: 20px;
 }

@@ -1,6 +1,5 @@
 // react
 import React from 'react';
-import { Card } from 'react-bootstrap'
 // button
 import ButtonVolver from '../buttons/ButtonVolver';
 // item count
@@ -21,25 +20,28 @@ const ItemDetail = ({ProductDetail}) => {
 
     return (
         <div className="DetalleProducto">
-            <ButtonVolver/>
             <h2>Detalle de producto</h2>
-            <Card style={{ width: '20rem' }}>
-                <Card.Img  src={img} alt={alt} />
-                <Card.Body>
-                    <Card.Title>{nombre}</Card.Title>
-                    <Card.Text>Precio: ${precio}</Card.Text>
-                    <Card.Text>Stock: {stock}</Card.Text>
-                    <Card.Text>Categoria: {categoria}</Card.Text>
-                    <Card.Text>Descripcion: {descripcion}</Card.Text>
-                </Card.Body>
+            <ButtonVolver/>
+            <div className='DetalleProductoInfo'>
                 <div>
-                <ItemCount
-                    initial = {initial}
-                    OnAdd = {OnAdd}
-                    stock = {stock}
-                    />
+                    <img  src={img} alt={alt} />
+                </div>
+                <div className='DetalleProductotext'>
+                    <p>{nombre}</p>
+                    <p>Precio: ${precio}</p>
+                    <pt>Stock: {stock}</pt>
+                    <p>Categoria: {categoria}</p>
+                    <p>Descripcion: {descripcion}</p>
+                    <div>
+                        <ItemCount
+                            initial = {initial}
+                            OnAdd = {OnAdd}
+                            stock = {stock}
+                            />
+                    </div>
+                </div>
+
             </div>
-            </Card>
 
         </div>
     )
