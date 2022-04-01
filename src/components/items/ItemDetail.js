@@ -32,14 +32,15 @@ const ItemDetail = ({ProductDetail}) => {
                     <Card.Text>Categoria: {categoria}</Card.Text>
                     <Card.Text>Descripcion: {descripcion}</Card.Text>
                 </Card.Body>
-            </Card>
-            <div>
+                <div>
                 <ItemCount
                     initial = {initial}
                     OnAdd = {OnAdd}
                     stock = {stock}
                     />
             </div>
+            </Card>
+
         </div>
     )
 }

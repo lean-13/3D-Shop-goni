@@ -25,16 +25,14 @@ const ItemCount= ({stock, initial, OnAdd}) => {
     }
 
     return (
-        <div className="card cardCantidadProducto">
-            <div className="card-body">
-                <h5 className="card-title">Cantidad Carrito</h5>
+        <div className="cardCantidadProducto">
+                <h5>Cantidad:</h5>
                 <div className="cantidadCompra">
                     <button onClick={() => click('resta')} className="botonRemove"><RemoveOutlinedIcon/></button>
                     <strong className="numeroCantidadCompra">{contador}</strong>
                     <button onClick={() => click('suma')} className="botonAdd"><AddOutlinedIcon/></button>
                 </div>
                 <button onClick={() => AddToCart()} className="botonAddCarrito"><AddShoppingCartIcon/>Agregar al carrito</button>
-            </div>
         </div>
     )
 }
