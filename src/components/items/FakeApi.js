@@ -1,7 +1,7 @@
 const Productos = [
     {
         id: 1,
-        nombre: "maceta de venus y afrodita",
+        nombre: "Maceta de venus y afrodita",
         categoria: "Hogar",
         descripcion: "maceta de las Diosas del amor, la belleza y la fertilidad",
         precio: 4000,
@@ -31,7 +31,7 @@ const Productos = [
       },
       {
         id: 4,
-        nombre: "soporte de esponja con forma de bob esponja",
+        nombre: "Soporte de esponja con forma de bob esponja",
         categoria: "Hogar",
         descripcion: "ideal para darle un aire fresco a tu cocina",
         precio: 800,

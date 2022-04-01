@@ -11,7 +11,7 @@ const Item = ({producto}) => {
         <Card classname="cardProducto" style={{ width: '15rem' }}>
             <Card.Img src={img} alt={alt} />
             <Card.Body>
-                <Card.Title>{nombre}</Card.Title>
+                <Card.Title className='textScss'>{nombre}</Card.Title>
                 <Card.Text>Precio: ${precio}</Card.Text>
                 <Card.Text>Categoria: {categoria}</Card.Text>
                 <Link to={`/detail/${id}`}><Button className="botonVerMas">Ver mas</Button></Link>

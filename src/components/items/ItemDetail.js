@@ -20,18 +20,18 @@ const ItemDetail = ({ProductDetail}) => {
 
     return (
         <div className="detalleProducto">
-            <h2>Detalle de producto</h2>
+            <h2 className='tituloScss'>Detalle de producto</h2>
             <ButtonVolver/>
             <div className='detalleProductoInfo'>
                 <div>
                     <img  src={img} alt={alt} />
                 </div>
-                <div className='detalleProductotext'>
-                    <p>{nombre}</p>
-                    <p>Precio: ${precio}</p>
-                    <pt>Stock: {stock}</pt>
-                    <p>Categoria: {categoria}</p>
-                    <p>Descripcion: {descripcion}</p>
+                <div className='detalleProductotext textScss'>
+                    <p className='nombreProducto'>{nombre}</p>
+                    <p className='precioProducto'>Precio: ${precio}</p>
+                    <p className='stockProducto'>Stock: {stock}</p>
+                    <p className='categoriaProducto'>Categoria: {categoria}</p>
+                    <p className='descripcionProducto'>Descripcion: {descripcion}</p>
                     <div>
                         <ItemCount
                             initial = {initial}

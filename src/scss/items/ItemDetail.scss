@@ -27,9 +27,11 @@
 }
 // right
 .detalleProductotext {
+    // size
+    margin-top: 10px;
     margin-left: 20px;
 }
-// boton
-.botonVolverDetail {
-    padding-left: 200px;
+// text
+.precioProducto {
+    color: $color10;
 }
