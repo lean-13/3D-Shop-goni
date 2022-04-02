@@ -36,7 +36,6 @@ const ItemDetail = ({ProductDetail}) => {
                 <div className='detalleProductotext textScss'>
                     <p className='nombreProducto'>{nombre}</p>
                     <p className='precioProducto'>Precio: ${precio}</p>
-                    <p className='stockProducto'>Stock: {stock}</p>
                     <p className='dimensionesProducto'>Dimensiones: </p>
                     <p className='descripcionProducto'>Descripcion: {descripcion}</p>
                     <div>
