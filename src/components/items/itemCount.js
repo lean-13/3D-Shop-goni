@@ -1,5 +1,5 @@
 // react
-import React, { useState } from 'react';
+import React from 'react';
 // sass
 import '../../scss/items/ItemCount.scss'
 // iconos 
@@ -8,19 +8,19 @@ import RemoveOutlinedIcon from '@material-ui/icons/RemoveOutlined';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 
 
-const ItemCount= ({stock, initial, OnAdd}) => {
-    const [contador, setContador] = useState(initial);
+const ItemCount= ({stock, OnAdd, cantidad, setCantidad}) => {
+    
     const click = (tipo) => {
-        if ((tipo === 'suma') && (contador < stock)) {
-            setContador(contador + 1);
-        }else if ((tipo === 'resta') && (contador > 0)) {
-            setContador(contador - 1);        
+        if ((tipo === 'suma') && (cantidad < stock)) {
+            setCantidad(cantidad + 1);
+        }else if ((tipo === 'resta') && (cantidad > 0)) {
+            setCantidad(cantidad - 1);        
         }
     }
 
     const AddToCart = () => {
-        if (contador > 0) {
-            OnAdd(contador);
+        if (cantidad > 0) {
+            OnAdd(cantidad);
         }
     }
 
@@ -28,7 +28,7 @@ const ItemCount= ({stock, initial, OnAdd}) => {
         <div className="cardCantidadProducto">
                 <div className="cantidadCompra">
                     <button onClick={() => click('resta')} className="botonRemove"><RemoveOutlinedIcon/></button>
-                    <strong className="numeroCantidadCompra">{contador}</strong>
+                    <strong className="numeroCantidadCompra">{cantidad}</strong>
                     <button onClick={() => click('suma')} className="botonAdd"><AddOutlinedIcon/></button>
                 </div>
                 <button onClick={() => AddToCart()} className="botonAddCarrito"><AddShoppingCartIcon/>Agregar al carrito</button>

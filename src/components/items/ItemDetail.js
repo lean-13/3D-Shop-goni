@@ -1,5 +1,5 @@
 // react
-import React from 'react';
+import React, { useState }  from 'react';
 // button
 import ButtonVolver from '../buttons/ButtonVolver';
 // item count
@@ -9,14 +9,21 @@ import '../../scss/items/ItemDetail.scss'
 
 const initial = 1;
 
-
-const OnAdd = (contador) => {
-    alert('stock: ' + contador)
-    console.log(contador)
-}
-
 const ItemDetail = ({ProductDetail}) => {
-    const {nombre, categoria, img, alt,descripcion, precio, stock} = ProductDetail;
+    const {nombre, categoria, img, alt,descripcion, precio, stock, id} = ProductDetail;
+
+    const [cantidad, setCantidad] = useState(initial);
+
+    const AddCart = (cantidad) => {
+        const ItemToAdd = {
+            id,
+            nombre,
+            precio,
+            cantidad,
+            img
+        }
+        console.log(ItemToAdd)
+    }
 
     return (
         <div className="detalleProducto">
@@ -34,8 +41,9 @@ const ItemDetail = ({ProductDetail}) => {
                     <p className='descripcionProducto'>Descripcion: {descripcion}</p>
                     <div>
                         <ItemCount
-                            initial = {initial}
-                            OnAdd = {OnAdd}
+                            OnAdd = {AddCart}
+                            cantidad={cantidad}
+                            setCantidad={setCantidad}
                             stock = {stock}
                             />
                     </div>

@@ -20,7 +20,7 @@ const ItemListContainer = ({nombre, categoria, precio, stock}) => {
       .then((res) => {
 
             if (categoriaId) {
-                SetListaProductos( res.filter( (prod) => prod.categoria === categoriaId ) )
+                SetListaProductos( res.filter( (prod) => prod.categoria === categoriaId ))
             }else {
                 SetListaProductos(res)
             }
@@ -30,6 +30,7 @@ const ItemListContainer = ({nombre, categoria, precio, stock}) => {
     }, [categoriaId])
     return (
         <div className='productos'>
+            <h5>Productos</h5>
             <div>
               {Cargando ? <p>Cargando...</p> : ''}
               <ItemList ListaProductos={ListaProductos}/>
