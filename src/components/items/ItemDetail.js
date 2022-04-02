@@ -10,7 +10,7 @@ import '../../scss/items/ItemDetail.scss'
 const initial = 1;
 
 const ItemDetail = ({ProductDetail}) => {
-    const {nombre, categoria, img, alt,descripcion, precio, stock, id} = ProductDetail;
+    const {nombre, img, alt,descripcion, precio, stock, id} = ProductDetail;
 
     const [cantidad, setCantidad] = useState(initial);
 
@@ -37,7 +37,7 @@ const ItemDetail = ({ProductDetail}) => {
                     <p className='nombreProducto'>{nombre}</p>
                     <p className='precioProducto'>Precio: ${precio}</p>
                     <p className='stockProducto'>Stock: {stock}</p>
-                    <p className='categoriaProducto'>Categoria: {categoria}</p>
+                    <p className='dimensionesProducto'>Dimensiones: </p>
                     <p className='descripcionProducto'>Descripcion: {descripcion}</p>
                     <div>
                         <ItemCount
