@@ -26,13 +26,18 @@ function App() {
   const [cart, setCart] = useState([])
 
   const AddItem = (item ) => {
-    setCart([item])
+    setCart([...cart, item])
+  }
+
+  const IsInCart = (id) => {
+    return cart.some(prod => prod.id === id)
   }
 
   return (           
     <CartContext.Provider value={{
       cart,
-      AddItem
+      AddItem,
+      IsInCart
     }}>
       <BrowserRouter className='body'>
         <div className="App-header">

@@ -1,5 +1,6 @@
 // react
 import React, { useContext, useState }  from 'react';
+import { Link } from "react-router-dom";
 // button
 import ButtonVolver from '../buttons/ButtonVolver';
 // item count
@@ -13,7 +14,7 @@ const initial = 1;
 const ItemDetail = ({ProductDetail}) => {
     const {nombre, img, alt,descripcion, precio, stock, id} = ProductDetail;
 
-    const { cart, AddItem} = useContext(CartContext);
+    const { cart, AddItem, IsInCart} = useContext(CartContext);
     console.log(cart)
 
     const [cantidad, setCantidad] = useState(initial);
@@ -43,12 +44,17 @@ const ItemDetail = ({ProductDetail}) => {
                     <p className='dimensionesProducto'>Dimensiones: </p>
                     <p className='descripcionProducto'>Descripcion: {descripcion}</p>
                     <div>
-                        <ItemCount
-                            OnAdd = {AddCart}
-                            cantidad={cantidad}
-                            setCantidad={setCantidad}
-                            stock = {stock}
-                            />
+                        {
+                            !IsInCart(id)
+                                ?<ItemCount
+                                OnAdd = {AddCart}
+                                cantidad={cantidad}
+                                setCantidad={setCantidad}
+                                stock = {stock}
+                                />
+                            : <Link to='/Carrito' className='linkTerminarCompra'>Terminar Compra</Link>
+                        }
+
                     </div>
                 </div>
 
