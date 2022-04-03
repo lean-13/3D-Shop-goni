@@ -1,16 +1,20 @@
 // react
-import React, { useState }  from 'react';
+import React, { useContext, useState }  from 'react';
 // button
 import ButtonVolver from '../buttons/ButtonVolver';
 // item count
 import ItemCount from './ItemCount'
 // scss
 import '../../scss/items/ItemDetail.scss'
+import { CartContext } from '../../context/CartContext';
 
 const initial = 1;
 
 const ItemDetail = ({ProductDetail}) => {
     const {nombre, img, alt,descripcion, precio, stock, id} = ProductDetail;
+
+    const { cart, AddItem} = useContext(CartContext);
+    console.log(cart)
 
     const [cantidad, setCantidad] = useState(initial);
 
@@ -22,7 +26,7 @@ const ItemDetail = ({ProductDetail}) => {
             cantidad,
             img
         }
-        console.log(ItemToAdd)
+        AddItem(ItemToAdd)
     }
 
     return (

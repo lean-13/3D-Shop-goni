@@ -25,9 +25,14 @@ function App() {
 
   const [cart, setCart] = useState([])
 
-  return (
+  const AddItem = (item ) => {
+    setCart([item])
+  }
+
+  return (           
     <CartContext.Provider value={{
-      cart
+      cart,
+      AddItem
     }}>
       <BrowserRouter className='body'>
         <div className="App-header">
