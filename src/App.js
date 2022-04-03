@@ -1,5 +1,5 @@
 // react
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // bootstrap
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
@@ -14,28 +14,35 @@ import ItemListContainer from './components/items/ItemListContainer'
 import ItemDetailContainer from './components/items/ItemDetailContainer'
 // carrito
 import Carrito from './components/carrito/Carrito'
-
+// cart context
+import { CartContext } from './context/CartContext';
 
 
 
 const IVA = 1.21;
 
 function App() {
-  return (
-    <BrowserRouter className='body'>
-      <div className="App-header">
-        <Navbar/>
-      </div>
-      <Routes>
-        <Route path="/" element={ <ItemListContainer/> } /> 
-        <Route path="/categoria/:categoriaId" element={ <ItemListContainer/> } /> 
-        <Route path="/detail/:itemId" element={ <ItemDetailContainer/> } />
-        <Route path="/carrito" element={ <Carrito/> } /> 
-        {/* error 404 */}
-        <Route path="*" element={ <h1>Error 404</h1> } /> 
-      </Routes>
-    </BrowserRouter>
 
+  const [cart, setCart] = useState([])
+
+  return (
+    <CartContext.Provider value={{
+      cart
+    }}>
+      <BrowserRouter className='body'>
+        <div className="App-header">
+          <Navbar/>
+        </div>
+        <Routes>
+          <Route path="/" element={ <ItemListContainer/> } /> 
+          <Route path="/categoria/:categoriaId" element={ <ItemListContainer/> } /> 
+          <Route path="/detail/:itemId" element={ <ItemDetailContainer/> } />
+          <Route path="/carrito" element={ <Carrito/> } /> 
+          {/* error 404 */}
+          <Route path="*" element={ <h1>Error 404</h1> } /> 
+        </Routes>
+      </BrowserRouter>
+    </CartContext.Provider>
   );
 }
 

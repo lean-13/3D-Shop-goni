@@ -2,17 +2,17 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 // sass
-import '../../scss/items/ItemListContainer.scss'
+import '../../scss/items/ItemListContainer.scss';
 import ItemList from './ItemList';
 // item
-import { GetProducts } from './FakeApi'
+import { GetProducts } from './FakeApi';
 
 const ItemListContainer = ({nombre, categoria, precio, stock}) => {
 
     const [ListaProductos , SetListaProductos] = useState([]);
     const [Cargando, SetCargando] = useState([]);
 
-    const {categoriaId} = useParams()
+    const {categoriaId} = useParams();
 
     useEffect(() => {
       SetCargando(true);
@@ -20,9 +20,9 @@ const ItemListContainer = ({nombre, categoria, precio, stock}) => {
       .then((res) => {
 
             if (categoriaId) {
-                SetListaProductos( res.filter( (prod) => prod.categoria === categoriaId ))
+                SetListaProductos( res.filter( (prod) => prod.categoria === categoriaId ));
             }else {
-                SetListaProductos(res)
+                SetListaProductos(res);
             }
       })
       .catch((error) => console.log(error))
