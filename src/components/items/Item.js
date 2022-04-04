@@ -8,7 +8,7 @@ import '../../scss/items/item.scss'
 const Item = ({producto}) => {
     const {nombre, categoria, img, alt, precio, id} = producto;
     return (
-        <Card classname="cardProducto" style={{ width: '15rem' }}>
+        <Card className="cardProducto" style={{ width: '15rem' }}>
             <Card.Img src={img} alt={alt} />
             <Card.Body>
                 <Card.Title className='textScss'>{nombre}</Card.Title>

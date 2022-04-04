@@ -33,27 +33,13 @@
     color: $color6;
 }
 .navBarSectionItems {
-
+    margin-top: 10px;
     div {
-        font-size: 20px;
-        padding-top: 5px;
-        color: $color6;
+        font-size: 18px;
+        font-family: $font2;
     }
+    
     span {
         color: $color4;
-        margin-left: 2%;
     }
-}
-// icono carrito
-.divIconoCarrito {
-    // modificacion
-    border-radius: 5px;
-    // color
-    background-color: $color6;
-}
-.iconoCarrito {
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: -8px;
-    color: $color7;
 }

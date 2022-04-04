@@ -33,11 +33,16 @@ function App() {
     return cart.some(prod => prod.id === id)
   }
 
+  const CartCantidad = () => {
+    return cart.length
+  }
+
   return (           
     <CartContext.Provider value={{
       cart,
       AddItem,
-      IsInCart
+      IsInCart,
+      CartCantidad
     }}>
       <BrowserRouter className='body'>
         <div className="App-header">

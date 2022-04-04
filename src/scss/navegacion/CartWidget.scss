@@ -1,0 +1,27 @@
+// variables
+@import "../variables";
+
+// icono carrito
+.divIconoCarrito {
+    // modificacion
+    border-radius: 5px;
+    // color
+    background-color: $color6;
+
+    strong {
+        // modificacion
+        position: relative;
+        font-size: 15px;
+        // size
+        left: -2px;
+        top: 5px;
+        // color
+        color:$color7;
+    }
+}
+.iconoCarrito {
+    // size
+    margin: 5px 5px 5px 5px;
+    // color
+    color: $color7;
+}
