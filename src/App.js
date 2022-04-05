@@ -1,5 +1,5 @@
 // react
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // bootstrap
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
@@ -15,35 +15,14 @@ import ItemDetailContainer from './components/items/ItemDetailContainer'
 // carrito
 import Carrito from './components/carrito/Carrito'
 // cart context
-import { CartContext } from './context/CartContext';
+import { CartProvider} from './context/CartContext';
 
-
-
-const IVA = 1.21;
 
 function App() {
 
-  const [cart, setCart] = useState([])
-
-  const AddItem = (item ) => {
-    setCart([...cart, item])
-  }
-
-  const IsInCart = (id) => {
-    return cart.some(prod => prod.id === id)
-  }
-
-  const CartCantidad = () => {
-    return cart.reduce((acc, prod) => acc += prod.cantidad, 0)
-  }
-
   return (           
-    <CartContext.Provider value={{
-      cart,
-      AddItem,
-      IsInCart,
-      CartCantidad
-    }}>
+
+    <CartProvider>
       <BrowserRouter className='body'>
         <div className="App-header">
           <Navbar/>
@@ -57,7 +36,7 @@ function App() {
           <Route path="*" element={ <h1>Error 404</h1> } /> 
         </Routes>
       </BrowserRouter>
-    </CartContext.Provider>
+    </CartProvider>
   );
 }
 
