@@ -40,7 +40,13 @@
         color: $color1;
     }
 }
-
+// control carrito
+.seccionControlCarrito {
+    display: flex;
+    justify-content: space-between;
+    // size
+    width: 65rem;
+}
 // botones
 .botonesBorradoCompra {
     // modificacion

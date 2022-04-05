@@ -10,7 +10,7 @@ import { CartContext } from '../../context/CartContext';
 
 function Carrito() {
 
-    const { cart } = useContext(CartContext)
+    const { cart, CartTotal } = useContext(CartContext)
     console.log(cart)
 
     return (
@@ -21,7 +21,7 @@ function Carrito() {
             <div className='carritoProductos'>
                 {
                     cart.map((item) => (
-                        <div className='itemProductoCarrito'>
+                        <div className='itemProductoCarrito' key={item.id }>
                             <div className='imgCarrito'>
                                 <img  src={item.img} alt={item.alt} />
                             </div>
@@ -37,9 +37,14 @@ function Carrito() {
                     ))
                 }
             </div>
-            <div className='botonesBorradoCompra'>
-                <button className='botonReset'>Borrar Carrito</button>
-                <button className='botonShop'>Comprar Carrito</button>
+            <div className='seccionControlCarrito'>
+                <div>
+                    <h3>Precio Total: ${CartTotal()}</h3>
+                </div>
+                <div className='botonesBorradoCompra'>
+                    <button className='botonReset'>Borrar Carrito</button>
+                    <button className='botonShop'>Comprar Carrito</button>
+                </div>
             </div>
         </div>
 
