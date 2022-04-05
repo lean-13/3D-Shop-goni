@@ -12,3 +12,76 @@
 .iconoCarrito {
     font-size: 15px;
 }
+.carritoProductos {
+    padding-left: 2rem;
+}
+// productos
+.itemProductoCarrito {
+    // modificacion
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 30%);
+    grid-gap: 10px;
+    border-radius: 5px;
+    // size
+    width: 80%;
+    align-items: center;
+    margin-bottom: 10px;
+    // color
+    background-color: $color7;
+}
+.imgCarrito img {
+    // modificacion
+    border-radius: 5px;
+    // size
+    width: 10rem;
+}
+.productoCarritoInformacion {
+    p {
+        color: $color1;
+    }
+}
+
+// botones
+.botonesBorradoCompra {
+    // modificacion
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // size
+    width: 16rem;
+    margin-left: 50%;
+}
+.botonReset {
+    // modificacion
+    border: none;
+    border-radius: 5px;
+    // size
+    width: 120px;
+    // color
+    background-color: $color9;
+    color: $color7;
+    box-shadow: 1px 1px 0px 0px;
+}
+.botonReset:hover {
+    // color
+    box-shadow: 2px 3px 0px 0px;
+    transition: 0.7s;
+}
+
+// boton compra
+.botonShop {
+    // modificacion
+    border: none;
+    border-radius: 5px;
+    // size
+    width: 120px;
+    // color
+    background-color: $color10;
+    color: $color7;
+    box-shadow: 1px 1px 0px 0px;
+}
+.botonShop:hover {
+    // color
+    box-shadow: 2px 3px 0px 0px;
+    transition: 0.7s;
+}
