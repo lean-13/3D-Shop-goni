@@ -27,7 +27,7 @@ function Carrito() {
                             </div>
                             <div className='productoCarritoInformacion'>
                                 <p>{item.nombre}</p>
-                                <p>Precio: ${item.precio}</p>
+                                <p>Precio: ${item.precio * item.cantidad}</p>
                                 <p>Cantidad: {item.cantidad}</p>
                             </div>
                             <div className='CarritoBotonDelete'>
