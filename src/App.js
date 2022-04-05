@@ -34,7 +34,7 @@ function App() {
   }
 
   const CartCantidad = () => {
-    return cart.length
+    return cart.reduce((acc, prod) => acc += prod.cantidad, 0)
   }
 
   return (           
