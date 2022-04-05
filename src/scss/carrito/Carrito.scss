@@ -48,6 +48,27 @@
     width: 65rem;
 }
 // botones
+// boton remove
+.botonCartRemove {
+    // modificacion
+    border: none;
+    border-radius: 5px;
+    background-color: $color6;
+    // size
+    padding: 0px 2px 2px 2px;
+    margin-left: 80%;
+}
+// icono
+.iconoCartRemove {
+    // color
+    color: $color7;
+}
+.iconoCartRemove:hover {
+    // color
+    color: $color1;
+    transition: 0.7s;
+}
+// otros
 .botonesBorradoCompra {
     // modificacion
     display: flex;
@@ -57,6 +78,7 @@
     width: 16rem;
     margin-left: 50%;
 }
+// boton reset
 .botonReset {
     // modificacion
     border: none;

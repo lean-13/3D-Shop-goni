@@ -1,16 +1,16 @@
 import React, { useContext } from 'react';
 // scss
 import '../../scss/carrito/Carrito.scss'
-// boton
-import BotonVolver from '../buttons/ButtonVolver'
 // iconos
 // carrito
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import { CartContext } from '../../context/CartContext';
+// remove
+import RemoveShoppingCartIcon from '@material-ui/icons/RemoveShoppingCart';
 
 function Carrito() {
 
-    const { cart, CartTotal, VaciarCarrito } = useContext(CartContext)
+    const { cart, CartTotal, VaciarCarrito, RemoveItem } = useContext(CartContext)
     console.log(cart)
 
     return (
@@ -31,7 +31,7 @@ function Carrito() {
                                 <p>Cantidad: {item.cantidad}</p>
                             </div>
                             <div className='CarritoBotonDelete'>
-                                <BotonVolver/>
+                                <button onClick={() => RemoveItem(item.id)} className='botonCartRemove'><RemoveShoppingCartIcon className='iconoCartRemove'/></button>
                             </div>
                         </div>
                     ))
