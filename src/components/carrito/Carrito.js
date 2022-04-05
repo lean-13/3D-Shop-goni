@@ -10,7 +10,7 @@ import { CartContext } from '../../context/CartContext';
 
 function Carrito() {
 
-    const { cart, CartTotal } = useContext(CartContext)
+    const { cart, CartTotal, VaciarCarrito } = useContext(CartContext)
     console.log(cart)
 
     return (
@@ -42,7 +42,7 @@ function Carrito() {
                     <h3>Precio Total: ${CartTotal()}</h3>
                 </div>
                 <div className='botonesBorradoCompra'>
-                    <button className='botonReset'>Borrar Carrito</button>
+                    <button onClick={VaciarCarrito} className='botonReset'>Borrar Carrito</button>
                     <button className='botonShop'>Comprar Carrito</button>
                 </div>
             </div>
