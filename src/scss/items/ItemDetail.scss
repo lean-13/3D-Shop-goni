@@ -38,22 +38,3 @@
 .descripcionProducto {
     width: 40rem;
 }
-
-// boton terminar compra
-.linkTerminarCompra {
-    // modificacion
-    text-decoration: none;
-    border-radius: 5px;
-    // size
-    padding: 5px 5px 5px 5px;
-    // color
-    background-color: $color10;
-    color: $color7;
-    box-shadow: 1px 1px 0px 0px;
-}
-.linkTerminarCompra:hover {
-    // color
-    color: $color7;
-    box-shadow: 2px 3px 0px 0px;
-    transition: 0.7s;
-}

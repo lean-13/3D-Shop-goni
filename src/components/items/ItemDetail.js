@@ -1,13 +1,14 @@
 // react
 import React, { useContext, useState }  from 'react';
-import { Link } from "react-router-dom";
+// scss
+import '../../scss/items/ItemDetail.scss'
+import { CartContext } from '../../context/CartContext';
 // button
 import ButtonVolver from '../buttons/ButtonVolver';
 // item count
 import ItemCount from './ItemCount'
-// scss
-import '../../scss/items/ItemDetail.scss'
-import { CartContext } from '../../context/CartContext';
+// item count edit
+import ItemCountEdit from './ItemCountEdit'
 
 const initial = 1;
 
@@ -52,7 +53,7 @@ const ItemDetail = ({ProductDetail}) => {
                                 setCantidad={setCantidad}
                                 stock = {stock}
                                 />
-                            : <Link to='/Carrito' className='linkTerminarCompra'>Terminar Compra</Link>
+                            : <ItemCountEdit/>
                         }
 
                     </div>

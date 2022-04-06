@@ -1,0 +1,108 @@
+// variables
+@import "../variables.scss";
+
+.cardCantidadProducto {
+    // modificacion
+    text-align: center;
+    // size
+    width: 180px;
+    height: auto;
+}
+.cantidadCompra {
+    // modificacion
+    z-index: 3;
+    position: relative;
+    border: 1px solid $color7;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 30% 33% 30%;
+    align-items: center;
+    // color
+    background-color: $color1;
+}
+.numeroCantidadCompra {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.botonEditCantidad {
+    // modificacion
+    z-index: 3;
+    position: relative;
+    border: 1px solid $color7;
+    border-radius: 5px;
+    font-family: $font2;
+    // size
+    width: 180px;
+    // color
+    background-color: $color1;
+    color: $color7;
+}
+.botonEditCantidad:hover {
+    // color
+    color: $color6;
+    text-shadow: 1px 0.5px 0px $color3;
+    transition: 0.7s;
+    .iconoEdit {
+        color: $color6;
+        filter: drop-shadow(1px 1.5px $color3);
+        transition: 0.7s;
+    }
+}
+// icono edit
+.iconoEdit {
+    // modificacion
+    position: relative;
+    top: -2px;
+    // size
+    font-size: 20px;
+    // color
+    color: $color7;
+    filter: drop-shadow(1px 1.5px $color6);
+}
+.stockProducto {
+    // modificacion
+    position: relative;
+    font-size: 12px;
+    // size
+    top: -3px;
+    left: 3px;
+    width: 174px;
+    // color
+    color: $color1;
+}
+
+// boton terminar compra
+.linkTerminarCompra {
+    // modificacion
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: $font2;
+    // size
+    padding: 5px 5px 5px 5px;
+    // color
+    background-color: $color10;
+    color: $color7;
+    box-shadow: 1px 1px 0px 0px;
+}
+.linkTerminarCompra:hover {
+    // color
+    color: $color7;
+    box-shadow: 2px 3px 0px 0px;
+    transition: 0.7s;
+
+    .iconoComprar {
+        // color
+        filter: drop-shadow(1px 1.5px $color7);
+        color: $color6;
+        transition: 0.7s;
+    }
+}
+.iconoComprar {
+    // modificacion
+    // size
+    font-size: 20px;
+    // color
+    color: $color7;
+    filter: drop-shadow(1px 1.5px $color6);
+}
+
