@@ -32,7 +32,7 @@ const ItemDetail = ({ProductDetail}) => {
     }
 
     return (
-        <div className="detalleProducto">
+        <div className="detalleProducto" key={id}>
             <h2 className='tituloScss'>Detalle de producto</h2>
             <ButtonVolver/>
             <div className='detalleProductoInfo'>

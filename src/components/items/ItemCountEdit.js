@@ -9,13 +9,12 @@ import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 
 const ItemCountEdit= () => {
 
-
     return (
         <div className="cardCantidadProducto">
                 <div className='cantidadCompraEdit'>
                     <button className='botonEditCantidad'><EditIcon 
                     className='iconoEdit'
-                    />Editar cantidad</button>
+                    />Quitar de carrito</button>
                 </div>
             <p className='stockProducto subrayadoText'>Cantidad: </p>
             <Link to='/Carrito' className='linkTerminarCompra'><ShoppingCartOutlinedIcon 
