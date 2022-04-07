@@ -113,3 +113,42 @@
     box-shadow: 2px 3px 0px 0px;
     transition: 0.7s;
 }
+
+// carrito vacio
+.divCarritoVacio {
+    // modificacion
+    display: flex;
+    align-items: baseline;
+    justify-content: left;
+    // size
+
+}
+.mensaje {
+    // modificacion
+    text-align: center;
+    font-family: $font2;
+    // size
+    width: 250px;
+    // color
+    color: $color7;
+    margin-right: 20px;
+}
+// boton
+.botonVolverInicio {
+    // modificacion
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    // size
+    padding: 2px 5px 4px 5px;
+    // color
+    background-color: $color6;
+    color: $color7;
+    box-shadow: 2px 2px 2px 0px $color7;
+}
+.botonVolverInicio:hover {
+    // color
+    color: $color1;
+    box-shadow: 2px 2px 8px 0px $color7;
+    transition: 0.7s;
+}

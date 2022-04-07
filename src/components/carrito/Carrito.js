@@ -21,9 +21,9 @@ function Carrito() {
                
             {   
                 cart.length === 0 ?
-                <div>
-                    <p>Su carrito se encuentra vacio</p>
-                    <Link to='/' >Volver a inicio</Link>
+                <div className='divCarritoVacio'>
+                    <p className='mensaje subrayadoText'>Su carrito se encuentra vacio</p>
+                    <Link to='/' className='botonVolverInicio'>Volver a inicio</Link>
                 </div>
                 :
                 <>
