@@ -33,6 +33,7 @@ const ItemDetail = ({ProductDetail}) => {
 
     return (
         <div className="detalleProducto" key={id}>
+            { stock === 0 && <p>Sin stock, si desea puede encargar este producto</p>}
             <h2 className='tituloScss'>Detalle de producto</h2>
             <ButtonVolver/>
             <div className='detalleProductoInfo'>

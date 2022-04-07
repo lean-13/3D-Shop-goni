@@ -45,7 +45,7 @@ const Productos = [
         categoria: "Organizadores",
         descripcion: "Perfecta para no perder tus cables",
         precio: 500,
-        stock: 2,
+        stock: 0,
         img: require("../../img/productos/5.jpg"),
         alt: "img organizador"
       }
