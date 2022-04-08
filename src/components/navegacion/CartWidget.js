@@ -15,7 +15,7 @@ function Iconshopcart() {
             fontSize="small" 
             className='iconoCarrito'
             />
-            <strong>{CartCantidad()}</strong>
+            <strong>{CartCantidad() || ''}</strong>
         </div>
 
     );
