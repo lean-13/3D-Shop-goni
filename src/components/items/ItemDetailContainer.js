@@ -1,6 +1,8 @@
 // react
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+// scss
+import '../../scss/items/ItemDetailContainer.scss'
 // item
 import { GetProducts } from './FakeApi'
 // item detail
@@ -24,7 +26,7 @@ const ItemDetailContainer = () => {
     return (
         
         <div>
-            {Cargando ? <p>Cargando...</p> : <ItemDetail ProductDetail = {ProductDetail} />}
+            {Cargando ? <p className='cargandoDetail'>Cargando...</p> : <ItemDetail ProductDetail = {ProductDetail} />}
         </div>
     )
 }
