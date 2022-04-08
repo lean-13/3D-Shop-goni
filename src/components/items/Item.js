@@ -14,7 +14,7 @@ const Item = ({producto}) => {
                 <Card.Title className='textScss'>{nombre}</Card.Title>
                 <Card.Text>Precio: ${precio}</Card.Text>
                 <Card.Text>Categoria: {categoria}</Card.Text>
-                {stock === 0 && <Card.Text style={{color:'orange'}}>Disponible solo para encargo</Card.Text> }
+                {stock === 0 && <Card.Text style={{color:'red'}}>Disponible solo para encargo</Card.Text> }
                 {stock >= 1 && <Card.Text style={{color:'green'}}>Disponible</Card.Text> }
                 <Link to={`/detail/${id}`}><Button className="botonVerMas">Ver mas</Button></Link>
             </Card.Body>

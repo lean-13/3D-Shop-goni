@@ -9,6 +9,8 @@ import ButtonVolver from '../buttons/ButtonVolver';
 import ItemCount from './ItemCount'
 // item count edit
 import ItemCountEdit from './ItemCountEdit'
+// icono
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 
 const initial = 1;
 
@@ -33,7 +35,6 @@ const ItemDetail = ({ProductDetail}) => {
 
     return (
         <div className="detalleProducto" key={id}>
-            { stock === 0 && <p>Sin stock, si desea puede encargar este producto</p>}
             <h2 className='tituloScss'>Detalle de producto</h2>
             <ButtonVolver/>
             <div className='detalleProductoInfo'>
@@ -47,16 +48,24 @@ const ItemDetail = ({ProductDetail}) => {
                     <p className='descripcionProducto'>Descripcion: {descripcion}</p>
                     <div>
                         {
-                            !IsInCart(id)
-                                ?<ItemCount
-                                OnAdd = {AddCart}
-                                cantidad={cantidad}
-                                setCantidad={setCantidad}
-                                stock = {stock}
-                                />
-                            : <ItemCountEdit/>
+                        stock > 0 ?
+                            <>
+                            {
+                                !IsInCart(id)
+                                    ?<ItemCount
+                                    OnAdd = {AddCart}
+                                    cantidad={cantidad}
+                                    setCantidad={setCantidad}
+                                    stock = {stock}
+                                    />
+                                : <ItemCountEdit/>
+                            }
+                            </>
+                             : 
+                
+                            <button className="botonAddCarrito"><AddShoppingCartIcon className='iconoAddCart'/>Encargar Producto</button>
+                            
                         }
-
                     </div>
                 </div>
 
