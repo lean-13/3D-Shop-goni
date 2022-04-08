@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import "../node_modules/bootstrap/dist/js/bootstrap";
 // scss
-import "./scss/body.scss"
+import "./scss/App.scss"
 // navBar
 import Navbar from './components/navegacion/Navbar'
 // item list
@@ -20,23 +20,25 @@ import { CartProvider} from './context/CartContext';
 
 function App() {
 
-  return (           
+  return (   
+    <div className='background'>
+      <CartProvider>
+        <BrowserRouter>
+          <div className="App-header">
+            <Navbar/>
+          </div>
+          <Routes>
+            <Route path="/" element={ <ItemListContainer/> } /> 
+            <Route path="/categoria/:categoriaId" element={ <ItemListContainer/> } /> 
+            <Route path="/detail/:itemId" element={ <ItemDetailContainer/> } />
+            <Route path="/carrito" element={ <Carrito/> } /> 
+            {/* error 404 */}
+            <Route path="*" element={ <h1>Error 404</h1> } /> 
+          </Routes>
+        </BrowserRouter>
+      </CartProvider>
+    </div>
 
-    <CartProvider>
-      <BrowserRouter className='body'>
-        <div className="App-header">
-          <Navbar/>
-        </div>
-        <Routes>
-          <Route path="/" element={ <ItemListContainer/> } /> 
-          <Route path="/categoria/:categoriaId" element={ <ItemListContainer/> } /> 
-          <Route path="/detail/:itemId" element={ <ItemDetailContainer/> } />
-          <Route path="/carrito" element={ <Carrito/> } /> 
-          {/* error 404 */}
-          <Route path="*" element={ <h1>Error 404</h1> } /> 
-        </Routes>
-      </BrowserRouter>
-    </CartProvider>
   );
 }
 

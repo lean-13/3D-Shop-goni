@@ -4,6 +4,12 @@
 .productos {
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 20px;
     margin-left: 2%;
+
+    h5 {
+        color: $color6;
+        margin-top: 10px;
+    }
 }
