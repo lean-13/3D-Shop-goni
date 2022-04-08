@@ -30,7 +30,7 @@ const ItemDetail = ({ProductDetail}) => {
             cantidad,
             img
         }
-        AddItem(ItemToAdd)
+        cantidad > 0 && AddItem(ItemToAdd)
     }
 
     return (
