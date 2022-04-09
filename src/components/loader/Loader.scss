@@ -1,0 +1,20 @@
+// variables
+@import "../../scss/variables";
+
+
+.loader {
+    // size
+    width: 100%;
+    height: 100vh;
+    // color
+    color: $color6;
+    background: linear-gradient(45deg,$color7,$color7,$color6,$color7);
+    background-size: 400% 400%;
+    position: relative;
+    animation: fondoCarga 10s ease-in-out infinite;
+}
+@keyframes fondoCarga{
+    0%{background-position: 0 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0 50%;}
+}

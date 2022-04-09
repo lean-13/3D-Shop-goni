@@ -1,13 +1,12 @@
 // react
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-// scss
-import '../../scss/items/ItemDetailContainer.scss'
 // item
 import { GetProducts } from './FakeApi'
 // item detail
 import ItemDetail from './ItemDetail'
-
+// loader
+import Loader from '../loader/Loader'
 const ItemDetailContainer = () => {
     const [ProductDetail, SetProductDetail] = useState([]);
     const [Cargando, SetCargando] = useState([]);
@@ -26,7 +25,7 @@ const ItemDetailContainer = () => {
     return (
         
         <div>
-            {Cargando ? <p className='cargandoDetail'>Cargando...</p> : <ItemDetail ProductDetail = {ProductDetail} />}
+            {Cargando ? <Loader/> : <ItemDetail ProductDetail = {ProductDetail} />}
         </div>
     )
 }

@@ -6,7 +6,8 @@ import '../../scss/items/ItemListContainer.scss';
 import ItemList from './ItemList';
 // item
 import { GetProducts } from './FakeApi';
-
+// loader
+import Loader from '../loader/Loader'
 const ItemListContainer = ({nombre, categoria, precio, stock}) => {
 
     const [ListaProductos , SetListaProductos] = useState([]);
@@ -32,7 +33,7 @@ const ItemListContainer = ({nombre, categoria, precio, stock}) => {
         <div className='productos'>
             <h5>Productos</h5>
             <div>
-              {Cargando ? <p>Cargando...</p> : ''}
+              {Cargando ? <Loader/> : ''}
               <ItemList ListaProductos={ListaProductos}/>
             </div>
         </div>

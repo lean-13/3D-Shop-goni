@@ -8,8 +8,12 @@
     border-radius: 5px;
     // size
     margin-left: 2%;
-    margin-top: 70px;
-    margin-bottom: 20px;
+    padding-top: 70px;
+    padding-bottom: 118px;
+
+    h2 {
+        color: $color6;
+    }
 }
 // detail img and text
 // left
@@ -32,9 +36,16 @@
     margin-left: 20px;
 }
 // text
+.nombreProducto {
+    color: $color6;
+}
 .precioProducto {
     color: $color10;
 }
+.dimensionesProducto {
+    color: $color11;
+}
 .descripcionProducto {
     width: 40rem;
+    color: $color1;
 }
