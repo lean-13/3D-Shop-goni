@@ -63,7 +63,12 @@ const ItemDetail = ({ProductDetail}) => {
                             </>
                              : 
                 
-                            <button className="botonAddCarrito"><AddShoppingCartIcon className='iconoAddCart'/>Encargar Producto</button>
+                            <button className={`botonEncargarCarrito ${stock === 0 ? 'botonEncargarCarritoColor' : 'botonEncargarCarritoColorBlock'}`}
+                            disabled={stock > 0}
+                            >
+                                <AddShoppingCartIcon className='iconoAddCart'/>
+                                Encargar Producto
+                            </button>
                             
                         }
                     </div>
