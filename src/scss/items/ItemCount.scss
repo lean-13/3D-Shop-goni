@@ -12,17 +12,18 @@
     // modificacion
     z-index: 3;
     position: relative;
-    border: 1px solid $color7;
+    border: 1px solid $color6;
     border-radius: 5px;
     display: grid;
     grid-template-columns: 30% 33% 30%;
     align-items: center;
     // color
-    background-color: $color1;
+    background-color: transparent;
 }
 .numeroCantidadCompra {
     margin-left: 10px;
     margin-right: 10px;
+    color: $color6;
 }
 // botones
 .botonRemove {

@@ -2,8 +2,10 @@
 @import "../variables";
 
 .divCarrito {
-    margin-top: 60px;
+    padding-top: 70px;
     margin-left: 2%;
+    min-height: 41.4rem;
+    color: $color6;
     h1 {
         font-size: 20px;
     }
@@ -22,6 +24,7 @@
     grid-template-columns: repeat(auto-fill, 30%);
     grid-gap: 10px;
     border-radius: 5px;
+    border: 1px solid $color6;
     // size
     width: 80%;
     align-items: center;
@@ -35,10 +38,18 @@
     // size
     width: 10rem;
 }
-.productoCarritoInformacion {
-    p {
-        color: $color1;
-    }
+// text
+.nombreProducto {
+    // color
+    color: $color6;
+}
+.precioProducto {
+    // color
+    color: $color10;
+}
+.cantidadProducto {
+    // color
+    color: $color1;
 }
 // control carrito
 .seccionControlCarrito {

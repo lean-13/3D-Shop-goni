@@ -11,9 +11,9 @@ const Item = ({producto}) => {
         <Card className="cardProducto" style={{ width: '15rem' }}>
             <Card.Img src={img} alt={alt} />
             <Card.Body>
-                <Card.Title className='textScss'>{nombre}</Card.Title>
-                <Card.Text>Precio: ${precio}</Card.Text>
-                <Card.Text>Categoria: {categoria}</Card.Text>
+                <Card.Title className='nombreProducto textScss'>{nombre}</Card.Title>
+                <Card.Text className='precioProducto'>Precio: ${precio}</Card.Text>
+                <Card.Text className='categoriaProducto'>Categoria: {categoria}</Card.Text>
                 {stock === 0 && <Card.Text style={{color:'red'}}>Disponible solo para encargo</Card.Text> }
                 {stock >= 1 && <Card.Text style={{color:'green'}}>Disponible</Card.Text> }
                 <Link to={`/detail/${id}`}><Button className="botonVerMas">Ver mas</Button></Link>

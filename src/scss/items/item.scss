@@ -5,11 +5,23 @@
     // modificacion
     border-radius: 5px;
     border-color: $color6;
+    // color
+    background-color: $color8;
 }
 .cardProducto:hover {
     // modificacion
     box-shadow: 2px 2px 0px 0px $color6;
     transition: 0.7s;
+}
+// text
+.nombreProducto {
+    color: $color6;
+}
+.precioProducto {
+    color: $color9;
+}
+.categoriaProducto {
+    color: $color1;
 }
 // boton
 .botonVerMas {
@@ -17,12 +29,13 @@
     border-radius: 5px;
     border: none;
     // size
-    padding: 4px;
+    padding: 4px; 
     // color
-    background-color: $color6;
+    background-color: $color1;
     color: $color7;
 }
 .botonVerMas:hover {
+    background-color: $color6;
     color: $color1;
     transition: 0.7s;
 }
