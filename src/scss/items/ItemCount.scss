@@ -39,6 +39,17 @@
     background-color: transparent;
     color: $color9;
 }
+.botonRemoveBlock {
+    // modificacion
+    border: none;
+    border-radius: 5px;
+    // size
+    width: 50px;
+    height: auto;
+    // color
+    background-color: transparent;
+    color: $color3;
+}
 .botonAdd {
     // modificacion
     border: none;
@@ -50,6 +61,18 @@
     // color
     background-color: transparent;
     color: $color10;
+}
+.botonAddBlock {
+    // modificacion
+    border: none;
+    border-radius: 5px;
+    // size
+    width: 60px;
+    height: auto;
+    margin-left: 6px;
+    // color
+    background-color: transparent;
+    color: $color3;
 }
 .botonAddCarrito {
     // modificacion

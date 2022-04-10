@@ -27,9 +27,9 @@ const ItemCount= ({stock, OnAdd, cantidad, setCantidad}) => {
     return (
         <div className="cardCantidadProducto">
                 <div className="cantidadCompra">
-                    <button onClick={() => click('resta')} className="botonRemove"><RemoveOutlinedIcon/></button>
+                    <button onClick={() => click('resta')} className={cantidad > 0 ? "botonRemove" : "botonRemoveBlock"}><RemoveOutlinedIcon/></button>
                     <strong className="numeroCantidadCompra">{cantidad}</strong>
-                    <button onClick={() => click('suma')} className="botonAdd"><AddOutlinedIcon/></button>
+                    <button onClick={() => click('suma')} className={cantidad < stock ? "botonAdd" : "botonAddBlock"}><AddOutlinedIcon/></button>
                 </div>
                 <p className='stockProducto subrayadoText'>Stock: {stock}</p>
                 { stock === 0 && <p>Sin stock, si desea puede encargar este producto</p>}
