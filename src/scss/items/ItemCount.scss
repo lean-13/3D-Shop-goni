@@ -37,17 +37,13 @@
     height: auto;
     // color
     background-color: transparent;
+}
+.botonRemoveColor {
+    // color
     color: $color9;
 }
-.botonRemoveBlock {
-    // modificacion
-    border: none;
-    border-radius: 5px;
-    // size
-    width: 50px;
-    height: auto;
+.botonRemoveColorBlock {
     // color
-    background-color: transparent;
     color: $color3;
 }
 .botonAdd {
@@ -60,18 +56,13 @@
     margin-left: 6px;
     // color
     background-color: transparent;
+}
+.botonAddColor {
+    // color
     color: $color10;
 }
-.botonAddBlock {
-    // modificacion
-    border: none;
-    border-radius: 5px;
-    // size
-    width: 60px;
-    height: auto;
-    margin-left: 6px;
+.botonAddColorBlock {
     // color
-    background-color: transparent;
     color: $color3;
 }
 .botonAddCarrito {
