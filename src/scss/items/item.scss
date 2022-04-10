@@ -4,6 +4,12 @@
 .cardProducto {
     // modificacion
     border-radius: 5px;
+    border-color: $color6;
+}
+.cardProducto:hover {
+    // modificacion
+    box-shadow: 2px 2px 0px 0px $color6;
+    transition: 0.7s;
 }
 // boton
 .botonVerMas {

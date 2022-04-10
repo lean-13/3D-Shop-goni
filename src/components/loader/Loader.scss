@@ -8,7 +8,7 @@
     height: 100vh;
     // color
     color: $color6;
-    background: linear-gradient(45deg,$color7,$color7,$color6,$color7);
+    background: radial-gradient(circle, $color7 0%, $color6 11%, $color7 48%, $color7 64%, $color7 100%);
     background-size: 400% 400%;
     position: relative;
     animation: fondoCarga 10s ease-in-out infinite;
