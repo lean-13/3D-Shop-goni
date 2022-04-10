@@ -33,6 +33,11 @@ const ItemDetail = ({ProductDetail}) => {
         cantidad > 0 && AddItem(ItemToAdd)
     }
 
+    const botonEncargarProductoConfig = {
+        className: `botonEncargarCarrito ${stock === 0 ? 'botonEncargarCarritoColor' : 'botonEncargarCarritoColorBlock'}`,
+        disabled: stock > 0
+
+    }
     return (
         <div className="detalleProducto" key={id}>
             <h2 className='tituloScss'>Detalle de producto</h2>
@@ -64,9 +69,7 @@ const ItemDetail = ({ProductDetail}) => {
                             </>
                              : 
                 
-                            <button className={`botonEncargarCarrito ${stock === 0 ? 'botonEncargarCarritoColor' : 'botonEncargarCarritoColorBlock'}`}
-                            disabled={stock > 0}
-                            >
+                            <button {...botonEncargarProductoConfig}>
                                 <AddShoppingCartIcon className='iconoAddCart'/>
                                 Encargar Producto
                             </button>
