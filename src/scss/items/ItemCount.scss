@@ -7,18 +7,20 @@
     // size
     width: 180px;
     height: auto;
+
+    .cantidadCompra {
+        background-color: $color8;
+        border: 1px solid $color6;  
+    }
 }
 .cantidadCompra {
     // modificacion
     z-index: 3;
     position: relative;
-    border: 1px solid $color6;
     border-radius: 5px;
     display: grid;
     grid-template-columns: 30% 33% 30%;
     align-items: center;
-    // color
-    background-color: transparent;
 }
 .numeroCantidadCompra {
     margin-left: 10px;
