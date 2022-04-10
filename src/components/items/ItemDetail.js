@@ -46,6 +46,7 @@ const ItemDetail = ({ProductDetail}) => {
                     <p className='precioProducto'>Precio: ${precio}</p>
                     <p className='dimensionesProducto'>Dimensiones: </p>
                     <p className='descripcionProducto'>Descripcion: {descripcion}</p>
+                    {stock === 0 && <p className='encargoProducto'>Sin stock, solo disponible para encargos</p>}
                     <div>
                         {
                         stock > 0 ?
