@@ -10,12 +10,11 @@ import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 
 const ItemCount= ({stock, OnAdd, cantidad, setCantidad}) => {
     
-    const click = (tipo) => {
-        if ((tipo === 'suma') && (cantidad < stock)) {
-            setCantidad(cantidad + 1);
-        }else if ((tipo === 'resta') && (cantidad > 0)) {
-            setCantidad(cantidad - 1);        
-        }
+    const Sumar = () => {
+        cantidad < stock && setCantidad(cantidad + 1)
+    }
+    const Restar = () => {
+        cantidad > 0 && setCantidad(cantidad - 1)
     }
 
     const AddToCart = () => {
@@ -24,18 +23,24 @@ const ItemCount= ({stock, OnAdd, cantidad, setCantidad}) => {
         }
     }
 
+    const botonRestarConfig = {
+        className: `botonRemove ${cantidad > 0 ? 'botonRemoveColor' : 'botonRemoveColorBlock'}`,
+        onClick: Restar,
+        disabled: cantidad === 0
+    }
+    const botonSumarConfig = {
+        className: `botonAdd ${cantidad < stock ? 'botonAddColor' : 'botonAddColorBlock'}`,
+        onClick: Sumar,
+        disabled: cantidad === stock
+    }
     return (
         <div className="cardCantidadProducto">
                 <div className="cantidadCompra">
-                    <button onClick={() => click('resta')} className={`botonRemove ${cantidad > 0 ? 'botonRemoveColor' : 'botonRemoveColorBlock'}`}
-                    disabled={cantidad === 0}
-                    >
+                    <button {...botonRestarConfig}>
                         <RemoveOutlinedIcon/>
                     </button>
                     <strong className="numeroCantidadCompra">{cantidad}</strong>
-                    <button onClick={() => click('suma')} className={`botonAdd ${cantidad < stock ? 'botonAddColor' : 'botonAddColorBlock'}`}
-                    disabled={cantidad === stock}
-                    >
+                    <button {...botonSumarConfig}>
                         <AddOutlinedIcon/>
                     </button>
                 </div>
