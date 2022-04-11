@@ -8,6 +8,10 @@ import "../node_modules/bootstrap/dist/js/bootstrap";
 import "./scss/App.scss"
 // navBar
 import Navbar from './components/navegacion/Navbar'
+// carousel
+import InicioCarousel from './components/carousel/inicioCarousel/InicioCarousel'
+// footer
+import FooterContacto from './components/navegacion/footer/Footer'
 // item list
 import ItemListContainer from './components/items/ItemListContainer'
 // item detail
@@ -28,13 +32,16 @@ function App() {
             <Navbar/>
           </div>
           <Routes>
-            <Route path="/" element={ <ItemListContainer/> } /> 
+            <Route path="/" element={ <> <InicioCarousel/> <ItemListContainer/> </> } /> 
             <Route path="/categoria/:categoriaId" element={ <ItemListContainer/> } /> 
             <Route path="/detail/:itemId" element={ <ItemDetailContainer/> } />
             <Route path="/carrito" element={ <Carrito/> } /> 
             {/* error 404 */}
             <Route path="*" element={ <h1>Error 404</h1> } /> 
           </Routes>
+          <footer>
+            <FooterContacto/>
+          </footer>
         </BrowserRouter>
       </CartProvider>
     </div>
