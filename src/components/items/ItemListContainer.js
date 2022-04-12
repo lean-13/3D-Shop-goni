@@ -1,11 +1,12 @@
 // react
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+// firebase
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../../fireBase/config';
 // sass
 import '../../scss/items/ItemListContainer.scss';
 import ItemList from './ItemList';
-// item
-import { GetProducts } from './FakeApi';
 // loader
 import Loader from '../loader/Loader'
 const ItemListContainer = ({nombre, categoria, precio, stock}) => {
@@ -17,27 +18,32 @@ const ItemListContainer = ({nombre, categoria, precio, stock}) => {
 
     useEffect(() => {
       SetCargando(true);
-      GetProducts
-      .then((res) => {
 
+      const productoRefencia = collection( db, "productos");
+      getDocs(productoRefencia)
+         .then((res) => {
+            const items = res.docs.map((doc) => doc.data()) 
+            console.log(items)
+            
             if (categoriaId) {
-                SetListaProductos( res.filter( (prod) => prod.categoria === categoriaId ));
+                SetListaProductos( items.filter( (prod) => prod.categoria === categoriaId ));
             }else {
-                SetListaProductos(res);
+                SetListaProductos(items);
             }
-      })
+         })
       .catch((error) => console.log(error))
       .finally(() => SetCargando(false))
     }, [categoriaId])
     return (
-        <div className='productos'>
-            <h5>Productos</h5>
-            <div>
-              {Cargando ? <Loader/> : ''}
-              <ItemList ListaProductos={ListaProductos}/>
+        <div className='divProductos'>
+            <div className='productos'>
+                <h5>Productos</h5>
+                <div>
+                    {Cargando ? <Loader/> : ''}
+                    <ItemList ListaProductos={ListaProductos}/>
+                </div>
             </div>
         </div>
-
     );
 }
 

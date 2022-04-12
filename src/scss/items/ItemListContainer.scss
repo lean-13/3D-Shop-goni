@@ -1,13 +1,17 @@
 // variables
 @import "../variables";
 
+.divProductos {
+    // size
+    min-height: 200px;
+}
 .productos {
     display: flex;
     flex-direction: column;
+    // size
     padding-top: 10px;
     padding-bottom: 20px;
     margin-left: 2%;
-
     h5 {
         color: $color6;
         margin-top: 10px;
