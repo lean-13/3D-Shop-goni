@@ -3,7 +3,7 @@ const Productos = [
         id: 1,
         nombre: "Maceta de venus y afrodita",
         categoria: "Hogar",
-        descripcion: "maceta de las Diosas del amor, la belleza y la fertilidad",
+        descripcion: "Maceta de las Diosas del amor, la belleza y la fertilidad",
         precio: 4000,
         stock: 5,
         img: require("../../img/productos/1.jpg"),
