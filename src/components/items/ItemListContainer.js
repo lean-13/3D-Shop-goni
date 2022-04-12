@@ -22,7 +22,7 @@ const ItemListContainer = ({nombre, categoria, precio, stock}) => {
       const productoRefencia = collection( db, "productos");
       getDocs(productoRefencia)
          .then((res) => {
-            const items = res.docs.map((doc) => doc.data()) 
+            const items = res.docs.map((doc) => ({id: doc.id, ...doc.data()})) 
             console.log(items)
             
             if (categoriaId) {
