@@ -10,7 +10,7 @@ const InicioCarousel = () => {
                 <Carousel.Item className="inicioCarouselItem">
                     <img
                     className="d-block w-100"
-                    src={require("../../../img/carousel/3d-printer-3311587.png")}
+                    src={("../../../../img/carousel/3d-printer-3311587.png")}
                     alt="First slide"
                     />
                     <Carousel.Caption>
@@ -21,7 +21,7 @@ const InicioCarousel = () => {
                 <Carousel.Item className="inicioCarouselItem">
                     <img
                     className="d-block w-100"
-                    src={require("../../../img/carousel/3d-printer-3311587.png")}
+                    src={("../../../../img/carousel/3d-printer-3311587.png")}
                     alt="Second slide"
                     />
                     <Carousel.Caption>
@@ -32,7 +32,7 @@ const InicioCarousel = () => {
                 <Carousel.Item className="inicioCarouselItem">
                     <img
                     className="d-block w-100"
-                    src={require("../../../img/carousel/3d-printer-3311587.png")}
+                    src={("../../../../img/carousel/3d-printer-3311587.png")}
                     alt="Third slide"
                     />
 

@@ -44,7 +44,7 @@ const ItemDetail = ({ProductDetail}) => {
             <ButtonVolver/>
             <div className='detalleProductoInfo'>
                 <div>
-                    <img  src={require("../../img/productos/4.jpg")} alt={alt} />
+                    <img src={img} alt={alt} />
                 </div>
                 <div className='detalleProductotext textScss'>
                     <p className='nombreProducto'>{nombre}</p>
