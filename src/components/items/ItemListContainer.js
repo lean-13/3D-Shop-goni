@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 // firebase
-import { collection, getDocs, query, where } from 'firebase/firestore';
+import { collection, getDocs, query, where, limit } from 'firebase/firestore';
 import { db } from '../../fireBase/config';
 // sass
 import '../../scss/items/ItemListContainer.scss';
@@ -20,10 +20,13 @@ const ItemListContainer = ({nombre, categoria, precio, stock}) => {
       SetCargando(true);
 
       const productoRefencia = collection( db, "productos");
-      const queryFilter = categoriaId ? query(productoRefencia, where('categoria', '==', categoriaId)) : productoRefencia
+      const queryFilter = categoriaId ? 
+        query(productoRefencia, 
+        where('categoria', '==', categoriaId)
+        ) : query(productoRefencia, limit(10))
       getDocs(queryFilter)
          .then((res) => {
-             
+
             const items = res.docs.map((doc) => ({id: doc.id, ...doc.data()})) 
 
             SetListaProductos(items);
