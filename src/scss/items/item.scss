@@ -3,8 +3,13 @@
 
 .cardProducto {
     // modificacion
+    font-family: $font2;
     border-radius: 5px;
     border-color: $color6;
+    // size
+    width: 15rem;
+    height: 450px;
+    font-size: 16px;
     // color
     background-color: $color8;
 }
@@ -15,7 +20,10 @@
 }
 // text
 .nombreProducto {
-    color: $color6;
+    // size
+    font-size: 18px;
+    // color
+    color: $color6;  
 }
 .precioProducto {
     color: $color9;

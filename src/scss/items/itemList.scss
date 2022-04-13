@@ -11,3 +11,29 @@
     margin-right: 2%;
     margin-bottom: 20px;
 }
+
+.simboloMas {
+    // size
+    padding-top: 130px;
+    padding-left: 75px;
+    font-size: 100px;
+    // color
+    color: $color6;
+}
+.botonMas {
+    // modificacion
+    border-radius: 5px;
+    border: none;
+    // size
+    padding: 4px; 
+    margin-top: 100px;
+    margin-left: 65px;
+    // color
+    background-color: $color1;
+    color: $color7;
+}
+.botonMas:hover {
+    background-color: $color6;
+    color: $color1;
+    transition: 0.7s;
+}

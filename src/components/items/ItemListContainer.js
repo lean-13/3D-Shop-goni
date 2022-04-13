@@ -23,7 +23,7 @@ const ItemListContainer = ({nombre, categoria, precio, stock}) => {
       const queryFilter = categoriaId ? 
         query(productoRefencia, 
         where('categoria', '==', categoriaId)
-        ) : query(productoRefencia, limit(10))
+        ) : query(productoRefencia, limit(4))
       getDocs(queryFilter)
          .then((res) => {
 
