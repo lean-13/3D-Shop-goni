@@ -1,7 +1,6 @@
 // react
 import React from 'react';
 // boostrap
-import { Link } from "react-router-dom";
 import { Card, Button } from 'react-bootstrap'
 // item
 import Item from './Item'

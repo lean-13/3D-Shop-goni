@@ -6,9 +6,9 @@ import { CartContext } from '../../context/CartContext';
 // button
 import ButtonVolver from '../buttons/ButtonVolver';
 // item count
-import ItemCount from './ItemCount'
+import ItemCount from './ItemCount';
 // item count edit
-import ItemCountEdit from './ItemCountEdit'
+import ItemCountEdit from './ItemCountEdit';
 // icono
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 
