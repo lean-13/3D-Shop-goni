@@ -6,15 +6,15 @@ import './Checkout.scss'
 
 const Checkout = () => {
 
-    const {cart, cartTotal} = useContext(CartContext);
+    const {cart, CartTotal} = useContext(CartContext);
 
     const Orden = {
         items: cart,
-        total: cartTotal(),
+        total: CartTotal(),
         comprador: {
             nombre: 'lean',
             email: 'leandro@hotmail.com',
-            celular: '234213'
+            celular: 23421
         }
     }
 
