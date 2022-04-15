@@ -93,7 +93,7 @@
     border: none;
     border-radius: 5px;
     // size
-    width: 120px;
+    width: 140px;
     padding: 5px 5px 5px 2px;
     // color
     background-color: $color9;
@@ -105,7 +105,14 @@
     box-shadow: 2px 1px 0px 0px $color9;
     transition: 0.7s;
 }
-
+.iconoDelete {
+    // modificacion
+    position: relative;
+    // size
+    bottom: 2px;
+    // color
+    color: $color7;
+}
 // boton compra
 .botonShop {
     // modificacion
@@ -113,6 +120,7 @@
     text-decoration: none;
     // size
     width: 160px;
+    padding: 5px 5px 5px 2px;
     margin-left: 10px;
     // color
     background-color: $color10;
@@ -125,7 +133,14 @@
     box-shadow: 2px 1px 0px 0px $color10;
     transition: 0.7s;
 }
-
+.iconoShop {
+    // modificacion
+    position: relative;
+    // size
+    bottom: 1.5px;
+    // color
+    color: $color7;
+}
 // carrito vacio
 .divCarritoVacio {
     // modificacion

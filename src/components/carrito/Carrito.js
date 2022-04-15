@@ -2,13 +2,16 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 // scss
 import "../../scss/carrito/Carrito.scss";
+// cart
+import { CartContext } from "../../context/CartContext";
 // iconos
 // carrito
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
-import { CartContext } from "../../context/CartContext";
+import DeleteIcon from '@material-ui/icons/Delete';
 // remove
 import RemoveShoppingCartIcon from "@material-ui/icons/RemoveShoppingCart";
-
+// flecha
+import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 function Carrito() {
   const { cart, CartTotal, VaciarCarrito, RemoveItem } =
     useContext(CartContext);
@@ -57,10 +60,11 @@ function Carrito() {
         </div>
         <div className="botonesBorradoCompra">
           <button onClick={VaciarCarrito} className="botonReset">
+            <DeleteIcon className="iconoDelete"/>
             Borrar Carrito
           </button>
           <Link to="/checkout" className="botonShop">
-            <ShoppingCartOutlinedIcon className="iconoCarrito"/>
+            <DoubleArrowIcon className="iconoShop"/>
             Comprar Carrito
           </Link>
         </div>
