@@ -59,7 +59,10 @@ function Carrito() {
           <button onClick={VaciarCarrito} className="botonReset">
             Borrar Carrito
           </button>
-          <button className="botonShop">Comprar Carrito</button>
+          <Link to="/checkout" className="botonShop">
+            <ShoppingCartOutlinedIcon className="iconoCarrito"/>
+            Comprar Carrito
+          </Link>
         </div>
       </div>
     </div>

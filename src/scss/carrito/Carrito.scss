@@ -54,11 +54,12 @@
 // control carrito
 .seccionControlCarrito {
     display: flex;
-    justify-content: space-between;
-    // size
-    width: 65rem;
+    margin-left: 2.5%;
 }
 // botones
+.botonesBorradoCompra {
+    margin-left: 26rem;
+}
 // boton remove
 .botonCartRemove {
     // modificacion
@@ -76,7 +77,7 @@
 }
 .iconoCartRemove:hover {
     // color
-    color: $color1;
+    color: $color9;
     transition: 0.7s;
 }
 // otros
@@ -85,9 +86,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // size
-    width: 16rem;
-    margin-left: 50%;
 }
 // boton reset
 .botonReset {
@@ -96,6 +94,7 @@
     border-radius: 5px;
     // size
     width: 120px;
+    padding: 5px 5px 5px 2px;
     // color
     background-color: $color9;
     color: $color7;
@@ -103,17 +102,18 @@
 }
 .botonReset:hover {
     // color
-    box-shadow: 2px 3px 0px 0px;
+    box-shadow: 2px 1px 0px 0px $color9;
     transition: 0.7s;
 }
 
 // boton compra
 .botonShop {
     // modificacion
-    border: none;
     border-radius: 5px;
+    text-decoration: none;
     // size
-    width: 120px;
+    width: 160px;
+    margin-left: 10px;
     // color
     background-color: $color10;
     color: $color7;
@@ -121,7 +121,8 @@
 }
 .botonShop:hover {
     // color
-    box-shadow: 2px 3px 0px 0px;
+    color: $color7;
+    box-shadow: 2px 1px 0px 0px $color10;
     transition: 0.7s;
 }
 
