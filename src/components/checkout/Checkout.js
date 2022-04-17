@@ -1,5 +1,5 @@
 // react
-import {useContext} from 'react'
+import React, { useContext, useState } from 'react';
 import {CartContext} from '../../context/CartContext'
 // scss
 import './Checkout.scss'
@@ -7,7 +7,11 @@ import './Checkout.scss'
 const Checkout = () => {
 
     const {cart, CartTotal} = useContext(CartContext);
+    const [nombre, setNombre] = useState('');
 
+    const OnChangeNombre = (e) => {
+        setNombre(e.target.value)
+    }
     const Submit = (e) => {
         e.preventDefault()
 
@@ -15,7 +19,7 @@ const Checkout = () => {
             items: cart,
             total: CartTotal(),
             comprador: {
-                nombre: 'lean',
+                nombre: nombre,
                 email: 'leandro@hotmail.com',
                 celular: 23421
             }
@@ -34,6 +38,9 @@ const Checkout = () => {
                         <input
                             className='form-control'
                             type={'text'}
+                            placeholder='Nombre completo'
+                            value={nombre}
+                            onChange={OnChangeNombre}
                         />
                     </div>
                     <div className='inputEmail'>
@@ -41,6 +48,7 @@ const Checkout = () => {
                         <input
                             className='form-control'
                             type={'email'}
+                            placeholder='Email'
                         />
                     </div>
                     <div className='inputTel'>
@@ -48,9 +56,10 @@ const Checkout = () => {
                         <input
                             className='form-control'
                             type={'tel'}
+                            placeholder='Telefono'
                         />
                     </div>
-                    <button className='botonEnviar'>Enviar</button>
+                    <button className='botonEnviar' type='submit'>Enviar</button>
                 </form>
             </div>
         </div>
