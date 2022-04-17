@@ -9,3 +9,52 @@
         color: $color6;
     }
 }
+
+// form
+.formCompra {
+    // modificacion
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+// input
+.inputText {
+    // size
+    width: 600px;
+}
+.inputEmail {
+    // size
+    width: 600px;
+}
+.inputTel {
+    // size
+    width: 600px;
+}
+// text
+.formText {
+    // modificacion
+    // size
+    padding-top: 10px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    // color
+    color: $color6;
+}
+
+// boton
+.botonEnviar {
+    // modificacion
+    border-radius: 5px;
+    border: none;
+    // size
+    margin-top: 10px;
+    padding: 0px 5px 0px 5px;
+    // color
+    background-color: $color6;
+    color: $color7;
+}
+.botonEnviar:hover {
+    // color
+    box-shadow: 2px 1px 0px 0px $color6;
+    transition: 0.7s;
+}

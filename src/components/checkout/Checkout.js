@@ -8,35 +8,48 @@ const Checkout = () => {
 
     const {cart, CartTotal} = useContext(CartContext);
 
-    const Orden = {
-        items: cart,
-        total: CartTotal(),
-        comprador: {
-            nombre: 'lean',
-            email: 'leandro@hotmail.com',
-            celular: 23421
+    const Submit = (e) => {
+        e.preventDefault()
+
+        const Orden = {
+            items: cart,
+            total: CartTotal(),
+            comprador: {
+                nombre: 'lean',
+                email: 'leandro@hotmail.com',
+                celular: 23421
+            }
         }
+    
+        console.log(Orden)
+        console.log('submit')
     }
-
-    console.log(Orden)
-
     return (
         <div className='checkout'>
             <h2>Checkout</h2>
-            <div className='formularioCompra'>
-                <form>
-                    <input
-                        className='form-control my-3'
-                        type={'text'}
-                    />
-                    <input
-                        className='form-control my-3'
-                        type={'email'}
-                    />
-                    <input
-                        className='form-control my-3'
-                        type={'tel'}
-                    />
+            <div className='formCompra'>
+                <form onSubmit={Submit}>
+                    <div className='inputText'>
+                        <p className='formText'>Nombre Completo</p>
+                        <input
+                            className='form-control'
+                            type={'text'}
+                        />
+                    </div>
+                    <div className='inputEmail'>
+                        <p className='formText'>Email</p>
+                        <input
+                            className='form-control'
+                            type={'email'}
+                        />
+                    </div>
+                    <div className='inputTel'>
+                        <p className='formText'>Telefono</p>
+                        <input
+                            className='form-control'
+                            type={'tel'}
+                        />
+                    </div>
                     <button className='botonEnviar'>Enviar</button>
                 </form>
             </div>
