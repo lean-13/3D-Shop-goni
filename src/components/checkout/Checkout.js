@@ -23,6 +23,23 @@ const Checkout = () => {
     return (
         <div className='checkout'>
             <h2>Checkout</h2>
+            <div className='formularioCompra'>
+                <form>
+                    <input
+                        className='form-control my-3'
+                        type={'text'}
+                    />
+                    <input
+                        className='form-control my-3'
+                        type={'email'}
+                    />
+                    <input
+                        className='form-control my-3'
+                        type={'tel'}
+                    />
+                    <button className='botonEnviar'>Enviar</button>
+                </form>
+            </div>
         </div>
     )
 }
