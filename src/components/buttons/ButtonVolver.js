@@ -10,7 +10,7 @@ function ButtonVolver() {
     const Navigate = useNavigate();
 
     const handleNavigate = () => {
-        Navigate(-1)
+        Navigate('/')
     }
 
     return (
