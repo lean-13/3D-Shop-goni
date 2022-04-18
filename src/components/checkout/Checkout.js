@@ -45,9 +45,18 @@ const Checkout = () => {
 
             getDoc(docRef)
                 .then((doc) => {
-                    updateDoc(docRef, {
-                        stock: doc.data().stock - item.cantidad
-                    })
+                    if (doc.data().stock >= item.cantidad) {
+                        updateDoc(docRef, {
+                            stock: doc.data().stock - item.cantidad
+                        })
+                    } else {
+                        return (
+                            <div className='confirmacionCompra'>
+                                <h4>Se ha producido un error en su compra!!</h4>
+                                <Link to='/' className='botonVolver'>Volver a inicio</Link>
+                            </div>
+                        )
+                    }
                 })
         })
 
