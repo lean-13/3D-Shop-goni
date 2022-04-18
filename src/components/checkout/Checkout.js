@@ -6,10 +6,11 @@ import { collection, addDoc, Timestamp } from 'firebase/firestore';
 import { db } from '../../fireBase/config';
 // scss
 import './Checkout.scss'
+import { Navigate } from 'react-router-dom';
 
 const Checkout = () => {
 
-    const {cart, CartTotal} = useContext(CartContext);
+    const {cart, CartTotal, VaciarCarrito} = useContext(CartContext);
 
     const [values, setValues] = useState({
         nombre: '',
@@ -40,8 +41,13 @@ const Checkout = () => {
         addDoc(OrdersRef, Orden)
             .then((doc) => {
                 console.log(doc.id )
+                VaciarCarrito();
             })
 
+    }
+
+    if (cart.length === 0) {
+        return <Navigate to='/' />
     }
     return (
         <div className='checkout'>
