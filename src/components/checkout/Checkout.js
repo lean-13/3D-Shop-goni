@@ -1,6 +1,9 @@
 // react
 import React, { useContext, useState } from 'react';
-import {CartContext} from '../../context/CartContext'
+import {CartContext} from '../../context/CartContext';
+// firebase
+import { collection, addDoc, Timestamp } from 'firebase/firestore';
+import { db } from '../../fireBase/config';
 // scss
 import './Checkout.scss'
 
@@ -28,10 +31,17 @@ const Checkout = () => {
         const Orden = {
             items: cart,
             total: CartTotal(),
-            comprador: {...values}
+            comprador: {...values},
+            fyh: Timestamp.fromDate(new Date())
         }
-    
-        console.log(Orden)
+
+        const OrdersRef = collection(db, 'orders')
+        
+        addDoc(OrdersRef, Orden)
+            .then((doc) => {
+                console.log(doc.id )
+            })
+
     }
     return (
         <div className='checkout'>
