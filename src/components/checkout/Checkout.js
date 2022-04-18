@@ -7,11 +7,21 @@ import './Checkout.scss'
 const Checkout = () => {
 
     const {cart, CartTotal} = useContext(CartContext);
+
     const [nombre, setNombre] = useState('');
+    const [email, setEmail] = useState('');
+    const [telefono, setTelefono] = useState('');
 
     const OnChangeNombre = (e) => {
         setNombre(e.target.value)
     }
+    const OnChangeEmail = (e) => {
+        setEmail(e.target.value)
+    }
+    const OnChangeTelefono = (e) => {
+        setTelefono(e.target.value)
+    }
+
     const Submit = (e) => {
         e.preventDefault()
 
@@ -20,8 +30,8 @@ const Checkout = () => {
             total: CartTotal(),
             comprador: {
                 nombre: nombre,
-                email: 'leandro@hotmail.com',
-                celular: 23421
+                email: email,
+                celular: telefono
             }
         }
     
@@ -49,6 +59,8 @@ const Checkout = () => {
                             className='form-control'
                             type={'email'}
                             placeholder='Email'
+                            value={email}
+                            onChange={OnChangeEmail}
                         />
                     </div>
                     <div className='inputTel'>
@@ -57,6 +69,8 @@ const Checkout = () => {
                             className='form-control'
                             type={'tel'}
                             placeholder='Telefono'
+                            value={telefono}
+                            onChange={OnChangeTelefono}
                         />
                     </div>
                     <button className='botonEnviar' type='submit'>Enviar</button>
