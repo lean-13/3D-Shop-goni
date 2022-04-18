@@ -8,19 +8,19 @@ const Checkout = () => {
 
     const {cart, CartTotal} = useContext(CartContext);
 
-    const [nombre, setNombre] = useState('');
-    const [email, setEmail] = useState('');
-    const [telefono, setTelefono] = useState('');
+    const [values, setValues] = useState({
+        nombre: '',
+        email: '',
+        telefono: ''
+    });
+    const InputChange = (e) => {
+        setValues({
+            ...values,
+            [e.target.name] : e.target.value
+        })
+    }
 
-    const OnChangeNombre = (e) => {
-        setNombre(e.target.value)
-    }
-    const OnChangeEmail = (e) => {
-        setEmail(e.target.value)
-    }
-    const OnChangeTelefono = (e) => {
-        setTelefono(e.target.value)
-    }
+
 
     const Submit = (e) => {
         e.preventDefault()
@@ -29,14 +29,13 @@ const Checkout = () => {
             items: cart,
             total: CartTotal(),
             comprador: {
-                nombre: nombre,
-                email: email,
-                celular: telefono
+                nombre: values.nombre,
+                email: values.email,
+                celular: values.telefono
             }
         }
     
         console.log(Orden)
-        console.log('submit')
     }
     return (
         <div className='checkout'>
@@ -49,8 +48,9 @@ const Checkout = () => {
                             className='form-control'
                             type={'text'}
                             placeholder='Nombre completo'
-                            value={nombre}
-                            onChange={OnChangeNombre}
+                            name='nombre'
+                            value={values.nombre}
+                            onChange={InputChange}
                         />
                     </div>
                     <div className='inputEmail'>
@@ -59,8 +59,9 @@ const Checkout = () => {
                             className='form-control'
                             type={'email'}
                             placeholder='Email'
-                            value={email}
-                            onChange={OnChangeEmail}
+                            name='email'
+                            value={values.email}
+                            onChange={InputChange}
                         />
                     </div>
                     <div className='inputTel'>
@@ -69,8 +70,9 @@ const Checkout = () => {
                             className='form-control'
                             type={'tel'}
                             placeholder='Telefono'
-                            value={telefono}
-                            onChange={OnChangeTelefono}
+                            name='telefono'
+                            value={values.telefono}
+                            onChange={InputChange}
                         />
                     </div>
                     <button className='botonEnviar' type='submit'>Enviar</button>
