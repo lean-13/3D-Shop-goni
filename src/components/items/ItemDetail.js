@@ -64,7 +64,10 @@ const ItemDetail = ({ProductDetail}) => {
                                     setCantidad={setCantidad}
                                     stock = {stock}
                                     />
-                                : <ItemCountEdit/>
+                                : <ItemCountEdit 
+                                    cantidad={cantidad}
+                                    id = {id}
+                                    />
                             }
                             </>
                              : 
