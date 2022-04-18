@@ -12,6 +12,8 @@ const Checkout = () => {
 
     const {cart, CartTotal, VaciarCarrito} = useContext(CartContext);
 
+    const [orderId, setOrderId] = useState(null)
+
     const [values, setValues] = useState({
         nombre: '',
         email: '',
@@ -40,10 +42,20 @@ const Checkout = () => {
         
         addDoc(OrdersRef, Orden)
             .then((doc) => {
-                console.log(doc.id )
+                console.log(doc.id)
+                setOrderId(doc.id)
                 VaciarCarrito();
             })
 
+    }
+
+    if (orderId) {
+        return (
+            <div className='confirmacionCompra'>
+                <h4>Tu compra se realizo correctamente!!</h4>
+                <p>Numero de compra: {orderId} </p>
+            </div>
+        )
     }
 
     if (cart.length === 0) {

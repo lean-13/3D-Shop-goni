@@ -58,3 +58,17 @@
     box-shadow: 2px 1px 0px 0px $color6;
     transition: 0.7s;
 }
+
+// confirmacion
+.confirmacionCompra {
+    // size
+    padding-top: 60px;
+    padding-bottom: 26.65rem;
+    padding-left: 2%;
+    h4 {
+        color: $color1;
+    }
+    p {
+        color: $color6;
+    }
+}
