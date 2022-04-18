@@ -28,11 +28,7 @@ const Checkout = () => {
         const Orden = {
             items: cart,
             total: CartTotal(),
-            comprador: {
-                nombre: values.nombre,
-                email: values.email,
-                celular: values.telefono
-            }
+            comprador: {...values}
         }
     
         console.log(Orden)
