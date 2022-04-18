@@ -3,7 +3,7 @@ import React, { useContext, useState } from 'react';
 import { Link } from "react-router-dom";
 import {CartContext} from '../../context/CartContext';
 // firebase
-import { collection, addDoc, Timestamp } from 'firebase/firestore';
+import { collection, addDoc, doc, Timestamp, updateDoc, getDoc } from 'firebase/firestore';
 import { db } from '../../fireBase/config';
 // scss
 import './Checkout.scss'
@@ -40,6 +40,17 @@ const Checkout = () => {
 
         const OrdersRef = collection(db, 'orders')
         
+        cart.forEach((item) => {
+            const docRef = doc(db, 'productos', item.id)
+
+            getDoc(docRef)
+                .then((doc) => {
+                    updateDoc(docRef, {
+                        stock: doc.data().stock - item.cantidad
+                    })
+                })
+        })
+
         addDoc(OrdersRef, Orden)
             .then((doc) => {
                 console.log(doc.id)
@@ -76,6 +87,7 @@ const Checkout = () => {
                             name='nombre'
                             value={values.nombre}
                             onChange={InputChange}
+                            required
                         />
                     </div>
                     <div className='inputEmail'>
@@ -87,6 +99,7 @@ const Checkout = () => {
                             name='email'
                             value={values.email}
                             onChange={InputChange}
+                            required
                         />
                     </div>
                     <div className='inputTel'>
@@ -98,6 +111,7 @@ const Checkout = () => {
                             name='telefono'
                             value={values.telefono}
                             onChange={InputChange}
+                            required
                         />
                     </div>
                     <button className='botonEnviar' type='submit'>Enviar</button>
