@@ -60,17 +60,15 @@ const Checkout = () => {
 
         if (OutOfStock.length === 0) {
             Batch.commit()
+            addDoc(OrdersRef, Orden)
+                .then((doc) => {
+                    setOrderId(doc.id)
+                    VaciarCarrito();
+                })
         } else {
             console.log(OutOfStock)
             alert('error')         
         }
-
-        addDoc(OrdersRef, Orden)
-            .then((doc) => {
-                setOrderId(doc.id)
-                VaciarCarrito();
-            })
-
     }
 
     if (orderId) {
