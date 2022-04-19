@@ -48,7 +48,7 @@ const Checkout = () => {
 
         Productos.docs.forEach((doc) => {
             const ItemInCart = cart.find((item) => item.id === doc.id)
-
+            console.log(ItemInCart)
             if ( doc.data() >= ItemInCart.cantidad) {
                 Batch.update(doc.ref, {
                     stock: doc.data().stock - ItemInCart.cantidad
@@ -58,10 +58,11 @@ const Checkout = () => {
             }
         })
 
-        if (OutOfStock === 0) {
+        if (OutOfStock.length === 0) {
             Batch.commit()
         } else {
-
+            console.log(OutOfStock)
+            alert('error')         
         }
 
         addDoc(OrdersRef, Orden)

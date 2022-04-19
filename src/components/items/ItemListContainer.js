@@ -19,11 +19,11 @@ const ItemListContainer = ({nombre, categoria, precio, stock}) => {
     useEffect(() => {
       SetCargando(true);
 
-      const productoRefencia = collection( db, "productos");
+      const productoRef = collection( db, "productos");
       const queryFilter = categoriaId ? 
-        query(productoRefencia, 
+        query(productoRef, 
         where('categoria', '==', categoriaId)
-        ) : query(productoRefencia, limit(4))
+        ) : query(productoRef, limit(4))
       getDocs(queryFilter)
          .then((res) => {
 

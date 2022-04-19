@@ -18,9 +18,9 @@ const ItemDetailContainer = () => {
     useEffect(() => {
         SetCargando(true)
 
-        const docReferencia = doc(db, "productos", itemId)
+        const docRefer = doc(db, "productos", itemId)
 
-        getDoc(docReferencia)
+        getDoc(docRefer)
             .then(doc => {
                 const product = {id: doc.id, ...doc.data()}
                 SetProductDetail(product)
