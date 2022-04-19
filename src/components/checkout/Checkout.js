@@ -1,6 +1,5 @@
 // react
 import React, { useContext, useState } from 'react';
-import { Link } from "react-router-dom";
 import {CartContext} from '../../context/CartContext';
 // firebase
 import {query, where, documentId , writeBatch , collection, addDoc, doc, Timestamp, updateDoc, getDocs } from 'firebase/firestore';
@@ -8,6 +7,8 @@ import { db } from '../../fireBase/config';
 // scss
 import './Checkout.scss'
 import { Navigate } from 'react-router-dom';
+// confirmacion
+import ConfirmacionCompra from '../confirmacion/Compra/ConfirmacionCompra'
 const Checkout = () => {
 
     const {cart, CartTotal, VaciarCarrito} = useContext(CartContext);
@@ -66,19 +67,8 @@ const Checkout = () => {
                     VaciarCarrito();
                 })
         } else {
-            console.log(OutOfStock)
-            alert('error')         
+            Navigate(`/IdCompra/${orderId}`)    
         }
-    }
-
-    if (orderId) {
-        return (
-            <div className='confirmacionCompra'>
-                <h4>Tu compra se realizo correctamente!!</h4>
-                <p>Numero de compra: {orderId} </p>
-                <Link to='/' className='botonVolver'>Volver a inicio</Link>
-            </div>
-        )
     }
 
     if (cart.length === 0) {

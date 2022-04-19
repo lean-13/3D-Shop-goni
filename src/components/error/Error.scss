@@ -1,0 +1,23 @@
+// variables
+@import "../../scss/variables";
+
+.error {
+    padding-top: 60px;
+    padding-bottom: 20rem;
+}
+// boton
+.botonVolver {
+    // modificacion
+    border-radius: 5px;
+    text-decoration: none;
+    // size
+    padding: 5px 5px 5px 5px;
+    // color
+    background-color: $color6;
+    color: $color7;
+}
+.botonVolver:hover {
+    // color
+    color: $color1;
+    transition: 0.7s;
+}

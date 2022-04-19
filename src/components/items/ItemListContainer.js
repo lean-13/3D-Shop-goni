@@ -34,13 +34,16 @@ const ItemListContainer = ({nombre, categoria, precio, stock}) => {
       .catch((error) => console.log(error))
       .finally(() => SetCargando(false))
     }, [categoriaId])
+
     return (
         <div className='divProductos'>
             <div className='productos'>
                 <h5>Productos</h5>
                 <div>
                     {Cargando ? <Loader/> : ''}
-                    <ItemList ListaProductos={ListaProductos}/>
+                    <ItemList 
+                        ListaProductos={ListaProductos}
+                    />
                 </div>
             </div>
         </div>

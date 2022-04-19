@@ -1,14 +1,12 @@
 // react
 import React from 'react';
-// boostrap
-import { Card, Button } from 'react-bootstrap'
 // item
 import Item from './Item'
 // sass
 import '../../scss/items/itemList.scss'
-
+// ver mas
+import CardVerMas from '../buttons/cardBotonVerMas/cardBotonVerMas';
 const ItemList = ({ListaProductos}) => {
-    console.log({ListaProductos})
     return (
         <div className="cardCatalogo">
             {
@@ -16,12 +14,7 @@ const ItemList = ({ListaProductos}) => {
                     <Item producto={producto} key={producto.id}/>
                 ))
             }
-            <Card className="cardProducto">
-                <Card.Body>
-                    <Card.Title className='simboloMas'>+</Card.Title>
-                    <Button className="botonMas">Ver mas</Button>
-            </Card.Body>
-        </Card>
+            <CardVerMas/>
         </div>
     )
 }

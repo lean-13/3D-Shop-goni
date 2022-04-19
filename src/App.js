@@ -37,7 +37,7 @@ function App() {
             <Route path="/categoria/:categoriaId" element={ <ItemListContainer/> } /> 
             <Route path="/detail/:itemId" element={ <ItemDetailContainer/> } />
             <Route path="/carrito" element={ <Carrito/> } /> 
-            <Route path="/checkout" element={ <Checkout/> } /> 
+            <Route path="/checkout" element={ <Checkout/> } />
             {/* error 404 */}
             <Route path="*" element={ <h1>Error 404</h1> } /> 
           </Routes>
