@@ -17,8 +17,7 @@ const initial = 1;
 const ItemDetail = ({ProductDetail}) => {
     const {nombre, img, alt,descripcion, precio, stock, id} = ProductDetail;
 
-    const { cart, AddItem, IsInCart} = useContext(CartContext);
-    console.log(cart)
+    const { AddItem, IsInCart} = useContext(CartContext);
 
     const [cantidad, setCantidad] = useState(initial);
 

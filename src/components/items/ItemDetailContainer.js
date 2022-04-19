@@ -18,12 +18,12 @@ const ItemDetailContainer = () => {
     useEffect(() => {
         SetCargando(true)
 
-        const docRefer = doc(db, "productos", itemId)
+        const docRef = doc(db, "productos", itemId)
 
-        getDoc(docRefer)
+        getDoc(docRef)
             .then(doc => {
-                const product = {id: doc.id, ...doc.data()}
-                SetProductDetail(product)
+                const Product = {id: doc.id, ...doc.data()}
+                SetProductDetail(Product)
             })
         
         // .then((res) => SetProductDetail(res.find((item) => item.id === Number(itemId))))
