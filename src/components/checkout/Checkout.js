@@ -3,7 +3,7 @@ import React, { useContext, useState } from 'react';
 import { Link } from "react-router-dom";
 import {CartContext} from '../../context/CartContext';
 // firebase
-import { collection, addDoc, doc, Timestamp, updateDoc, getDoc } from 'firebase/firestore';
+import {query, where, documentId , writeBatch , collection, addDoc, doc, Timestamp, updateDoc, getDocs } from 'firebase/firestore';
 import { db } from '../../fireBase/config';
 // scss
 import './Checkout.scss'
@@ -28,7 +28,7 @@ const Checkout = () => {
 
 
 
-    const Submit = (e) => {
+    const Submit = async (e) => {
         e.preventDefault()
 
         const Orden = {
@@ -37,32 +37,35 @@ const Checkout = () => {
             comprador: {...values},
             fyh: Timestamp.fromDate(new Date())
         }
-
+        const Batch = writeBatch(db)
         const OrdersRef = collection(db, 'orders')
-        
-        cart.forEach((item) => {
-            const docRef = doc(db, 'productos', item.id)
+        const ProductosRef = collection(db, 'productos')
 
-            getDoc(docRef)
-                .then((doc) => {
-                    if (doc.data().stock >= item.cantidad) {
-                        updateDoc(docRef, {
-                            stock: doc.data().stock - item.cantidad
-                        })
-                    } else {
-                        return (
-                            <div className='confirmacionCompra'>
-                                <h4>Se ha producido un error en su compra!!</h4>
-                                <Link to='/' className='botonVolver'>Volver a inicio</Link>
-                            </div>
-                        )
-                    }
+        const Q = query(ProductosRef, where(documentId(), 'in' , cart.map((item) => item.id)))
+        const Productos = await getDocs(Q)
+
+        const OutOfStock = []
+
+        Productos.docs.forEach((doc) => {
+            const ItemInCart = cart.find((item) => item.id === doc.id)
+
+            if ( doc.data() >= ItemInCart.cantidad) {
+                Batch.update(doc.ref, {
+                    stock: doc.data().stock - ItemInCart.cantidad
                 })
+            } else {
+                OutOfStock.push(ItemInCart)
+            }
         })
+
+        if (OutOfStock === 0) {
+            Batch.commit()
+        } else {
+
+        }
 
         addDoc(OrdersRef, Orden)
             .then((doc) => {
-                console.log(doc.id)
                 setOrderId(doc.id)
                 VaciarCarrito();
             })
