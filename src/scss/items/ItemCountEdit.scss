@@ -3,9 +3,9 @@
 
 .cardCantidadProducto {
     // modificacion
-    text-align: center;
+    text-align: left;
     // size
-    width: 180px;
+    width: 40rem;
     height: auto;
 }
 .cantidadCompra {
@@ -17,6 +17,8 @@
     display: grid;
     grid-template-columns: 30% 33% 30%;
     align-items: center;
+    // size
+    width: 180px;
     // color
     background-color: $color1;
 }
