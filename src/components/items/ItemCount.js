@@ -46,11 +46,17 @@ const ItemCount= ({stock, OnAdd, cantidad, setCantidad}) => {
                 </div>
                 <p className='stockProducto subrayadoText'>Stock: {stock}</p>
                 { stock === 0 && <p>Sin stock, si desea puede encargar este producto</p>}
-                <button onClick={() => AddToCart()} className={`botonAddCarrito ${cantidad > 0 ? 'botonAddCarritoColor' : 'botonAddCarritoColorBlock'}`}
-                disabled={cantidad === 0}
+                <button onClick={() => AddToCart()} 
+                    className={
+                        `botonAddCarrito ${cantidad > 0 ? 
+                            'botonAddCarritoColor' 
+                            :
+                            'botonAddCarritoColorBlock'
+                        }`}
+                    disabled={cantidad === 0}
                 >
-                <AddShoppingCartIcon className='iconoAddCart'/>
-                Agregar al carrito
+                    <AddShoppingCartIcon className='iconoAddCart'/>
+                    Agregar al carrito
                 </button>
         </div>
     )

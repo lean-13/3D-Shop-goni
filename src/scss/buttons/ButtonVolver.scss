@@ -6,10 +6,17 @@
     // modificacion
     border: none;
     border-radius: 5px;
-    background-color: $color6;
     // size
     padding: 0px 2px 2px 2px;
     margin-left: 80%;
+    // color
+    background-color: $color6;
+}
+.buttonVolver:hover {
+    // size
+    transform: translateY(-2px);
+    transition: 0.7s;
+    box-shadow: 0px 3px 15px $color9;
 }
 // icono
 .iconoVolver {
@@ -20,6 +27,6 @@
 }
 .iconoVolver:hover {
     // color
-    color: $color1;
+    color: $color9;
     transition: 0.7s;
 }
