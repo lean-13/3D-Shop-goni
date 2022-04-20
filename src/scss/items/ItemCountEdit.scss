@@ -28,23 +28,20 @@
     // modificacion
     z-index: 3;
     position: relative;
-    border: 1px solid $color7;
+    border: 1px solid $color11;
     border-radius: 5px;
     font-family: $font2;
     // size
     width: 180px;
     // color
-    background-color: $color1;
-    color: $color7;
+    background-color: $color8;
+    color: $color3;
 }
 .botonEditCantidad:hover {
-    // color
-    color: $color6;
-    text-shadow: 1px 0.5px 0px $color3;
-    transition: 0.7s;
     .iconoEdit {
-        color: $color6;
-        filter: drop-shadow(1px 1.5px $color3);
+        color: $color9;
+        filter: drop-shadow(1px 1.5px $color11);
+        transform: rotatez(-15deg);
         transition: 0.7s;
     }
 }
@@ -56,8 +53,8 @@
     // size
     font-size: 20px;
     // color
-    color: $color7;
-    filter: drop-shadow(1px 1.5px $color6);
+    color: $color11;
+    filter: drop-shadow(1px 1.5px $color9);
 }
 .stockProducto {
     // modificacion
@@ -79,23 +76,23 @@
     font-family: $font2;
     // size
     padding: 5px 5px 5px 5px;
+    // size
+    width: 250px;
+    height: 35px;
     // color
-    background-color: $color10;
     color: $color7;
-    box-shadow: 1px 1px 0px 0px;
+    background-color: $color10;
+    box-shadow: 0px 4px 15px $color6;
+    transition: all 0.3s ease;
 }
 .linkTerminarCompra:hover {
+    // size
+    transform: translateY(-3px);
     // color
     color: $color7;
-    box-shadow: 2px 3px 0px 0px;
-    transition: 0.7s;
-
-    .iconoComprar {
-        // color
-        filter: drop-shadow(1px 1.5px $color7);
-        color: $color6;
-        transition: 0.7s;
-    }
+    background-color: $color10;
+    box-shadow: 0px 4px 25px $color10;
+    transition: all 0.3s ease;
 }
 .iconoComprar {
     // modificacion
@@ -103,6 +100,5 @@
     font-size: 20px;
     // color
     color: $color7;
-    filter: drop-shadow(1px 1.5px $color6);
 }
 

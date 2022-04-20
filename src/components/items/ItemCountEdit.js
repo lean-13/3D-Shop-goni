@@ -26,7 +26,7 @@ const ItemCountEdit= ({cantidad, id}) => {
             <p className='stockProducto subrayadoText'>Cantidad: {cantidad}</p>
             <Link to='/Carrito' className='linkTerminarCompra'><ShoppingCartOutlinedIcon 
             className='iconoComprar'
-            />Comprar</Link>
+            />Terminar Compra</Link>
         </div>
     )
 }
