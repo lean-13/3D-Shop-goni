@@ -11,11 +11,11 @@
     height: 450px;
     font-size: 16px;
     // color
-    background-color: $color8;
+    background: linear-gradient(to right, $color7, $color7, $color8)
 }
 .cardProducto:hover {
     // modificacion
-    box-shadow: 2px 2px 0px 0px $color6;
+    transform: scale(1.02);
     transition: 0.7s;
 }
 // text
