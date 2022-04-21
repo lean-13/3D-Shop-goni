@@ -16,7 +16,40 @@
         // size
         padding-left: 2%;
         padding-top: 10px;
-        // color
-        color: $color6;
+
     }
+}
+
+.linkFormulario {
+    // modificacion
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    // color
+    color: $color3;
+}
+.linkFormulario:hover {
+    // color
+    color: $color6;
+    transition: 1.5s;
+}
+.linkFormulario::before {
+    content: '';
+    position: absolute;
+    transform-origin: right;
+    transform: scaleX(0);
+    border-radius: 5px;
+    // size
+    bottom: -2px;
+    left: 2;
+    width: 150px;
+    height: 1px;
+    // color
+    background: linear-gradient(to right, $color3, $color6, $color6 );
+    transition: 0.4s;
+
+}
+.linkFormulario:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
 }

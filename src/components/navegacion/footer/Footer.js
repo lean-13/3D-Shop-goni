@@ -8,7 +8,7 @@ const FooterContacto = () => {
 
     return (
         <div className='footer'>
-            <p>Formulario Contacto</p>
+            <p className='linkFormulario'>Formulario Contacto</p>
         </div>
     )
 }
