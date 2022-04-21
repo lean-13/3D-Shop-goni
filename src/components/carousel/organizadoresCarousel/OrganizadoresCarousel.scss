@@ -7,7 +7,24 @@
 .inicioCarouselItem {
 
     img {
-        width: 80%;
-        height: 500px;
+        // modificacion
+        display: block;
+        margin: 0px auto;
+        border-radius: 5px;
+        // size
+        width: 98%;
+        height: 400px;
+    }
+}
+.carouselDescripcion {
+   
+    .desc1 {
+        color: $color6;
+    }
+    .desc2 {
+        color: $color1;
+    }
+    .desc3 {
+        color: $color11;
     }
 }

@@ -9,36 +9,33 @@ const HogarCarousel = () => {
             <Carousel className="inicioCarousel">
                 <Carousel.Item className="inicioCarouselItem">
                     <img
-                    className="d-block w-100"
+                    className="d-block"
                     src={("../../../../img/carousel/3d-printer-3311587.png")}
                     alt="First slide"
                     />
-                    <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <Carousel.Caption className="carouselDescripcion">
+                    <p className="desc1">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item className="inicioCarouselItem">
                     <img
-                    className="d-block w-100"
+                    className="d-block"
                     src={("../../../../img/carousel/3d-printer-3311587.png")}
                     alt="Second slide"
                     />
-                    <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <Carousel.Caption className="carouselDescripcion">
+                    <p className="desc2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item className="inicioCarouselItem">
                     <img
-                    className="d-block w-100"
+                    className="d-block"
                     src={("../../../../img/carousel/3d-printer-3311587.png")}
                     alt="Third slide"
                     />
 
-                    <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    <Carousel.Caption className="carouselDescripcion">
+                    <p className="desc3">Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
