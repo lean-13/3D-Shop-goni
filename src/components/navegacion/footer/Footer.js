@@ -9,16 +9,16 @@ const FooterContacto = () => {
     return (
         <div className='footer'>
             <div>
-                <p className='textFooter'>Formulario Contacto</p>
+                <Link to='/' className='textFooter'>Formulario Contacto</Link>
             </div>
             <div>
-                <p className='textFooter'>Metodos de pago</p>
+                <Link to='/' className='textFooter'>Metodos de pago</Link>
             </div>
             <div>
-                <p className='textFooter'>Como trabajamos</p>
+                <Link to='/' className='textFooter'>Como trabajamos</Link>
             </div>
             <div>
-                <p className='textFooter'>Quien soy</p>
+                <Link to='/' className='textFooter'>Quien soy</Link>
             </div>
         </div>
     )
