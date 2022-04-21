@@ -8,7 +8,18 @@ const FooterContacto = () => {
 
     return (
         <div className='footer'>
-            <p className='linkFormulario'>Formulario Contacto</p>
+            <div>
+                <p className='textFooter'>Formulario Contacto</p>
+            </div>
+            <div>
+                <p className='textFooter'>Metodos de pago</p>
+            </div>
+            <div>
+                <p className='textFooter'>Como trabajamos</p>
+            </div>
+            <div>
+                <p className='textFooter'>Quien soy</p>
+            </div>
         </div>
     )
 }
