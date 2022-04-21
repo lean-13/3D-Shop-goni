@@ -40,7 +40,6 @@ const ItemDetail = ({ProductDetail}) => {
     return (
         <div className="detalleProducto" key={id}>
             <h2 className='tituloScss'>Detalle de producto</h2>
-            <ButtonVolver/>
             <div className='detalleProductoInfo'>
                 <div>
                     <img src={img} alt={alt} />
@@ -79,7 +78,9 @@ const ItemDetail = ({ProductDetail}) => {
                         }
                     </div>
                 </div>
-
+                <div>
+                    <ButtonVolver/>
+                </div>
             </div>
 
         </div>
