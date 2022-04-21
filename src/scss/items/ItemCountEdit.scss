@@ -88,8 +88,6 @@
     transition: all 0.3s ease;
 }
 .linkTerminarCompra:hover {
-    // size
-    transform: translateY(-3px);
     // color
     color: $color7;
     background-color: $color10;
@@ -98,9 +96,9 @@
 }
 .iconoComprar {
     // modificacion
+    transform: scale(1);
     // size
     font-size: 20px;
     // color
     color: $color7;
 }
-

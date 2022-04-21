@@ -20,8 +20,32 @@
     }
 }
 .iconoCarrito {
+    // modificacion
+    transform: scale(1);
     // size
     margin: 5px 5px 5px 5px;
     // color
     color: $color7;
+}
+.iconoCarrito:active {
+    // modificacion
+    transform: scale(0.90);
+}
+.divIconoCarrito:hover {
+    box-shadow: 0 0 0 0 $color3;
+    transform: scale(1);
+    animation: pulseCarrito 5s infinite;
+}
+@keyframes pulseCarrito {
+    0% {
+      transform: scale(1);
+    }
+    
+    50% {
+      transform: scale(0.95);
+    }
+    
+    100% {
+      transform: scale(1);
+    }
 }

@@ -38,7 +38,7 @@ function Navbar() {
                 <Link className="nav-link" to="/Carrito"><Iconshopcart/></Link>
               </li>
             </ul>
-            <span className="navbar-text">
+            <span className="navbar-text textNavbar">
               3DShop
             </span>
           </div>
