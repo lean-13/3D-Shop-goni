@@ -1,12 +1,15 @@
 // react
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState} from 'react';
 import {CartContext} from '../../context/CartContext';
 // firebase
 import {query, where, documentId , writeBatch , collection, addDoc, Timestamp, getDocs } from 'firebase/firestore';
 import { db } from '../../fireBase/config';
+import swal from'sweetalert2';
 // scss
 import './Checkout.scss'
 import { Navigate } from 'react-router-dom';
+import ConfirmacionCompra from '../confirmacion/Compra/ConfirmacionCompra';
+
 const Checkout = () => {
 
     const {cart, CartTotal, VaciarCarrito} = useContext(CartContext);
@@ -61,12 +64,21 @@ const Checkout = () => {
             Batch.commit()
             addDoc(OrdersRef, Orden)
                 .then((doc) => {
+                    <ConfirmacionCompra/>
                     setOrderId(doc.id)
-
+                    swal.fire({                
+                    title: 'Compra realizada con exito',
+                    icon: 'success',
+                    buttons: 'Ok'});
                     VaciarCarrito();
                 })
         } else {
-            alert("error")
+            swal.fire({
+                title: 'Hubo un problema inesperado',
+                text: 'por favor revise los datos de compra',
+                icon: 'error',
+                buttons: 'Volver a carrito'
+              })
         }
     }
 

@@ -1,7 +1,6 @@
 // react
 import React from "react";
-import swal from 'sweetalert';
-/*
+
 import { Link } from "react-router-dom";
 
 const ConfirmacionCompra = (orderId) => {
@@ -13,8 +12,5 @@ const ConfirmacionCompra = (orderId) => {
         </div>
     )
 }
-*/
-const ConfirmacionCompra = (orderId) => {
-    swal("Compra Realizada con exito", "Id de pedido:" , {orderId}, "success");
-}
+
 export default ConfirmacionCompra;

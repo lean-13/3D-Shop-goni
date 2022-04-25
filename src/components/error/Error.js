@@ -5,7 +5,11 @@ import swal from 'sweetalert';
 import './Error.scss';
 
 const Error = () => {
-    swal("Hubo un problema inesperado", "warning");
+    swal({
+        title: "Hubo un problema inesperado",
+        text: "por favor revise los datos de compra",
+        icon: "error",
+      });  
 }
 
 export default Error;
