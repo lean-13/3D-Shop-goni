@@ -3,6 +3,8 @@
 
 .inicioCarousel {
     padding-top: 60px;
+    width: 100%;
+    height: auto;
 }
 .inicioCarouselItem {
 
@@ -12,9 +14,19 @@
         margin: 0px auto;
         border-radius: 5px;
         // size
-        width: 98%;
+        width: 60rem;
         height: 400px;
     }
+}
+// color fondo
+.item1 {
+    background-color: transparent;
+}
+.item2 {
+    background-color: transparent;
+}
+.item3 {
+    background-color: $color11;
 }
 .carouselDescripcion {
    
@@ -25,6 +37,6 @@
         color: $color1;
     }
     .desc3 {
-        color: $color11;
+        color: $color7;
     }
 }

@@ -2,13 +2,11 @@
 import React, { useContext, useState } from 'react';
 import {CartContext} from '../../context/CartContext';
 // firebase
-import {query, where, documentId , writeBatch , collection, addDoc, doc, Timestamp, updateDoc, getDocs } from 'firebase/firestore';
+import {query, where, documentId , writeBatch , collection, addDoc, Timestamp, getDocs } from 'firebase/firestore';
 import { db } from '../../fireBase/config';
 // scss
 import './Checkout.scss'
 import { Navigate } from 'react-router-dom';
-// confirmacion
-import ConfirmacionCompra from '../confirmacion/Compra/ConfirmacionCompra'
 const Checkout = () => {
 
     const {cart, CartTotal, VaciarCarrito} = useContext(CartContext);
@@ -64,10 +62,11 @@ const Checkout = () => {
             addDoc(OrdersRef, Orden)
                 .then((doc) => {
                     setOrderId(doc.id)
+
                     VaciarCarrito();
                 })
         } else {
-            Navigate(`/IdCompra/${orderId}`)    
+            alert("error")
         }
     }
 
