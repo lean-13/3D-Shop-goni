@@ -9,7 +9,7 @@ import '../../scss/items/ItemListContainer.scss';
 import ItemList from './ItemList';
 // loader
 import Loader from '../loader/Loader'
-const ItemListContainer = ({nombre, categoria, precio, stock}) => {
+const ItemListContainer = () => {
 
     const [ListaProductos , SetListaProductos] = useState([]);
     const [Cargando, SetCargando] = useState([]);

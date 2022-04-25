@@ -7,6 +7,7 @@ const InicioCarousel = () => {
     return (
         <div className="divInicioCarousel">
             <Carousel className="inicioCarousel">
+                {/* agregar imagen de menor tamaño y ponerle un div con fondo de color */}
                 <Carousel.Item className="inicioCarouselItem">
                     <img
                     className="d-block"
