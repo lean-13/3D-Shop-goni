@@ -7,6 +7,7 @@ import {query, where, documentId , writeBatch , collection, addDoc, Timestamp, g
 import { db } from '../../fireBase/config';
 import swal from'sweetalert2';
 // scss
+import '../../scss/variables.scss'
 import './Checkout.scss'
 import { Navigate } from 'react-router-dom';
 
@@ -98,19 +99,26 @@ const Checkout = () => {
         return <Navigate to='/' />
     }
 
+    const ConfigSwal = {
+        color: '#5298F2',
+        background: '#07080D',
+        backdrop: '#5297f285',
+
+    }
     // pregunta Confirmar compra
     const swalCompra = () => {
         swal.fire({
             title: 'Casi es tuyo',
             text: 'Confirmar Compra',
-            icon: 'info',
+            icon: 'warning',
             confirmButtonText: 'Confirmar Compra',
-            cancelButtonText: 'Cancelar'
+            ...ConfigSwal
           }).then((result) => {
             if (result.isConfirmed) {
                 swal.fire({                
                     title: 'Compra realizada con exito',
-                    icon: 'success'
+                    icon: 'success',
+                    ...ConfigSwal
                 });
                 document.envia.submit()
             }
@@ -158,8 +166,8 @@ const Checkout = () => {
                             required
                         />
                     </div>
-                    <button className='botonEnviar' onClick={swalCompra}>Comprar</button>
                 </form>
+                <button className='botonEnviar' onClick={swalCompra}>Comprar</button>
             </div>
         </div>
     )
