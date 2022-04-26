@@ -112,11 +112,8 @@ const Checkout = () => {
             title: 'Casi es tuyo',
             text: 'Confirmar Compra',
             icon: 'warning',
-            confirmButtonColor: 'rgba(13, 177, 13, 0.952)',
-            confirmButtonText: 'Confirmar Compra',
-            showCancelButton: true,
-            cancelButtonColor: 'Red',
-            cancelButtonText: 'Cancelar',
+            showConfirmButton: false,
+            html: `<button className='botonEnviar' type="submit" form="formCompra">Enviar</button>`,
             ...ConfigSwal
           }).then((result) => {
             if (result.isConfirmed) {
