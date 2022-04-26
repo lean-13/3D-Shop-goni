@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import swal from'sweetalert2';
 // scss
 import "../../scss/carrito/Carrito.scss";
 // cart
@@ -25,6 +26,38 @@ function Carrito() {
         </Link>
       </div>
     );
+  }
+
+  const ConfigSwal = {
+    color: '#5298F2',
+    background: '#07080D',
+    backdrop: '#5297f285',
+}
+
+  const SwalVaciarCarrito = () => {
+    swal.fire({
+      title: 'Cuidado!!',
+      text: 'Seguro que quieres vaciar el carrito',
+      icon: 'warning',
+      confirmButtonColor: 'red',
+      confirmButtonText: 'Vaciar Carrito',
+      showCancelButton: true,
+      cancelButtonColor: 'rgba(13, 177, 13, 0.952)',
+      cancelButtonText: 'Cancelar',
+      ...ConfigSwal
+    }).then((result) => {
+      if (result.isConfirmed) {
+        VaciarCarrito()
+          swal.fire({                
+              title: 'Vaciado con exito',
+              icon: 'success',
+              showConfirmButton: false,
+              timer: 1500,
+              ...ConfigSwal
+          });
+          
+      }
+    })
   }
   return (
     <div className="divCarrito">
@@ -59,7 +92,7 @@ function Carrito() {
           <h3>Precio Total: ${CartTotal()}</h3>
         </div>
         <div className="botonesBorradoCompra">
-          <button onClick={VaciarCarrito} className="botonReset">
+          <button onClick={SwalVaciarCarrito} className="botonReset">
             <DeleteIcon className="iconoDelete"/>
             Borrar Carrito
           </button>

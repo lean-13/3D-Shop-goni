@@ -66,6 +66,7 @@ const Checkout = () => {
             addDoc(OrdersRef, Orden)
                 .then((doc) => {
                     setOrderId(doc.id)
+                    console.log('compra')
                     VaciarCarrito();
                 })
         } else {
@@ -103,7 +104,7 @@ const Checkout = () => {
         color: '#5298F2',
         background: '#07080D',
         backdrop: '#5297f285',
-
+        allowOutsideClick: false
     }
     
     // pregunta Confirmar compra
@@ -112,8 +113,12 @@ const Checkout = () => {
             title: 'Casi es tuyo',
             text: 'Confirmar Compra',
             icon: 'warning',
-            showConfirmButton: false,
+            confirmButtonColor: 'rgba(13, 177, 13, 0.952)',
+            confirmButtonText: 'Confirmar Compra',
             html: `<button className='botonEnviar' type="submit" form="formCompra">Enviar</button>`,
+            showCancelButton: true,
+            cancelButtonColor: 'Red',
+            cancelButtonText: 'Cancelar',
             ...ConfigSwal
           }).then((result) => {
             if (result.isConfirmed) {
@@ -124,6 +129,7 @@ const Checkout = () => {
                     timer: 1500,
                     ...ConfigSwal
                 });
+                
             }
           })
         
@@ -132,7 +138,7 @@ const Checkout = () => {
         <div className='checkout'>
             <h2>Checkout</h2>
             <div className='formCompra' >
-                <form onSubmit={Submit}  id='formCompra' action="/create">
+                <form onSubmit={Submit}  id='formCompra'>
                     <div className='inputText'>
                         <p className='formText'>Nombre Completo</p>
                         <input
