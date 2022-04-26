@@ -105,22 +105,28 @@ const Checkout = () => {
         backdrop: '#5297f285',
 
     }
+    
     // pregunta Confirmar compra
     const swalCompra = () => {
         swal.fire({
             title: 'Casi es tuyo',
             text: 'Confirmar Compra',
             icon: 'warning',
+            confirmButtonColor: 'rgba(13, 177, 13, 0.952)',
             confirmButtonText: 'Confirmar Compra',
+            showCancelButton: true,
+            cancelButtonColor: 'Red',
+            cancelButtonText: 'Cancelar',
             ...ConfigSwal
           }).then((result) => {
             if (result.isConfirmed) {
                 swal.fire({                
                     title: 'Compra realizada con exito',
                     icon: 'success',
+                    showConfirmButton: false,
+                    timer: 1500,
                     ...ConfigSwal
                 });
-                document.envia.submit()
             }
           })
         
@@ -128,8 +134,8 @@ const Checkout = () => {
     return (
         <div className='checkout'>
             <h2>Checkout</h2>
-            <div className='formCompra' id='form'>
-                <form onSubmit={Submit}>
+            <div className='formCompra' >
+                <form onSubmit={Submit}  id='formCompra' action="/create">
                     <div className='inputText'>
                         <p className='formText'>Nombre Completo</p>
                         <input
