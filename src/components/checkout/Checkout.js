@@ -59,7 +59,7 @@ const Checkout = () => {
                 OutOfStock.push(ItemInCart)
             }
         })
-
+        // revision de stock
         if (OutOfStock.length === 0) {
             Batch.commit()
             addDoc(OrdersRef, Orden)
@@ -81,13 +81,8 @@ const Checkout = () => {
               })
         }
     }
-
+    // mostrar confirmacion
     if (orderId) {
-        swal.fire({                
-            title: 'Compra realizada con exito',
-            icon: 'success'
-        });
-
         return (
             <div className='confirmacionCompra'>
                 <h4>Tu compra se realizo correctamente!!</h4>
@@ -98,13 +93,34 @@ const Checkout = () => {
 
     }
 
+    // devolver a inicio si carrito esta vacio
     if ((cart.length === 0) || (orderId !== null) ) {
         return <Navigate to='/' />
+    }
+
+    // pregunta Confirmar compra
+    const swalCompra = () => {
+        swal.fire({
+            title: 'Casi es tuyo',
+            text: 'Confirmar Compra',
+            icon: 'info',
+            confirmButtonText: 'Confirmar Compra',
+            cancelButtonText: 'Cancelar'
+          }).then((result) => {
+            if (result.isConfirmed) {
+                swal.fire({                
+                    title: 'Compra realizada con exito',
+                    icon: 'success'
+                });
+                document.envia.submit()
+            }
+          })
+        
     }
     return (
         <div className='checkout'>
             <h2>Checkout</h2>
-            <div className='formCompra'>
+            <div className='formCompra' id='form'>
                 <form onSubmit={Submit}>
                     <div className='inputText'>
                         <p className='formText'>Nombre Completo</p>
@@ -142,7 +158,7 @@ const Checkout = () => {
                             required
                         />
                     </div>
-                    <button className='botonEnviar' type='submit'>Enviar</button>
+                    <button className='botonEnviar' onClick={swalCompra}>Comprar</button>
                 </form>
             </div>
         </div>
