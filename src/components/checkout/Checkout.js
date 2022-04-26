@@ -70,9 +70,14 @@ const Checkout = () => {
         } else {
             swal.fire({
                 title: 'Hubo un problema inesperado',
-                text: 'por favor revise los datos de compra',
+                text: 'Stock no disponible',
                 icon: 'error',
-                buttons: 'Volver a carrito'
+                confirmButtonText: 'Volver a Carrito'
+              }).then((result) => {
+                if (result.isConfirmed) {
+                    console.log('link')
+                    return <Navigate to='/' />
+                }
               })
         }
     }
