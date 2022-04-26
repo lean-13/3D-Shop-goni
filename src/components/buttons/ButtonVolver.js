@@ -6,7 +6,7 @@ import CloseIcon from '@material-ui/icons/Close';
 // scss
 import '../../scss/buttons/ButtonVolver.scss'
 
-function ButtonVolver() {
+const ButtonVolver = () => {
     const Navigate = useNavigate();
 
     const handleNavigate = () => {

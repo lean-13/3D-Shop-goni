@@ -62,8 +62,8 @@
 // confirmacion
 .confirmacionCompra {
     // size
-    padding-top: 60px;
-    padding-bottom: 26.65rem;
+    padding-top: 62px;
+    padding-bottom: 27rem;
     padding-left: 2%;
     h4 {
         color: $color1;
@@ -71,4 +71,21 @@
     p {
         color: $color6;
     }
+}
+
+// boton
+.botonVolver {
+    // modificacion
+    border-radius: 5px;
+    text-decoration: none;
+    // size
+    padding: 5px 5px 5px 5px;
+    // color
+    background-color: $color6;
+    color: $color7;
+}
+.botonVolver:hover {
+    // color
+    color: $color1;
+    transition: 0.7s;
 }

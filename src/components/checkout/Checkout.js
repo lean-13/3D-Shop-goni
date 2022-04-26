@@ -1,6 +1,7 @@
 // react
 import React, { useContext, useState} from 'react';
 import {CartContext} from '../../context/CartContext';
+import { Link } from "react-router-dom";
 // firebase
 import {query, where, documentId , writeBatch , collection, addDoc, Timestamp, getDocs } from 'firebase/firestore';
 import { db } from '../../fireBase/config';
@@ -8,7 +9,6 @@ import swal from'sweetalert2';
 // scss
 import './Checkout.scss'
 import { Navigate } from 'react-router-dom';
-import ConfirmacionCompra from '../confirmacion/Compra/ConfirmacionCompra';
 
 const Checkout = () => {
 
@@ -64,12 +64,7 @@ const Checkout = () => {
             Batch.commit()
             addDoc(OrdersRef, Orden)
                 .then((doc) => {
-                    <ConfirmacionCompra/>
                     setOrderId(doc.id)
-                    swal.fire({                
-                    title: 'Compra realizada con exito',
-                    icon: 'success',
-                    buttons: 'Ok'});
                     VaciarCarrito();
                 })
         } else {
@@ -82,7 +77,23 @@ const Checkout = () => {
         }
     }
 
-    if (cart.length === 0) {
+    if (orderId) {
+        swal.fire({                
+            title: 'Compra realizada con exito',
+            icon: 'success'
+        });
+
+        return (
+            <div className='confirmacionCompra'>
+                <h4>Tu compra se realizo correctamente!!</h4>
+                <p>Numero de compra: {orderId} </p>
+                <Link to='/' className='botonVolver'>Volver a inicio</Link>
+            </div>
+        )
+
+    }
+
+    if ((cart.length === 0) || (orderId !== null) ) {
         return <Navigate to='/' />
     }
     return (
