@@ -152,6 +152,7 @@
 // boton reset
 .botonReset {
     // modificacion
+    transform: scale(1);
     border: none;
     border-radius: 5px;
     // size
@@ -160,12 +161,15 @@
     // color
     background-color: $color9;
     color: $color7;
-    box-shadow: 1px 1px 0px 0px;
+    box-shadow: 1px 1px 0px 0px $color9;
 }
 .botonReset:hover {
+    // size
+    transform: translateY(-3px);
     // color
-    box-shadow: 2px 1px 0px 0px $color9;
-    transition: 0.7s;
+    color: $color7;
+    box-shadow: 0px 4px 10px $color9;
+    transition: all 0.3s ease;
 }
 .iconoDelete {
     // modificacion
@@ -176,24 +180,36 @@
     color: $color7;
 }
 // boton compra
-.botonShop {
+.divBotonShop {
     // modificacion
+    transform: scale(1);
     border-radius: 5px;
-    text-decoration: none;
+    text-align: center;
     // size
     width: 160px;
     padding: 5px 5px 5px 2px;
     margin-left: 10px;
     // color
     background-color: $color10;
-    color: $color7;
-    box-shadow: 1px 1px 0px 0px;
+    box-shadow: 0px 0px 0px $color10;
+    transition: all 0.3s ease;
 }
-.botonShop:hover {
+.divBotonShop:hover {
+    // size
+    transform: translateY(-3px);
     // color
     color: $color7;
-    box-shadow: 2px 1px 0px 0px $color10;
-    transition: 0.7s;
+    background-color: $color10;
+    box-shadow: 0px 4px 10px $color10;
+}
+.botonShop {
+    // modificacion
+    text-decoration: none;
+    // color
+    color: $color7;
+}
+.botonShop:hover {
+    color: $color7;
 }
 .iconoShop {
     // modificacion

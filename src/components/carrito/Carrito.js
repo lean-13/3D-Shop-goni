@@ -7,13 +7,11 @@ import "./Carrito.scss";
 import { CartContext } from "../../context/CartContext";
 // carrito
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
-import DeleteIcon from '@material-ui/icons/Delete';
 // lapiz
 import CreateIcon from '@material-ui/icons/Create';
 // remove
 import RemoveShoppingCartIcon from "@material-ui/icons/RemoveShoppingCart";
-// flecha
-import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
+
 function Carrito() {
   const { cart, CartTotal, VaciarCarrito, RemoveItem } =
     useContext(CartContext);
@@ -97,14 +95,16 @@ function Carrito() {
           <h3>Precio Total: ${CartTotal()}</h3>
         </div>
         <div className="botonesBorradoCompra">
-          <button onClick={SwalVaciarCarrito} className="botonReset">
-            <DeleteIcon className="iconoDelete"/>
-            Borrar Carrito
-          </button>
-          <Link to="/checkout" className="botonShop">
-            <DoubleArrowIcon className="iconoShop"/>
-            Comprar Carrito
-          </Link>
+          <div className="divBotonReset">
+            <button onClick={SwalVaciarCarrito} className="botonReset">
+              Borrar Carrito
+            </button>
+          </div>
+          <div className="divBotonShop">
+            <Link to="/checkout" className="botonShop">
+              Comprar Carrito
+            </Link>
+          </div>
         </div>
       </div>
     </div>
