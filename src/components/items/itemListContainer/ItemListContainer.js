@@ -36,7 +36,7 @@ const ItemListContainer = () => {
     return (
         <div className='divProductos'>
             <div className='productos'>
-                <h5>Productos</h5>
+                {categoriaId === undefined ? <h5>Productos</h5> : <h5>{categoriaId}</h5>}
                 <div>
                     {Cargando ? <Loader/> : ''}
                     <ItemList 
