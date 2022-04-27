@@ -17,22 +17,23 @@ const ItemListContainer = () => {
     const {categoriaId} = useParams();
 
     useEffect(() => {
-      SetCargando(true);
-
-      const productoRef = collection( db, "productos");
-      const queryFilter = categoriaId ? 
+        SetCargando(true);
+        
+        const productoRef = collection( db, "productos");
+        const queryFilter = categoriaId ? 
         query(productoRef, 
         where('categoria', '==', categoriaId)
         ) : query(productoRef, limit(4))
-      getDocs(queryFilter)
-         .then((res) => {
+        getDocs(queryFilter)
+            .then((res) => {
             const items = res.docs.map((doc) => ({id: doc.id, ...doc.data()})) 
             SetListaProductos(items);
-         })
-      .catch((error) => console.log(error))
-      .finally(() => SetCargando(false))
+            })
+        .catch((error) => console.log(error))
+        .finally(() => SetCargando(false))
     }, [categoriaId])
 
+    
     return (
         <div className='divProductos'>
             <div className='productos'>
@@ -43,6 +44,7 @@ const ItemListContainer = () => {
                         ListaProductos={ListaProductos}
                         Cargando={Cargando}
                         Categoria={categoriaId}
+
                     />
                 </div>
             </div>
