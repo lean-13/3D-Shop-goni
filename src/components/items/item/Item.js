@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { Card, Button } from 'react-bootstrap'
 // sass
-import '../../scss/items/item.scss'
+import './item.scss'
 
 const Item = ({producto}) => {
     const {nombre, categoria, img, alt, precio, id, stock} = producto;

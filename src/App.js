@@ -7,15 +7,15 @@ import "../node_modules/bootstrap/dist/js/bootstrap";
 // scss
 import "./scss/App.scss"
 // navBar
-import Navbar from './components/navegacion/Navbar'
+import Navbar from './components/navegacion/navBar/Navbar'
 // carousel
 import InicioCarousel from './components/carousel/inicioCarousel/InicioCarousel'
 // footer
 import FooterContacto from './components/navegacion/footer/Footer'
 // item list
-import ItemListContainer from './components/items/ItemListContainer'
+import ItemListContainer from './components/items/itemListContainer/ItemListContainer'
 // item detail
-import ItemDetailContainer from './components/items/ItemDetailContainer'
+import ItemDetailContainer from './components/items/itemDetailContainer/ItemDetailContainer'
 // carrito
 import Carrito from './components/carrito/Carrito'
 // cart context

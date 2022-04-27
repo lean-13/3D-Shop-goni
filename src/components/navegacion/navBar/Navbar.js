@@ -1,11 +1,10 @@
 
-import '../../scss/navegacion/navBar.scss';
-import '../../scss/variables.scss'
+import './navBar.scss';
 // react
 import React from 'react';
 import { Link } from "react-router-dom";
 // icono carrito
-import Iconshopcart from './CartWidget'
+import Iconshopcart from '../cartWidget/CartWidget'
 
 function Navbar() {
     return (

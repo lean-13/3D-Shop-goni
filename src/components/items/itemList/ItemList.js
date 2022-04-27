@@ -1,11 +1,11 @@
 // react
 import React from 'react';
 // item
-import Item from './Item'
+import Item from '../item/Item'
 // sass
-import '../../scss/items/itemList.scss'
+import './/itemList.scss'
 // ver mas
-import CardVerMas from '../buttons/cardBotonVerMas/cardBotonVerMas';
+import CardVerMas from '../../buttons/cardBotonVerMas/cardBotonVerMas';
 const ItemList = ({ListaProductos}) => {
     return (
         <div className="cardCatalogo">
@@ -16,7 +16,7 @@ const ItemList = ({ListaProductos}) => {
             }
             <CardVerMas/>
         </div>
-    )
+    )   
 }
 
 export default ItemList;

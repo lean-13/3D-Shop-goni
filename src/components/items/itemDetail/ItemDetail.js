@@ -1,14 +1,14 @@
 // react
 import React, { useContext, useState }  from 'react';
 // scss
-import '../../scss/items/ItemDetail.scss'
-import { CartContext } from '../../context/CartContext';
+import './ItemDetail.scss'
+import { CartContext } from '../../../context/CartContext';
 // button
-import ButtonVolver from '../buttons/botonVolver/ButtonVolver';
+import ButtonVolver from '../../buttons/botonVolver/ButtonVolver';
 // item count
-import ItemCount from './ItemCount';
+import ItemCount from '../itemCount/ItemCount';
 // item count edit
-import ItemCountEdit from './ItemCountEdit';
+import ItemCountEdit from '../itemCountEdit/ItemCountEdit';
 // icono
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 

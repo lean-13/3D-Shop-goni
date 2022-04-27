@@ -3,12 +3,12 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 // firebase
 import { collection, getDocs, query, where, limit } from 'firebase/firestore';
-import { db } from '../../fireBase/config';
+import { db } from '../../../fireBase/config';
 // sass
-import '../../scss/items/ItemListContainer.scss';
-import ItemList from './ItemList';
+import './ItemListContainer.scss';
+import ItemList from '../itemList/ItemList';
 // loader
-import Loader from '../loader/Loader'
+import Loader from '../../loader/Loader'
 const ItemListContainer = () => {
 
     const [ListaProductos , SetListaProductos] = useState([]);

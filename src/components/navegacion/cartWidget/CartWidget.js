@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 // scss
-import '../../scss/navegacion/CartWidget.scss'
+import './CartWidget.scss'
 // iconos
 // carrito
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
-import { CartContext } from '../../context/CartContext';
+import { CartContext } from '../../../context/CartContext';
 function Iconshopcart() {
 
     const { CartCantidad } = useContext(CartContext);

@@ -2,9 +2,9 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 // cart
-import { CartContext } from "../../context/CartContext";
+import { CartContext } from "../../../context/CartContext";
 // sass
-import '../../scss/items/ItemCountEdit.scss'
+import './ItemCountEdit.scss'
 // icono
 import EditIcon from '@material-ui/icons/Edit';
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';

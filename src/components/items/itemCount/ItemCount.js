@@ -1,7 +1,7 @@
 // react
 import React from 'react';
 // sass
-import '../../scss/items/ItemCount.scss'
+import './ItemCount.scss'
 // iconos 
 import AddOutlinedIcon from '@material-ui/icons/AddOutlined';
 import RemoveOutlinedIcon from '@material-ui/icons/RemoveOutlined';
