@@ -1,7 +1,7 @@
 // react
 import React, { useContext, useState} from 'react';
 import {CartContext} from '../../context/CartContext';
-import { Link } from "react-router-dom";
+import { Link, useNavigate  } from "react-router-dom";
 // firebase
 import {query, where, documentId , writeBatch , collection, addDoc, Timestamp, getDocs } from 'firebase/firestore';
 import { db } from '../../fireBase/config';
@@ -9,7 +9,7 @@ import swal from'sweetalert2';
 // scss
 import '../../scss/variables.scss'
 import './Checkout.scss'
-import { Navigate } from 'react-router-dom';
+
 
 const Checkout = () => {
 
@@ -28,9 +28,11 @@ const Checkout = () => {
             [e.target.name] : e.target.value
         })
     }
-
-
-
+    // navigate
+    const Navigate = useNavigate();
+    const handleNavigate = () => {
+        Navigate('/carrito')
+    }
     const Submit = async (e) => {
         e.preventDefault()
 
@@ -60,13 +62,27 @@ const Checkout = () => {
                 OutOfStock.push(ItemInCart)
             }
         })
+
+        const ConfigSwal = {
+            color: '#5298F2',
+            background: '#07080D',
+            backdrop: '#5297f285',
+            allowOutsideClick: false
+        }
+
         // revision de stock
         if (OutOfStock.length === 0) {
             Batch.commit()
             addDoc(OrdersRef, Orden)
                 .then((doc) => {
                     setOrderId(doc.id)
-                    console.log('compra')
+                    swal.fire({                
+                        title: 'Compra realizada con exito',
+                        icon: 'success',
+                        showConfirmButton: false,
+                        timer: 1500,
+                        ...ConfigSwal
+                    });
                     VaciarCarrito();
                 })
         } else {
@@ -74,11 +90,12 @@ const Checkout = () => {
                 title: 'Hubo un problema inesperado',
                 text: 'Stock no disponible',
                 icon: 'error',
-                confirmButtonText: 'Volver a Carrito'
+                confirmButtonText: 'Volver a Carrito',
+                confirmButtonColor: 'green',
+                ...ConfigSwal
               }).then((result) => {
                 if (result.isConfirmed) {
-                    console.log('link')
-                    return <Navigate to='/' />
+                    handleNavigate()
                 }
               })
         }
@@ -99,46 +116,12 @@ const Checkout = () => {
     if ((cart.length === 0) || (orderId !== null) ) {
         return <Navigate to='/' />
     }
-
-    const ConfigSwal = {
-        color: '#5298F2',
-        background: '#07080D',
-        backdrop: '#5297f285',
-        allowOutsideClick: false
-    }
-    
-    // pregunta Confirmar compra
-    const swalCompra = () => {
-        swal.fire({
-            title: 'Casi es tuyo',
-            text: 'Confirmar Compra',
-            icon: 'warning',
-            confirmButtonColor: 'rgba(13, 177, 13, 0.952)',
-            confirmButtonText: 'Confirmar Compra',
-            html: `<button className='botonEnviar' type="submit" form="formCompra">Enviar</button>`,
-            showCancelButton: true,
-            cancelButtonColor: 'Red',
-            cancelButtonText: 'Cancelar',
-            ...ConfigSwal
-          }).then((result) => {
-            if (result.isConfirmed) {
-                swal.fire({                
-                    title: 'Compra realizada con exito',
-                    icon: 'success',
-                    showConfirmButton: false,
-                    timer: 1500,
-                    ...ConfigSwal
-                });
-                
-            }
-          })
-        
-    }
+ 
     return (
         <div className='checkout'>
             <h2>Checkout</h2>
             <div className='formCompra' >
-                <form onSubmit={Submit}  id='formCompra'>
+                <form onSubmit={Submit}  id='formCompraId'>
                     <div className='inputText'>
                         <p className='formText'>Nombre Completo</p>
                         <input
@@ -175,8 +158,8 @@ const Checkout = () => {
                             required
                         />
                     </div>
+                    <button className='botonEnviar' type='submit' >Comprar</button>
                 </form>
-                <button className='botonEnviar' onClick={swalCompra}>Comprar</button>
             </div>
         </div>
     )
