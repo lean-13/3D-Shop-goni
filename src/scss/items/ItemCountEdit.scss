@@ -71,32 +71,40 @@
 }
 
 // boton terminar compra
+.terminarCompra {
+    // modificacion
+    transform: scale(1);
+    border-radius: 5px;
+    // size
+    padding: 5px 5px 5px 5px;
+    width: 250px;
+    height: 35px;
+    // color
+    background-color: $color10;
+    box-shadow: 0px 0px 0px $color10;
+    transition: all 0.3s ease;
+}
+.terminarCompra:hover {
+    // size
+    transform: translateY(-3px);
+    // color
+    background-color: $color10;
+    box-shadow: 0px 4px 10px $color10;
+    transition: all 0.3s ease;
+}
 .linkTerminarCompra {
     // modificacion
     text-decoration: none;
     border-radius: 5px;
     font-family: $font2;
-    // size
-    padding: 5px 5px 5px 5px;
-    // size
-    width: 250px;
-    height: 35px;
     // color
     color: $color7;
-    background-color: $color10;
-    box-shadow: 0px 0px 0px $color10;
-    transition: all 0.3s ease;
 }
 .linkTerminarCompra:hover {
-    // color
     color: $color7;
-    background-color: $color10;
-    box-shadow: 0px 4px 10px $color10;
-    transition: all 0.3s ease;
 }
+
 .iconoComprar {
-    // modificacion
-    transform: scale(1);
     // size
     font-size: 20px;
     // color

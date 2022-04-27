@@ -5,10 +5,11 @@ import swal from'sweetalert2';
 import "./Carrito.scss";
 // cart
 import { CartContext } from "../../context/CartContext";
-// iconos
 // carrito
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
 import DeleteIcon from '@material-ui/icons/Delete';
+// lapiz
+import CreateIcon from '@material-ui/icons/Create';
 // remove
 import RemoveShoppingCartIcon from "@material-ui/icons/RemoveShoppingCart";
 // flecha
@@ -76,6 +77,9 @@ function Carrito() {
               <p className="precioProducto">Precio: ${item.precio * item.cantidad}</p>
               <p className="cantidadProducto">Cantidad: {item.cantidad}</p>
               <p className="stockProducto">stock disponible: {item.stock}</p>
+            </div>
+            <div className="botonEditProducto">
+              <Link to={`/detail/${item.id}`} className='botonEditProductoId'><CreateIcon className="iconEdit"/></Link>
             </div>
             <div className="CarritoBotonDelete">
               <button
