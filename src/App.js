@@ -9,18 +9,20 @@ import "./scss/App.scss"
 // navBar
 import Navbar from './components/navegacion/navBar/Navbar'
 // carousel
-import InicioCarousel from './components/carousel/inicioCarousel/InicioCarousel'
+import InicioCarousel from './components/carousel/inicioCarousel/InicioCarousel';
+import CategoriaCarousel from './components/carousel/CategoriaCarousel/CategoriaCarousel';
 // footer
-import FooterContacto from './components/navegacion/footer/Footer'
+import FooterContacto from './components/navegacion/footer/Footer';
 // item list
-import ItemListContainer from './components/items/itemListContainer/ItemListContainer'
+import ItemListContainer from './components/items/itemListContainer/ItemListContainer';
 // item detail
-import ItemDetailContainer from './components/items/itemDetailContainer/ItemDetailContainer'
+import ItemDetailContainer from './components/items/itemDetailContainer/ItemDetailContainer';
 // carrito
-import Carrito from './components/carrito/Carrito'
+import Carrito from './components/carrito/Carrito';
 // cart context
 import { CartProvider} from './context/CartContext';
 import Checkout from './components/checkout/Checkout';
+
 
 
 function App() {
@@ -34,7 +36,7 @@ function App() {
           </div>
           <Routes>
             <Route path="/" element={ <> <InicioCarousel/> <ItemListContainer/> </> } /> 
-            <Route path="/categoria/:categoriaId" element={ <ItemListContainer/> } /> 
+            <Route path="/categoria/:categoriaId" element={ <><CategoriaCarousel/> <ItemListContainer/></> } /> 
             <Route path="/detail/:itemId" element={ <ItemDetailContainer/> } />
             <Route path="/carrito" element={ <Carrito/> } /> 
             <Route path="/checkout" element={ <Checkout/> } />

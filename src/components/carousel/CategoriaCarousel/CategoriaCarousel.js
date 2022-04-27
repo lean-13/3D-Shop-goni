@@ -1,13 +1,14 @@
 import React from "react";
 import { Carousel } from 'react-bootstrap';
 // scss
-import './HogarCarousel.scss';
-const HogarCarousel = () => {
+import './CategoriaCarousel.scss';
+const CategoriaCarousel = () => {
 
     return (
         <div className="divInicioCarousel">
             <Carousel className="inicioCarousel">
-                <Carousel.Item className="inicioCarouselItem">
+                {/* agregar imagen de menor tamaño y ponerle un div con fondo de color */}
+                <Carousel.Item className="inicioCarouselItem item1">
                     <img
                     className="d-block"
                     src={("../../../../img/carousel/3d-printer-3311587.png")}
@@ -17,7 +18,7 @@ const HogarCarousel = () => {
                     <p className="desc1">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item className="inicioCarouselItem">
+                <Carousel.Item className="inicioCarouselItem item2">
                     <img
                     className="d-block"
                     src={("../../../../img/carousel/3d-printer-3311587.png")}
@@ -27,7 +28,7 @@ const HogarCarousel = () => {
                     <p className="desc2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item className="inicioCarouselItem">
+                <Carousel.Item className="inicioCarouselItem item3">
                     <img
                     className="d-block"
                     src={("../../../../img/carousel/3d-printer-3311587.png")}
@@ -43,4 +44,4 @@ const HogarCarousel = () => {
     )
 }
 
-export default HogarCarousel;
+export default CategoriaCarousel;
