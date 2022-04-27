@@ -1,5 +1,5 @@
 // variables
-@import "../variables";
+@import "../../scss/variables";
 
 .divCarrito {
     padding-top: 70px;
@@ -50,6 +50,13 @@
 .cantidadProducto {
     // color
     color: $color1;
+}
+.stockProducto {
+    // modificacion
+    // size
+    font-size: 15px;
+    // color
+    color: $color3;
 }
 // control carrito
 .seccionControlCarrito {

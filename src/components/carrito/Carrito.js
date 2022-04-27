@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import swal from'sweetalert2';
 // scss
-import "../../scss/carrito/Carrito.scss";
+import "./Carrito.scss";
 // cart
 import { CartContext } from "../../context/CartContext";
 // iconos
@@ -75,6 +75,7 @@ function Carrito() {
               <p className="nombreProducto">{item.nombre}</p>
               <p className="precioProducto">Precio: ${item.precio * item.cantidad}</p>
               <p className="cantidadProducto">Cantidad: {item.cantidad}</p>
+              <p className="stockProducto">stock disponible: {item.stock}</p>
             </div>
             <div className="CarritoBotonDelete">
               <button

@@ -27,7 +27,8 @@ const ItemDetail = ({ProductDetail}) => {
             nombre,
             precio,
             cantidad,
-            img
+            img,
+            stock
         }
         cantidad > 0 && AddItem(ItemToAdd)
     }
