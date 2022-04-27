@@ -4,7 +4,7 @@ import React, { useContext, useState }  from 'react';
 import '../../scss/items/ItemDetail.scss'
 import { CartContext } from '../../context/CartContext';
 // button
-import ButtonVolver from '../buttons/ButtonVolver';
+import ButtonVolver from '../buttons/botonVolver/ButtonVolver';
 // item count
 import ItemCount from './ItemCount';
 // item count edit

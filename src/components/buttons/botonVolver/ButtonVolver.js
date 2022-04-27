@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import CloseIcon from '@material-ui/icons/Close';
 
 // scss
-import '../../scss/buttons/ButtonVolver.scss'
+import './ButtonVolver.scss'
 
 const ButtonVolver = () => {
     const Navigate = useNavigate();
