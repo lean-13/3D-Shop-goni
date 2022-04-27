@@ -26,9 +26,7 @@ const ItemListContainer = () => {
         ) : query(productoRef, limit(4))
       getDocs(queryFilter)
          .then((res) => {
-
             const items = res.docs.map((doc) => ({id: doc.id, ...doc.data()})) 
-
             SetListaProductos(items);
          })
       .catch((error) => console.log(error))
@@ -43,6 +41,8 @@ const ItemListContainer = () => {
                     {Cargando ? <Loader/> : ''}
                     <ItemList 
                         ListaProductos={ListaProductos}
+                        Cargando={Cargando}
+                        Categoria={categoriaId}
                     />
                 </div>
             </div>

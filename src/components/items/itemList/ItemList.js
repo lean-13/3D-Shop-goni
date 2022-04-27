@@ -6,7 +6,7 @@ import Item from '../item/Item'
 import './/itemList.scss'
 // ver mas
 import CardVerMas from '../../buttons/cardBotonVerMas/cardBotonVerMas';
-const ItemList = ({ListaProductos}) => {
+const ItemList = ({ListaProductos, Cargando, Categoria}) => {
     return (
         <div className="cardCatalogo">
             {
@@ -14,7 +14,7 @@ const ItemList = ({ListaProductos}) => {
                     <Item producto={producto} key={producto.id}/>
                 ))
             }
-            <CardVerMas/>
+            {(Cargando || (Categoria === undefined))  && <CardVerMas/>}
         </div>
     )   
 }
