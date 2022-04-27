@@ -79,7 +79,7 @@ function Carrito() {
               <p className="stockProducto">stock disponible: {item.stock}</p>
             </div>
             <div className="botonEditProducto">
-              <Link to={`/detail/${item.id}`} className='botonEditProductoId'><CreateIcon className="iconEdit"/></Link>
+              <Link to={`/detail/${item.id}`} className='botonEditProductoId'><CreateIcon className="productoIconEdit"/></Link>
             </div>
             <div className="CarritoBotonDelete">
               <button

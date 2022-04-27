@@ -44,7 +44,7 @@ const ItemCount= ({stock, OnAdd, cantidad, setCantidad}) => {
                         <AddOutlinedIcon/>
                     </button>
                 </div>
-                <p className='stockProducto subrayadoText'>Stock: {stock}</p>
+                <p className='stockProductoDetail subrayadoText'>Stock: {stock}</p>
                 { stock === 0 && <p>Sin stock, si desea puede encargar este producto</p>}
                 <button onClick={() => AddToCart()} 
                     className={
