@@ -36,7 +36,8 @@ function App() {
           </div>
           <Routes>
             <Route path="/" element={ <> <InicioCarousel/> <ItemListContainer/> </> } /> 
-            <Route path="/categoria/:categoriaId" element={ <><CategoriaCarousel/> <ItemListContainer/></> } /> 
+            <Route path="/categoria/:categoriaId" element={ <><CategoriaCarousel/> <ItemListContainer/></> } />
+            <Route path="/allProductos" element={ <><CategoriaCarousel/> <ItemListContainer/></> } /> 
             <Route path="/detail/:itemId" element={ <ItemDetailContainer/> } />
             <Route path="/carrito" element={ <Carrito/> } /> 
             <Route path="/checkout" element={ <Checkout/> } />

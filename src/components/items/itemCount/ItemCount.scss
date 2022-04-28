@@ -123,33 +123,4 @@
     // color
    color: $color7;
 }
-// boton encargar
-.botonEncargarCarrito {
-    // modificacion
-    border-radius: 5px;
-    border: none;
-    // size
-    margin-top: 10px;
-    padding: 5px; 
-}
-.botonEncargarCarritoColor {
-    // color
-    color: $color7;
-    background-color: $color6;
-    box-shadow: 0px 4px 15px $color3;
-    transition: all 0.3s ease;
-}
-.botonEncargarCarritoColor:hover {
-    // size
-    transform: translateY(-3px);
-    // color
-    color: $color7;
-    background-color: $color11;
-    box-shadow: 0px 8px 15px $color11;
-}
-.botonEncargarCarritoColorBlock {
-    // color
-    color: $color7;
-    background-color: $color3;
-    box-shadow: 0px 4px 10px $color3;
-}
+

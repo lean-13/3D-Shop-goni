@@ -8,7 +8,7 @@ const CardVerMas = () => {
         <Card className="cardProducto">
             <Card.Body>
                 <Card.Title className='simboloMas'>+</Card.Title>
-                <Link to='/categoria/Productos'><Button className="botonMas">Ver mas</Button></Link>
+                <Link to='/allProductos'><Button className="botonMas">Ver mas</Button></Link>
             </Card.Body>
         </Card>
     )

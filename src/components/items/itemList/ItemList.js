@@ -10,7 +10,7 @@ import CardVerMas from '../../buttons/cardBotonVerMas/cardBotonVerMas';
 const ItemList = ({ListaProductos, Cargando, Categoria}) => {
 
     let MostrarVerMas = ((Cargando === false) && (Categoria === undefined)) 
-    console.log(MostrarVerMas)
+
     return (
         <div className="cardCatalogo">
             {

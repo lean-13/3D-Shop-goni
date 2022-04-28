@@ -15,10 +15,8 @@ const ItemListContainer = () => {
     const [Cargando, SetCargando] = useState([]);
 
     const {categoriaId} = useParams();
-
     useEffect(() => {
         SetCargando(true);
-        
         const productoRef = collection( db, "productos");
         const queryFilter = categoriaId ? 
         query(productoRef, 
