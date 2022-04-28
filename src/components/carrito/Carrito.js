@@ -30,7 +30,7 @@ function Carrito() {
   const ConfigSwal = {
     color: '#5298F2',
     background: '#07080D',
-    backdrop: '#5297f285',
+    backdrop: '#5297f285'
 }
 
   const SwalVaciarCarrito = () => {
@@ -52,9 +52,8 @@ function Carrito() {
               icon: 'success',
               showConfirmButton: false,
               timer: 1500,
-              ...ConfigSwal
+              ...ConfigSwal,
           });
-          
       }
     })
   }
