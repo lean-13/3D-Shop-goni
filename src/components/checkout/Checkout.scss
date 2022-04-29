@@ -46,24 +46,32 @@
     // modificacion
     border-radius: 5px;
     border: none;
+    transform: scale(1);
     // size
     margin-top: 10px;
     padding: 0px 5px 0px 5px;
     // color
-    background-color: $color6;
     color: $color7;
+    background-color: $color10;
+    box-shadow: 0px 0px 0px $color10;
+    transition: all 0.3s ease;
 }
 .botonEnviar:hover {
+    // size
+    transform: translateY(-3px);
     // color
-    box-shadow: 2px 1px 0px 0px $color6;
-    transition: 0.7s;
+    color: $color7;
+    background-color: $color10;
+    box-shadow: 0px 4px 10px $color10;
 }
-
+.botonEnviar:active {
+    transform: scale(0.90);
+}
 // confirmacion
 .confirmacionCompra {
     // size
-    padding-top: 62px;
-    padding-bottom: 27rem;
+    padding-top: 64px;
+    padding-bottom: 30rem;
     padding-left: 2%;
     h4 {
         color: $color1;

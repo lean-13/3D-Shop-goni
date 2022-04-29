@@ -26,13 +26,9 @@ function Navbar() {
                   Categorias
                 </Link>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><Link className="dropdown-item"  to="/categoria/Productos">Productos</Link></li>
                   <li><Link className="dropdown-item"  to="/categoria/Hogar">Hogar</Link></li>
                   <li><Link className="dropdown-item"  to="/categoria/Organizadores">Organizadores</Link></li>
                 </ul>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="#">Encargo</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/Carrito"><Iconshopcart/></Link>

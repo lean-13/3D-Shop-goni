@@ -18,9 +18,9 @@ const ItemCount= ({stock, OnAdd, cantidad, setCantidad}) => {
     }
 
     const AddToCart = () => {
-
+        if (cantidad > 0) {
             OnAdd(cantidad);
-        
+        }
     }
 
     const botonRestarConfig = {
@@ -32,11 +32,6 @@ const ItemCount= ({stock, OnAdd, cantidad, setCantidad}) => {
         className: `botonAdd ${cantidad < stock ? 'botonAddColor' : 'botonAddColorBlock'}`,
         onClick: Sumar,
         disabled: cantidad === stock
-    }
-    const botonEncargarProductoConfig = {
-        className: `botonEncargarCarrito ${stock === 0 ? 'botonEncargarCarritoColor' : 'botonEncargarCarritoColorBlock'}`,
-        disabled: stock > 0
-
     }
     return (
         <div className="cardCantidadProducto">
@@ -50,9 +45,7 @@ const ItemCount= ({stock, OnAdd, cantidad, setCantidad}) => {
                     </button>
                 </div>
                 <p className='stockProductoDetail subrayadoText'>Stock: {stock}</p>
-                {
-                    stock > 1 ?
-                    <button onClick={() => AddToCart()} 
+                <button onClick={() => AddToCart()} 
                     className={
                         `botonAddCarrito ${cantidad > 0 ? 
                             'botonAddCarritoColor' 
@@ -63,14 +56,7 @@ const ItemCount= ({stock, OnAdd, cantidad, setCantidad}) => {
                 >
                     <AddShoppingCartIcon className='iconoAddCart'/>
                     Agregar al carrito
-                    </button> 
-                    :
-                    <button {...botonEncargarProductoConfig} onClick={() => AddToCart()} >
-                        <AddShoppingCartIcon className='iconoAddCart'/>
-                        Encargar Producto
-                    </button>
-
-                }
+                </button>
         </div>
     )
 }

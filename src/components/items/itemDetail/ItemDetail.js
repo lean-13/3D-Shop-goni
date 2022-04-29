@@ -9,16 +9,24 @@ import ButtonVolver from "../../buttons/botonVolver/ButtonVolver";
 import ItemCount from "../itemCount/ItemCount";
 // item count edit
 import ItemCountEdit from "../itemCountEdit/ItemCountEdit";
-import ItemOrder from "../itemOrder/ItemOrder";
 
-const initial = 1;
+
+
 
 const ItemDetail = ({ ProductDetail }) => {
   const { nombre, img, alt, descripcion, precio, stock, id } = ProductDetail;
 
+  const initial = (stock) => {
+    if (stock === 0) {
+        return 0
+    }else {
+            return 1
+        }
+    }
+
   const { AddItem, IsInCart } = useContext(CartContext);
 
-  const [cantidad, setCantidad] = useState(initial);
+  const [cantidad, setCantidad] = useState(initial(stock));
 
   const AddCart = (cantidad) => {
     const ItemToAdd = {
@@ -44,11 +52,7 @@ const ItemDetail = ({ ProductDetail }) => {
           <p className="precioProducto">Precio: ${precio}</p>
           <p className="dimensionesProducto">Dimensiones: </p>
           <p className="descripcionProducto">Descripcion: {descripcion}</p>
-          {stock === 0 && (
-            <p className="encargoProducto">
-              Sin stock, solo disponible para encargos
-            </p>
-          )}
+          {stock === 0 && <p className="encargoProducto">Sin stock</p>}
           <div>
             {!IsInCart(id) ? (
               <ItemCount

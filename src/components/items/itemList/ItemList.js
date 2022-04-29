@@ -3,13 +3,9 @@ import React from 'react';
 // item
 import Item from '../item/Item'
 // sass
-import './/itemList.scss'
-// ver mas
-import CardVerMas from '../../buttons/cardBotonVerMas/cardBotonVerMas';
+import './/itemList.scss';
 
 const ItemList = ({ListaProductos, Cargando, Categoria}) => {
-
-    let MostrarVerMas = ((Cargando === false) && (Categoria === undefined)) 
 
     return (
         <div className="cardCatalogo">
@@ -18,7 +14,6 @@ const ItemList = ({ListaProductos, Cargando, Categoria}) => {
                     <Item producto={producto} key={producto.id}/>
                 ))
             }
-            {MostrarVerMas  && <CardVerMas/>}
         </div>
     )   
 }
