@@ -13,9 +13,15 @@
     // color
     background: linear-gradient(to right, $color7, $color7, $color8)
 }
-.cardProducto:hover {
+.divCardImg {
+    overflow: hidden;
+}
+.cardImg {
+    object-fit: cover;
+}
+.cardProducto:hover .cardImg {
     // modificacion
-    transform: scale(1.02);
+    transform: scale(1.1);
     transition: 0.7s;
 }
 // text
@@ -26,9 +32,6 @@
     color: $color6;  
 }
 .precioProducto {
-    color: $color10;
-}
-.categoriaProducto {
     color: $color1;
 }
 .encargoProducto {

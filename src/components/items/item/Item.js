@@ -9,7 +9,9 @@ const Item = ({producto}) => {
     const {nombre, img, alt, precio, id, stock} = producto;
     return (
         <Card className="cardProducto">
-            <Card.Img src={img} alt={alt} />
+            <div className='divCardImg'> 
+                <Card.Img className='cardImg' src={img} alt={alt} />
+            </div>
             <Card.Body className='cardBody'>
                 <Card.Title className='nombreProducto mb-1'>{nombre}</Card.Title>
                 <Card.Text className='precioProducto mb-1'>Precio: ${precio}</Card.Text>
