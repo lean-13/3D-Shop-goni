@@ -10,7 +10,7 @@ function Navbar() {
     return (
       <nav className="navbar navbar-expand-lg nav__bar--modificacion nav__bar--size nav__bar--color" id="navBar">
         <div className="navBarSection">
-          <Link className="navbar-brand nav__bar__logo--modificacion nav__bar__logo--size nav__bar__logo--color" id="navBarLogo" to="/">Logo</Link>
+          <Link className="navbar-brand nav__bar__logo--modificacion nav__bar__logo--size nav__bar__logo--color" id="navBarLogo" to="/">3DShop</Link>
         </div>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />

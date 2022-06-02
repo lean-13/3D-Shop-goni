@@ -40,9 +40,6 @@ const ItemListContainer = () => {
                     {Cargando ? <Loader/> : ''}
                     <ItemList 
                         ListaProductos={ListaProductos}
-                        Cargando={Cargando}
-                        Categoria={categoriaId}
-
                     />
                 </div>
             </div>

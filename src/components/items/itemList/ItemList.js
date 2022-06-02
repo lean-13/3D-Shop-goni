@@ -5,7 +5,7 @@ import Item from '../item/Item'
 // sass
 import './/itemList.scss';
 
-const ItemList = ({ListaProductos, Cargando, Categoria}) => {
+const ItemList = ({ListaProductos}) => {
 
     return (
         <div className="cardCatalogo">

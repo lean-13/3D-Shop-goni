@@ -20,7 +20,7 @@ const ItemCountEdit= ({cantidad, id}) => {
                     >
                         <EditIcon 
                         className='iconoEdit'
-                        />Modificar cantidad
+                        />Quitar de carrito
                     </button>
                 </div>
             <p className='stockProductoDetail subrayadoText'>Cantidad: {cantidad}</p>
