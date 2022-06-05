@@ -10,9 +10,20 @@ import swal from'sweetalert2';
 import '../../scss/variables.scss'
 import './Checkout.scss'
 
+const expresiones = {
+    usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
+    nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+    password: /^.{4,12}$/, // 4 a 12 digitos.
+    correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+    telefono: /^\d{7,14}$/ // 7 a 14 numeros.
+}
+
+const ValidarForm = () => {
+
+}
 
 const Checkout = () => {
-
+    
     const {cart, CartTotal, VaciarCarrito} = useContext(CartContext);
 
     const [orderId, setOrderId] = useState(null)
@@ -122,42 +133,50 @@ const Checkout = () => {
             <h2>Checkout</h2>
             <div className='formCompra' >
                 <form onSubmit={Submit}  id='formCompraId'>
-                    <div className='inputText'>
-                        <p className='formText'>Nombre Completo</p>
-                        <input
-                            className='form-control'
-                            type={'text'}
-                            placeholder='Nombre completo'
-                            name='nombre'
-                            value={values.nombre}
-                            onChange={InputChange}
-                            required
-                        />
+                    <div>
+                        <div className='inputInformacionContacto'>
+                            <div className='inputText'>
+                                <p className='formText'>Nombre Completo</p>
+                                <input
+                                    className='form-control'
+                                    type={'text'}
+                                    placeholder='Nombre completo'
+                                    name='nombre'
+                                    value={values.nombre}
+                                    onChange={InputChange}
+                                    required
+                                />
+                            </div>
+                            <div className='inputEmail'>
+                                <p className='formText'>Email</p>
+                                <input
+                                    className='form-control'
+                                    type={'email'}
+                                    placeholder='Email'
+                                    name='email'
+                                    value={values.email}
+                                    onChange={InputChange}
+                                    required
+                                />
+                            </div>
+                            <div className='inputTel'>
+                                <p className='formText'>Telefono</p>
+                                <input
+                                    className='form-control'
+                                    type={'tel'}
+                                    placeholder='Telefono'
+                                    name='telefono'
+                                    value={values.telefono}
+                                    onChange={InputChange}
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div className='inputInformacionPago'>
+                            
+                        </div>
                     </div>
-                    <div className='inputEmail'>
-                        <p className='formText'>Email</p>
-                        <input
-                            className='form-control'
-                            type={'email'}
-                            placeholder='Email'
-                            name='email'
-                            value={values.email}
-                            onChange={InputChange}
-                            required
-                        />
-                    </div>
-                    <div className='inputTel'>
-                        <p className='formText'>Telefono</p>
-                        <input
-                            className='form-control'
-                            type={'tel'}
-                            placeholder='Telefono'
-                            name='telefono'
-                            value={values.telefono}
-                            onChange={InputChange}
-                            required
-                        />
-                    </div>
+
                     <button className='botonEnviar' type='submit' >Comprar</button>
                 </form>
             </div>
