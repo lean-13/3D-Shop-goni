@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/3D-Shop-goni/static/css/main.9d0f2df6.css",
-    "main.js": "/3D-Shop-goni/static/js/main.bb43b85a.js",
+    "main.js": "/3D-Shop-goni/static/js/main.294ce9fd.js",
     "index.html": "/3D-Shop-goni/index.html",
     "main.9d0f2df6.css.map": "/3D-Shop-goni/static/css/main.9d0f2df6.css.map",
-    "main.bb43b85a.js.map": "/3D-Shop-goni/static/js/main.bb43b85a.js.map"
+    "main.294ce9fd.js.map": "/3D-Shop-goni/static/js/main.294ce9fd.js.map"
   },
   "entrypoints": [
     "static/css/main.9d0f2df6.css",
-    "static/js/main.bb43b85a.js"
+    "static/js/main.294ce9fd.js"
   ]
 }
