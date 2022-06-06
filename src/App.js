@@ -7,7 +7,7 @@ import "../node_modules/bootstrap/dist/js/bootstrap";
 // scss
 import "./scss/App.scss"
 // navBar
-import Navbar from './components/navegacion/navBar/Navbar'
+import NavBar from './components/navegacion/navBar/Navbar'
 // carousel
 import InicioCarousel from './components/carousel/inicioCarousel/InicioCarousel';
 import CategoriaCarousel from './components/carousel/CategoriaCarousel/CategoriaCarousel';
@@ -32,7 +32,7 @@ function App() {
       <CartProvider>
         <BrowserRouter>
           <div className="App-header">
-            <Navbar/>
+            <NavBar/>
           </div>
           <Routes>
             <Route path="/" element={ <> <InicioCarousel/> <ItemListContainer/> </> } /> 

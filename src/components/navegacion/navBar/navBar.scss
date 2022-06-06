@@ -2,15 +2,10 @@
 @import "../../../scss/variables.scss";
 
 .nav__bar--modificacion {
-    align-items: center;
-    text-align: left;
     position: fixed;
     top: -4px;
     border-radius: 5px;
     z-index: 5;
-    // flex
-    display: flex;
-    justify-content: space-between;
 }
 .nav__bar--size {
     width: 100%;
@@ -22,28 +17,9 @@
     background-color: $color8;
 }
 // logo
-.nav__bar__logo--modificacion {
-    text-decoration: none;
-    font-family: $font4;
+.logo3D {
+    color: red;
+    font-size: 20px;
 }
-.nav__bar__logo--size {
-    font-size: 30px;
-    margin-left: 2%;
-}
-.nav__bar__logo--color {
-    color: $color6;
-}
-.navBarSectionItems {
-    margin-top: 10px;
-    div {
-        font-size: 18px;
-        font-family: $font2;
-    }
-    
-    span {
-        color: $color4;
-    }
-}
-.textNavbar {
-    padding-right: 2rem;
-}
+
+
