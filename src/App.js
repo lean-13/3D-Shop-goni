@@ -1,6 +1,6 @@
 // react
 import React from 'react';
-import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
+import { BrowserRouter, Router, Route, HashRouter } from "react-router-dom";
 // bootstrap
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import "../node_modules/bootstrap/dist/js/bootstrap";
@@ -22,6 +22,7 @@ import Carrito from './components/carrito/Carrito';
 // cart context
 import { CartProvider} from './context/CartContext';
 import Checkout from './components/checkout/Checkout';
+import { Router } from '@material-ui/icons';
 
 
 
@@ -34,7 +35,7 @@ function App() {
           <div className="App-header">
             <NavBar/>
           </div>
-          <Routes basename={process.env.PUBLIC_URL}>
+          <Router basename={process.env.PUBLIC_URL}>
             <Route path="/" element={ <> <InicioCarousel/> <ItemListContainer/> </> } /> 
             <Route path="/categoria/:categoriaId" element={ <><CategoriaCarousel/> <ItemListContainer/></> } />
             <Route path="/allProductos" element={ <><CategoriaCarousel/> <ItemListContainer/></> } /> 
@@ -43,7 +44,7 @@ function App() {
             <Route path="/checkout" element={ <Checkout/> } />
             {/* error 404 */}
             <Route path="*" element={ <h1>Error 404</h1> } /> 
-          </Routes>
+          </Router>
           <footer>
             <FooterContacto/>
           </footer>
