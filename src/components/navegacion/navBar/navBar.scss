@@ -6,6 +6,8 @@
     top: -4px;
     border-radius: 5px;
     z-index: 5;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 .nav__bar--size {
     width: 100%;
@@ -20,6 +22,12 @@
 .logo3D {
     color: red;
     font-size: 20px;
+}
+
+.categoriasHover:hover {
+    background-color: $color8;
+    color: $color6;
+    transition: 0.7s;
 }
 
 
