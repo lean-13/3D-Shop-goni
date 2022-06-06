@@ -1,6 +1,6 @@
 // react
 import React from 'react';
-import { BrowserRouter, Router, Route, HashRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 // bootstrap
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import "../node_modules/bootstrap/dist/js/bootstrap";
@@ -31,11 +31,11 @@ function App() {
   return (   
     <div className='background'>
       <CartProvider>
-        <HashRouter>
+        <BrowserRouter>
           <div className="App-header">
             <NavBar/>
           </div>
-          <Router basename={process.env.PUBLIC_URL}>
+          <Routes>
             <Route path="/" element={ <> <InicioCarousel/> <ItemListContainer/> </> } /> 
             <Route path="/categoria/:categoriaId" element={ <><CategoriaCarousel/> <ItemListContainer/></> } />
             <Route path="/allProductos" element={ <><CategoriaCarousel/> <ItemListContainer/></> } /> 
@@ -44,11 +44,11 @@ function App() {
             <Route path="/checkout" element={ <Checkout/> } />
             {/* error 404 */}
             <Route path="*" element={ <h1>Error 404</h1> } /> 
-          </Router>
+          </Routes>
           <footer>
             <FooterContacto/>
           </footer>
-        </HashRouter>
+        </BrowserRouter>
       </CartProvider>
     </div>
 
