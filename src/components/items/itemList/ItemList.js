@@ -3,7 +3,7 @@ import React from 'react';
 // item
 import Item from '../item/Item'
 // sass
-import './/itemList.scss';
+import './itemList.scss';
 
 const ItemList = ({ListaProductos}) => {
 

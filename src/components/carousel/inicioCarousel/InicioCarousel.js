@@ -2,8 +2,7 @@ import React from "react";
 import { Carousel } from 'react-bootstrap';
 // scss
 import './InicioCarousel.scss';
-// img
-import imgCarousel1 from '../../../../public/img/carousel/3d-printer-3311587.jpg';
+
 const InicioCarousel = () => {
 
     return (
@@ -13,7 +12,7 @@ const InicioCarousel = () => {
                 <Carousel.Item className="inicioCarouselItem item1">
                     <img
                     className="d-block"
-                    src={("../../../../img/carousel/3d-printer-3311587.png")}
+                    src={require("../../img/carousel/3d-printer-3311587.jpg")}
                     alt="First slide"
                     />
                     <Carousel.Caption className="carouselDescripcion">
@@ -23,7 +22,7 @@ const InicioCarousel = () => {
                 <Carousel.Item className="inicioCarouselItem item2">
                     <img
                     className="d-block"
-                    src={("../../../../img/carousel/3d-printer-3311587.png")}
+                    src={require("../../img/carousel/3d-printer-3311587.jpg")}
                     alt="Second slide"
                     />
                     <Carousel.Caption className="carouselDescripcion">
@@ -33,7 +32,7 @@ const InicioCarousel = () => {
                 <Carousel.Item className="inicioCarouselItem item3">
                     <img
                     className="d-block"
-                    src={("../../../../img/carousel/3d-printer-3311587.png")}
+                    src={require("../../img/carousel/3d-printer-3311587.jpg")}
                     alt="Third slide"
                     />
 
