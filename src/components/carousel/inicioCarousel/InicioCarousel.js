@@ -12,7 +12,7 @@ const InicioCarousel = () => {
                 <Carousel.Item className="inicioCarouselItem item1">
                     <img
                     className="d-block"
-                    src={require("../../img/carousel/3d-printer-3311587.jpg")}
+                    src={("https://firebasestorage.googleapis.com/v0/b/dshop-ca6b4.appspot.com/o/img%2Fcarrousel%2F3d-printer-3311587.jpg?alt=media&token=1043f672-08ec-4fe6-b179-17446ab6d9b2")}
                     alt="First slide"
                     />
                     <Carousel.Caption className="carouselDescripcion">
@@ -22,7 +22,7 @@ const InicioCarousel = () => {
                 <Carousel.Item className="inicioCarouselItem item2">
                     <img
                     className="d-block"
-                    src={require("../../img/carousel/3d-printer-3311587.jpg")}
+                    src={("https://firebasestorage.googleapis.com/v0/b/dshop-ca6b4.appspot.com/o/img%2Fcarrousel%2F3d-printer-3311587.jpg?alt=media&token=1043f672-08ec-4fe6-b179-17446ab6d9b2")}
                     alt="Second slide"
                     />
                     <Carousel.Caption className="carouselDescripcion">
@@ -32,7 +32,7 @@ const InicioCarousel = () => {
                 <Carousel.Item className="inicioCarouselItem item3">
                     <img
                     className="d-block"
-                    src={require("../../img/carousel/3d-printer-3311587.jpg")}
+                    src={("https://firebasestorage.googleapis.com/v0/b/dshop-ca6b4.appspot.com/o/img%2Fcarrousel%2F3d-printer-3311587.jpg?alt=media&token=1043f672-08ec-4fe6-b179-17446ab6d9b2")}
                     alt="Third slide"
                     />
 
