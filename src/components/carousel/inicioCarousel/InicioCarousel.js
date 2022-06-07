@@ -2,6 +2,8 @@ import React from "react";
 import { Carousel } from 'react-bootstrap';
 // scss
 import './InicioCarousel.scss';
+// img
+import imgCarousel1 from '../../../../public/img/carousel/3d-printer-3311587.jpg';
 const InicioCarousel = () => {
 
     return (

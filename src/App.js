@@ -1,6 +1,6 @@
 // react
 import React from 'react';
-import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 // bootstrap
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import "../node_modules/bootstrap/dist/js/bootstrap";
@@ -22,7 +22,7 @@ import Carrito from './components/carrito/Carrito';
 // cart context
 import { CartProvider} from './context/CartContext';
 import Checkout from './components/checkout/Checkout';
-import { Router } from '@material-ui/icons';
+
 
 
 
