@@ -1,14 +1,13 @@
 {
   "files": {
     "main.css": "/3D-Shop-goni/static/css/main.9d0f2df6.css",
-    "main.js": "/3D-Shop-goni/static/js/main.c4779b06.js",
-    "static/media/3d-printer-3311587.jpg": "/3D-Shop-goni/static/media/3d-printer-3311587.959c37dd50a6c36b97a0.jpg",
+    "main.js": "/3D-Shop-goni/static/js/main.ffaed6ee.js",
     "index.html": "/3D-Shop-goni/index.html",
     "main.9d0f2df6.css.map": "/3D-Shop-goni/static/css/main.9d0f2df6.css.map",
-    "main.c4779b06.js.map": "/3D-Shop-goni/static/js/main.c4779b06.js.map"
+    "main.ffaed6ee.js.map": "/3D-Shop-goni/static/js/main.ffaed6ee.js.map"
   },
   "entrypoints": [
     "static/css/main.9d0f2df6.css",
-    "static/js/main.c4779b06.js"
+    "static/js/main.ffaed6ee.js"
   ]
 }
