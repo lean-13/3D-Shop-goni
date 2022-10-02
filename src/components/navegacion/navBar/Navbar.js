@@ -9,11 +9,11 @@ function NavBar() {
     <>
       <Navbar variant="dark" expand="lg" className='nav__bar--modificacion nav__bar--size nav__bar--color'>
         <Container>
-          <Navbar.Brand as={Link} to="/" className='logo3D '>3DShop</Navbar.Brand>
+          <Navbar.Brand as={Link} to="/3D-Shop-goni" className='logo3D '>3DShop</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav"/>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link as={Link} to="/">Inicio</Nav.Link>
+              <Nav.Link as={Link} to="/3D-Shop-goni">Inicio</Nav.Link>
               <Nav.Link as={Link} to="/carrito"><Iconshopcart/></Nav.Link>
               <NavDropdown title="Categorias" className='categoria' id="basic-nav-dropdown">
                 <NavDropdown.Item as={Link} to="/categoria/Hogar" className='categoriasHover'>Hogar</NavDropdown.Item>

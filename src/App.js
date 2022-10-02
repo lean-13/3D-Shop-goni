@@ -21,9 +21,8 @@ import ItemDetailContainer from './components/items/itemDetailContainer/ItemDeta
 import Carrito from './components/carrito/Carrito';
 // cart context
 import { CartProvider} from './context/CartContext';
+
 import Checkout from './components/checkout/Checkout';
-
-
 
 
 function App() {
@@ -36,7 +35,7 @@ function App() {
             <NavBar/>
           </div>
           <Routes>
-            <Route path="/" element={ <> <InicioCarousel/> <ItemListContainer/> </> } /> 
+            <Route path="/3D-Shop-goni" element={ <> <InicioCarousel/> <ItemListContainer/> </> } /> 
             <Route path="/categoria/:categoriaId" element={ <><CategoriaCarousel/> <ItemListContainer/></> } />
             <Route path="/allProductos" element={ <><CategoriaCarousel/> <ItemListContainer/></> } /> 
             <Route path="/detail/:itemId" element={ <ItemDetailContainer/> } />
