@@ -40,20 +40,20 @@
     color: $color3;
 }
 .botonEditCantidad:hover {
-    .iconoEdit {
+    .CloseIcon {
         color: $color9;
         filter: drop-shadow(1px 1.5px $color11);
         transform: rotatez(-15deg);
         transition: 0.7s;
     }
 }
-// icono edit
-.iconoEdit {
+// icono 
+.CloseIcon {
     // modificacion
     position: relative;
     top: -2px;
     // size
-    font-size: 20px;
+    font-size: 16px;
     // color
     color: $color11;
     filter: drop-shadow(1px 1.5px $color9);

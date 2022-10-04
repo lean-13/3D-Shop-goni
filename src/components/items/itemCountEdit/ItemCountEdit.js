@@ -6,6 +6,7 @@ import { CartContext } from "../../../context/CartContext";
 // sass
 import './ItemCountEdit.scss'
 // icono
+import CloseIcon from '@material-ui/icons/Close';
 import EditIcon from '@material-ui/icons/Edit';
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 
@@ -18,8 +19,8 @@ const ItemCountEdit= ({cantidad, id}) => {
                     <button className='botonEditCantidad'
                         onClick={() => RemoveItem(id)}
                     >
-                        <EditIcon 
-                        className='iconoEdit'
+                        <CloseIcon 
+                        className='CloseIcon'
                         />Quitar de carrito
                     </button>
                 </div>
