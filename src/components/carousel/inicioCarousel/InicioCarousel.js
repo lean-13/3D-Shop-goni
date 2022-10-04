@@ -9,7 +9,7 @@ const InicioCarousel = () => {
         <div className="divInicioCarousel">
             <Carousel className="inicioCarousel">
                 {/* agregar imagen de menor tamaño y ponerle un div con fondo de color */}
-                <Carousel.Item className="inicioCarouselItem item3">
+                <Carousel.Item className="inicioCarouselItem item1">
                     <img
                     className="d-block"
                     src={("https://firebasestorage.googleapis.com/v0/b/dshop-ca6b4.appspot.com/o/img%2Fcarrousel%2F3DEnvio.svg?alt=media&token=67762a4e-e135-4d1d-a7bf-d32fc154604b")}
@@ -22,7 +22,7 @@ const InicioCarousel = () => {
                 <Carousel.Item className="inicioCarouselItem item2">
                     <img
                     className="d-block"
-                    src={("https://firebasestorage.googleapis.com/v0/b/dshop-ca6b4.appspot.com/o/img%2Fcarrousel%2F3d-printer-3311587.jpg?alt=media&token=1043f672-08ec-4fe6-b179-17446ab6d9b2")}
+                    src={("https://firebasestorage.googleapis.com/v0/b/dshop-ca6b4.appspot.com/o/img%2Fcarrousel%2Fprinter-4348147_1280.jpg?alt=media&token=5e0032f5-b413-4005-8257-71fd63adec2a")}
                     alt="Second slide"
                     />
                     <Carousel.Caption className="carouselDescripcion">

@@ -1,12 +1,12 @@
 // variables
 @import "../../../scss/variables.scss";
 
-.inicioCarousel {
+.categoriaCarousel {
     padding-top: 60px;
     width: 100%;
     height: auto;
 }
-.inicioCarouselItem {
+.categoriaCarouselItem {
 
     img {
         // modificacion
@@ -19,24 +19,22 @@
     }
 }
 // color fondo
-.item1 {
+.itemCategoria1 {
     background-color: transparent;
 }
-.item2 {
+.itemCategoria2 {
     background-color: transparent;
 }
-.item3 {
-    background-color: $color11;
-}
-.carouselDescripcion {
+
+.carouselCategoriaDescripcion {
    
-    .desc1 {
+    .categoriaDesc1 {
         color: $color6;
     }
-    .desc2 {
+    .categoriaDesc2 {
         color: $color1;
     }
-    .desc3 {
+    .categoriaDesc3 {
         color: $color7;
     }
 }

@@ -20,17 +20,23 @@
 }
 // color fondo
 .item1 {
-    background-color: $color2;
+    background-color: $color11;
 }
 .item2 {
-    background-color: transparent;
+    background-color: $color7;
 }
 .carouselDescripcion {
    
     .desc1 {
-        color: $color1;
+        color: $color2;
     }
     .desc2 {
-        color: $color1;
+        // modificacion
+        border-radius: 10px;
+        // size
+        width: auto;
+        // color
+        background-color: $color4;
+        color: $color7;
     }
 }
