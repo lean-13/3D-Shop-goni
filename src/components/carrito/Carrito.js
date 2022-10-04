@@ -7,8 +7,9 @@ import "./Carrito.scss";
 import { CartContext } from "../../context/CartContext";
 // carrito
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
-// lapiz
+// ver
 import CreateIcon from '@material-ui/icons/Create';
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 // remove
 import RemoveShoppingCartIcon from "@material-ui/icons/RemoveShoppingCart";
 
@@ -76,8 +77,8 @@ function Carrito() {
               <p className="cantidadProducto">Cantidad: {item.cantidad}</p>
               <p className="stockProducto">stock disponible: {item.stock}</p>
             </div>
-            <div className="botonEditProducto">
-              <Link to={`/detail/${item.id}`} className='botonEditProductoId'><CreateIcon className="productoIconEdit"/></Link>
+            <div className="botonVerProducto">
+              <Link to={`/detail/${item.id}`} className='botonVerProductoId'><ArrowDownwardIcon className="productoIconVer"/></Link>
             </div>
             <div className="CarritoBotonDelete">
               <button

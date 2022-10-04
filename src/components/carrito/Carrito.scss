@@ -81,7 +81,7 @@
     // color
     background-color: $color6;
 }
-.botonEditProducto {
+.botonVerProducto {
     // modificacion
     transform: scale(1);
     border: none;
@@ -94,15 +94,15 @@
     padding: 0px 2px 2px 2px;
     margin-left: 88%;
 }
-.botonEditProducto:hover {
+.botonVerProducto:hover {
     // size
     transform: translateY(-3px);
     // color
-    background-color: $color11;
-    box-shadow: 0px 8px 15px $color11;
+    background-color: $color6;
+    box-shadow: 0px 8px 15px $color6;
 }
 // icono
-.productoIconEdit {
+.productoIconVer {
     // color
     color: $color7;
 }
