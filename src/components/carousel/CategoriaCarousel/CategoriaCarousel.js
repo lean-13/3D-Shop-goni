@@ -22,7 +22,7 @@ const CategoriaCarousel = () => {
                     alt="Second slide"
                     />
                     <Carousel.Caption className="carouselCategoriaDescripcion">
-                    <p className="categoriaDesc2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p className="categoriaDesc2">.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

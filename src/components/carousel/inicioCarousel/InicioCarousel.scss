@@ -10,6 +10,7 @@
 
     img {
         // modificacion
+        object-fit: cover;
         display: block;
         margin: 0px auto;
         border-radius: 5px;
@@ -26,8 +27,9 @@
     background-color: $color7;
 }
 .carouselDescripcion {
-   
+    font-family: $font6;
     .desc1 {
+        
         color: $color2;
     }
     .desc2 {

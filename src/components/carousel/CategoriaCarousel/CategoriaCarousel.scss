@@ -10,6 +10,7 @@
 
     img {
         // modificacion
+        object-fit: cover;
         display: block;
         margin: 0px auto;
         border-radius: 5px;
@@ -27,7 +28,7 @@
 }
 
 .carouselCategoriaDescripcion {
-   
+    font-family: $font6;
     .categoriaDesc1 {
         color: $color6;
     }

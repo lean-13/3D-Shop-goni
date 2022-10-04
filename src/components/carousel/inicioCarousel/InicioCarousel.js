@@ -25,9 +25,6 @@ const InicioCarousel = () => {
                     src={("https://firebasestorage.googleapis.com/v0/b/dshop-ca6b4.appspot.com/o/img%2Fcarrousel%2Fprinter-4348147_1280.jpg?alt=media&token=5e0032f5-b413-4005-8257-71fd63adec2a")}
                     alt="Second slide"
                     />
-                    <Carousel.Caption className="carouselDescripcion">
-                    <p className="desc2">Impresiones 3D de gran calidad.</p>
-                    </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
         </div>
