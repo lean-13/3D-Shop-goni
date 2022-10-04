@@ -10,13 +10,12 @@
 
     img {
         // modificacion
-        object-fit: cover;
         display: block;
         margin: 0px auto;
         border-radius: 5px;
         // size
-        width: 60rem;
-        height: 400px;
+        width: 99%;
+        height: 500px;
     }
 }
 // color fondo
@@ -25,6 +24,10 @@
 }
 .item2 {
     background-color: $color7;
+    
+    img {
+        object-fit: cover;
+    }
 }
 .carouselDescripcion {
     font-family: $font6;

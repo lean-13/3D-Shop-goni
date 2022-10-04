@@ -8,10 +8,9 @@ const InicioCarousel = () => {
     return (
         <div className="divInicioCarousel">
             <Carousel className="inicioCarousel">
-                {/* agregar imagen de menor tamaño y ponerle un div con fondo de color */}
                 <Carousel.Item className="inicioCarouselItem item1">
                     <img
-                    className="d-block"
+                    className="d-block inicioCarouselImg1"
                     src={("https://firebasestorage.googleapis.com/v0/b/dshop-ca6b4.appspot.com/o/img%2Fcarrousel%2F3DEnvio.svg?alt=media&token=67762a4e-e135-4d1d-a7bf-d32fc154604b")}
                     alt="First slide"
                     />
